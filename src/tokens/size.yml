@@ -4,10 +4,21 @@
 #
 
 props:
-  height_footer:
-    value: "64px"
-  tappable_square:
-    value: "44px"
+  tappable_element_xxl:
+    value: "72px"
+  tappable_element_xl:
+    value: "60px"
+  tappable_element_l:
+    value: "48px"
+  tappable_element_m:
+    value: "40px"
+  tappable_element_s:
+    value: "32px"
+  tappable_element_xs:
+    value: "24px"
+  tappable_element_xxs:
+    value: "12px"
+
 global:
   type: number
   category: size

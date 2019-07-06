@@ -5,7 +5,10 @@
 import WebFont from "webfontloader"
 
 WebFont.load({
-  google: {
-    families: ["Fira+Sans:300,400,400i,600,700"],
+  custom: {
+    families: ["Formular-Regular", "Formular-Medium", "Formular-Bold"],
+    // You need both of these paths since Styleguidist
+    // tries to find static assets from the root.
+    urls: ["/assets/fonts/fonts.css", "/fonts/fonts.css"],
   },
 })

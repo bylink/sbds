@@ -1,3 +1,5 @@
+@import "~bourbon/core/bourbon";
+
 /* GLOBAL MIXINS
 --------------------------------------------- */
 
@@ -44,6 +46,11 @@
   margin: 0;
 }
 
+@mixin reset-text-indents() {
+  font-size: 0;
+  line-height: 0;
+}
+
 // Used to prevent text selection on an element
 @mixin prevent-user-select {
   -webkit-user-select: none;
@@ -71,4 +78,13 @@
 @mixin layout-flex-fix {
   min-width: 0;
   max-width: 100%;
+}
+
+@mixin ellipsis($width: 100%, $display: inline-block) {
+  display: $display;
+  max-width: $width;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
 }

@@ -8,82 +8,77 @@
 #
 
 aliases:
-  vermilion:
-    value: "7, 83%"
-  ucla_gold:
-    value: "43, 100%"
-  bleu_de_france:
-    value: "210, 86%"
-  oxford_blue:
-    value: "210, 100%"
-  rich_black:
-    value: "#001123"
-  white:
-    value: "#fff"
+  orange:
+    value: "27, 100%"
+  green:
+    value: "145, 63%"
+  red:
+    value: "0, 90%"
+  gray:
+    value: "0, 0%"
+
 props:
-  color_vermilion_darker:
-    value: "hsla({!vermilion}, 33%, 1)"
-    category: color_group_1
-  color_vermilion_dark:
-    value: "hsla({!vermilion}, 43%, 1)"
-    category: color_group_1
-  color_vermilion:
-    value: "hsla({!vermilion}, 53%, 1)"
-    category: color_group_1
-  color_vermilion_light:
-    value: "hsla({!vermilion}, 63%, 1)"
-    category: color_group_1
-  color_vermilion_lighter:
-    value: "hsla({!vermilion}, 75%, 1)"
-    category: color_group_1
+  color_main: ############ #FF7200
+    value: "hsla({!orange}, 50%, 1)"
+    category: color_group_new
+  color_main_disabled: ############ #FFD5B3
+    value: "hsla({!orange}, 85%, 1)"
+    category: color_group_new
+  color_main_focused: ############ #FF8A00
+    value: "hsla(32, 100%, 50%, 1)"
+    category: color_group_new
+  color_main_active: ############ #E26500
+    value: "hsla({!orange}, 44%, 1)"
+    category: color_group_new
 
-  color_ucla_gold_darker:
-    value: "hsla({!ucla_gold}, 35%, 1)"
-    category: color_group_2
-  color_ucla_gold_dark:
-    value: "hsla({!ucla_gold}, 45%, 1)"
-    category: color_group_2
-  color_ucla_gold:
-    value: "hsla({!ucla_gold}, 52%, 1)"
-    category: color_group_2
-  color_ucla_gold_light:
-    value: "hsla({!ucla_gold}, 65%, 1)"
-    category: color_group_2
-  color_ucla_gold_lighter:
-    value: "hsla({!ucla_gold}, 75%, 1)"
-    category: color_group_2
+  color_success: ############ #27AE60
+    value: "hsla({!green}, 42%, 1)"
+    category: color_group_new
 
-  color_bleu_de_france_darker:
-    value: "hsla({!bleu_de_france}, 34%, 1)"
-    category: color_group_3
-  color_bleu_de_france_dark:
-    value: "hsla({!bleu_de_france}, 44%, 1)"
-    category: color_group_3
-  color_bleu_de_france:
-    value: "hsla({!bleu_de_france}, 54%, 1)"
-    category: color_group_3
-  color_bleu_de_france_light:
-    value: "hsla({!bleu_de_france}, 64%, 1)"
-    category: color_group_3
-  color_bleu_de_france_lighter:
-    value: "hsla({!bleu_de_france}, 74%, 1)"
-    category: color_group_3
+  color_danger: ############ #F42A2A
+    value: "hsla({!red}, 56%, 1)"
+    category: color_group_new
 
-  color_oxford_blue:
-    value: "hsla({!oxford_blue}, 15%, 1)"
-    category: color_group_4
-  color_rich_black:
-    value: "{!rich_black}"
-    category: color_group_4
-  color_white:
-    value: "{!white}"
-    category: color_group_4
-  color_silver:
-    value: "#7F8891"
-    category: color_group_4
-  color_cloud:
-    value: "#E9F3FD"
-    category: color_group_4
+  color_black: ############ #000000
+    value: "hsla({!gray}, 0%, 1)"
+    category: color_group_new
+  color_pre_black: ############ #222222
+    value: "hsla({!gray}, 13%, 1)"
+    category: color_group_new
+  color_gray_darkest: ############ #333333
+    value: "hsla({!gray}, 20%, 1)"
+    category: color_group_new
+  color_gray_darker: ############ #4A4A4A
+    value: "hsla({!gray}, 29%, 1)"
+    category: color_group_new
+  color_gray_darken: ############ #5B5B5B
+    value: "hsla({!gray}, 36%, 1)"
+    category: color_group_new
+  color_gray_dark: ############ #777777
+    value: "hsla({!gray}, 47%, 1)"
+    category: color_group_new
+  color_gray: ############ #999999
+    value: "hsla({!gray}, 60%, 1)"
+    category: color_group_new
+  color_gray_light: ############ #C1C1C1
+    value: "hsla({!gray}, 76%, 1)"
+    category: color_group_new
+  color_gray_lighten: ############ #DCDCDC
+    value: "hsla({!gray}, 86%, 1)"
+    category: color_group_new
+  color_gray_lighter: ############ #E5E5E5
+    value: "hsla({!gray}, 90%, 1)"
+    category: color_group_new
+  color_gray_lightest: ############ #F3F3F3
+    value: "hsla({!gray}, 95%, 1)"
+    category: color_group_new
+  color_pre_white: ############ #F3F3F3
+    value: "hsla({!gray}, 99%, 1)"
+    category: color_group_new
+  color_white: ############ #FFFFFF
+    value: "hsla({!gray}, 100%, 1)"
+    category: color_group_new
+
 global:
   type: color
   category: color
