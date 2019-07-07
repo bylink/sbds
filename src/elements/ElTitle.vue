@@ -1,7 +1,7 @@
 <template>
   <component :is="tag" class="el-title" :class="classObject">
     <slot name="icon-prepend" />
-    <div class="el-title__text"><slot></slot></div>
+    <div class="el-title__text"><slot /></div>
     <slot name="icon-append" />
   </component>
 </template>
@@ -85,6 +85,9 @@ export default {
 </script>
 
 <style lang="scss">
+$sizes: $token-sizes;
+$line-heights: $token-line-heights;
+
 .el-title {
   $block-name: &;
   margin-top: 0;
@@ -117,100 +120,16 @@ export default {
   /*  }*/
   /*}*/
 
-  &--size-xxxxs {
-    font-size: $size-xs;
+  @each $size, $value in $sizes {
+    &--size-#{$size} {
+      font-size: $value;
+    }
   }
 
-  &--size-xxxs {
-    font-size: $size-xs;
-  }
-
-  &--size-xxs {
-    font-size: $size-xs;
-  }
-
-  &--size-xs {
-    font-size: $size-xs;
-  }
-
-  &--size-s {
-    font-size: $size-s;
-  }
-
-  &--size-sm {
-    font-size: $size-m;
-  }
-
-  &--size-m {
-    font-size: $size-m;
-  }
-
-  &--size-ml {
-    font-size: $size-ml;
-  }
-
-  &--size-l {
-    font-size: $size-l;
-  }
-
-  &--size-xl {
-    font-size: $size-xl;
-  }
-
-  &--size-xxl {
-    font-size: $size-xxl;
-  }
-
-  &--size-xxxl {
-    font-size: $size-xxxl;
-  }
-
-  &--size-xxxxl {
-    font-size: $size-xxxxl;
-  }
-
-  &--line-height-xxxs {
-    line-height: $line-height-xxxs;
-  }
-
-  &--line-height-xxs {
-    line-height: $line-height-xxs;
-  }
-
-  &--line-height-xs {
-    line-height: $line-height-xs;
-  }
-
-  &--line-height-s {
-    line-height: $line-height-s;
-  }
-
-  &--line-height-sm {
-    line-height: $line-height-sm;
-  }
-
-  &--line-height-m {
-    line-height: $line-height-m;
-  }
-
-  &--line-height-ml {
-    line-height: $line-height-ml;
-  }
-
-  &--line-height-l {
-    line-height: $line-height-l;
-  }
-
-  &--line-height-xl {
-    line-height: $line-height-xl;
-  }
-
-  &--line-height-xxl {
-    line-height: $line-height-xxl;
-  }
-
-  &--line-height-xxxl {
-    line-height: $line-height-xxxl;
+  @each $line-height, $value in $line-heights {
+    &--line-height-#{$line-height} {
+      line-height: $value;
+    }
   }
 
   &--ellipsis {

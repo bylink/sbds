@@ -26,6 +26,8 @@ props:
     value: "18px"
   line_height_xxxs:
     value: "16px"
+  line_height_xxxxs:
+    value: "14px"
 
 global:
   type: number

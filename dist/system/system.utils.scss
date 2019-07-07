@@ -81,6 +81,7 @@ $line-height-xxxl: 56px;
 $line-height-xl: 40px;
 $line-height-s: 24px;
 $line-height-xxs: 18px;
+$line-height-xxxxs: 14px;
 $line-height-sm: 28px;
 $line-height-xxxs: 16px;
 $line-height-xs: 20px;
@@ -216,11 +217,7 @@ $spacing-ratio: 1.7;
   max-width: 100%;
 }
 
-
-@mixin ellipsis(
-  $width: 100%,
-  $display: inline-block
-) {
+@mixin ellipsis($width: 100%, $display: inline-block) {
   display: $display;
   max-width: $width;
   overflow: hidden;

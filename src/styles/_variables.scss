@@ -14,3 +14,34 @@ $token-colors: (
   "danger": $color-danger,
   "success": $color-success,
 );
+
+$token-sizes: (
+  "xxxxl": $size-xxxxl,
+  "xxxl": $size-xxxl,
+  "xxl": $size-xxl,
+  "xl": $size-xl,
+  "l": $size-l,
+  "ml": $size-ml,
+  "m": $size-m,
+  "sm": $size-sm,
+  "s": $size-s,
+  "xs": $size-xs,
+  "xxs": $size-xxs,
+  "xxxs": $size-xxxs,
+  "xxxxs": $size-xxxxs,
+);
+
+$token-line-heights: (
+  "xxxl": $line-height-xxxl,
+  "xxl": $line-height-xxl,
+  "xl": $line-height-xl,
+  "l": $line-height-l,
+  "ml": $line-height-ml,
+  "m": $line-height-m,
+  "sm": $line-height-sm,
+  "s": $line-height-s,
+  "xs": $line-height-xs,
+  "xxs": $line-height-xxs,
+  "xxxs": $line-height-xxxs,
+  "xxxxs": $line-height-xxxxs,
+);

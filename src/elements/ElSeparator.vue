@@ -1,5 +1,5 @@
 <template>
-  <div class="el-separator" :class="classes"><slot></slot></div>
+  <div class="el-separator" :class="classes"><slot /></div>
 </template>
 
 <script>

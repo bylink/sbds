@@ -588,6 +588,13 @@
       "originalValue": "18px",
       "name": "line_height_xxs"
     },
+    "line_height_xxxxs": {
+      "type": "number",
+      "category": "line-height",
+      "value": "14px",
+      "originalValue": "14px",
+      "name": "line_height_xxxxs"
+    },
     "line_height_sm": {
       "type": "number",
       "category": "line-height",
