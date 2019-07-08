@@ -26,6 +26,7 @@
     <ElButton size="l" disabled>Кнопка L</ElButton>
     <ElButton>Кнопка M</ElButton>
     <ElButton size="s">Кнопка S</ElButton>
+    <ElButton size="xs">Кнопка XS</ElButton>
     <ElButton size="l" radius="none">Кнопка</ElButton>
     <ElButton size="l" fullWidth>Кнопка</ElButton>
 
@@ -34,6 +35,7 @@
     <ElButton size="l" disabled variation="main-outline">Кнопка L</ElButton>
     <ElButton variation="main-outline">Кнопка M</ElButton>
     <ElButton size="s" variation="main-outline">Кнопка S</ElButton>
+    <ElButton size="xs" variation="main-outline">Кнопка XS</ElButton>
 
     <ElButton size="s" variation="gray-light-small">Применить</ElButton>
 
@@ -116,6 +118,22 @@
     </div>
 
     <ElSeparator indentTop="l" indentBottom="l" />
+
+    <div style="max-width: 700px; margin-left: 30px;">
+      <ElFieldText
+        name="login"
+        title="Лейбл"
+        help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
+        :errors="['Имя пользователя и пароль не совпадают', 'Поле обязательно для заполнения.']"
+        v-model="inputText"
+      >
+        <ElSvgIcon slot="append" name="direction"></ElSvgIcon>
+      </ElFieldText>
+
+      <ElFieldText name="login2" title="Лейбл" disabled="" v-model="inputText"> </ElFieldText>
+    </div>
+
+    <ElSeparator indentTop="l" indentBottom="l" />
   </div>
 </template>
 
@@ -124,7 +142,8 @@ import ElSvgIcon from "../elements/ElSvgIcon"
 import ElTitle from "../elements/ElTitle"
 import ElSeparator from "../elements/ElSeparator"
 import ElButton from "../elements/ElButton"
-import ElFieldCheckbox from "../elements/ElFieldCheckbox"
+import ElFieldCheckbox from "../elements/ElField/ElFieldCheckbox"
+import ElFieldText from "../elements/ElField/ElFieldText"
 
 export default {
   name: "Index",
@@ -134,14 +153,22 @@ export default {
     ElSeparator,
     ElButton,
     ElFieldCheckbox,
+    ElFieldText,
   },
   props: {},
   data() {
     return {
       checkedRadio: true,
+      inputText: null,
     }
   },
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+</style>

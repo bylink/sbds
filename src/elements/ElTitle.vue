@@ -98,6 +98,7 @@ $line-heights: $token-line-heights;
   display: inline-flex;
   max-width: 100%;
   width: 100%;
+  transition: all 0.15s ease;
 
   &__text {
     padding-bottom: 1px; // fix overflow

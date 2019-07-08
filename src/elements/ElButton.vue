@@ -252,6 +252,24 @@ $colors: $token-colors;
   }
 
   &--size {
+    &-xs {
+      padding: $space_nano $space_s;
+      letter-spacing: normal;
+      font-weight: $weight-medium;
+      font-size: $size-xs;
+      height: $tappable-element-s;
+
+      .el-svg-icon,
+      .el-avatar {
+        &:first-child {
+          margin-right: $space_xs;
+        }
+
+        &:last-child {
+          margin-left: $space_xs;
+        }
+      }
+    }
     &-s {
       padding: $space_xxs / 2 $space_m;
       letter-spacing: normal;
@@ -334,11 +352,13 @@ $colors: $token-colors;
 
         &:hover,
         &:focus {
-          background-color: transparent;
+          background-color: $value;
+          color: $color-pre-black;
         }
 
         &:active {
-          background-color: transparent;
+          background-color: $value;
+          color: $color-pre-black;
         }
       } @else {
         background-color: $value;

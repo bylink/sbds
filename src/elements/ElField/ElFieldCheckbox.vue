@@ -1,6 +1,6 @@
 <template>
   <div class="el-field-checkbox" :class="classes">
-    <div class="el-field-text__header">
+    <div class="el-field-checkbox__header">
       <slot name="header">
         <ElTitle :ellipsis="false" v-if="title" :level="4">{{ title }}</ElTitle>
       </slot>
@@ -46,7 +46,7 @@
 </template>
 
 <script>
-import ElTitle from "./ElTitle"
+import ElTitle from "../ElTitle"
 export default {
   name: "ElFieldCheckbox",
   components: { ElTitle },
