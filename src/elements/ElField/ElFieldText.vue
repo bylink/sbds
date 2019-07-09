@@ -5,8 +5,8 @@
         <ElTitle
           :ellipsis="false"
           v-if="title"
-          :size="inputFocused ? 'xxxs' : 's'"
-          :line-height="inputFocused ? 'xxs' : 's'"
+          :size="titleSize"
+          :line-height="titleLineHeight"
           color="gray"
         >
           {{ title }}
@@ -26,6 +26,9 @@
           ref="input"
           :disabled="disabled"
           :id="name"
+          v-model="date"
+          @focus="inputFocused = true"
+          @blur="handleBlur"
           v-on="listeners"
           @input="value => handleInput(value)"
         ></flat-pickr>
@@ -38,6 +41,8 @@
           :disabled="disabled"
           :name="name"
           :id="name"
+          @focus="inputFocused = true"
+          @blur="handleBlur"
           v-on="listeners"
           @input="$event => handleInput($event.target.value)"
         ></textarea>
@@ -134,6 +139,24 @@ export default {
     },
 
     /**
+     *  Без границ
+     *
+     */
+    borderless: {
+      type: Boolean,
+      default: false,
+    },
+
+    /**
+     *  Без радиусов
+     *
+     */
+    radiusless: {
+      type: Boolean,
+      default: false,
+    },
+
+    /**
      *  Значение
      *
      */
@@ -174,6 +197,7 @@ export default {
       prependWidth: 0,
       appendWidth: 0,
       inputFocused: false,
+      date: new Date(),
     }
   },
 
@@ -189,7 +213,23 @@ export default {
         "el-field-text--date": this.isDate,
         "el-field-text--disabled": this.disabled,
         "el-field-text--focused": this.inputFocused,
+        "el-field-text--borderless": this.borderless,
+        "el-field-text--radiusless": this.radiusless,
       }
+    },
+
+    titleSize() {
+      if (this.isDate) {
+        return "xxxs"
+      }
+      return this.inputFocused ? "xxxs" : "s"
+    },
+
+    titleLineHeight() {
+      if (this.isDate) {
+        return "xxs"
+      }
+      return this.inputFocused ? "xxs" : "s"
     },
 
     isTextarea() {
@@ -247,13 +287,16 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~flatpickr/dist/flatpickr";
+
 .el-field-text {
   $block-name: &;
 
   display: block;
   position: relative;
 
-  &--focused {
+  &--focused,
+  &--date {
     & #{$block-name} {
       &__header {
         top: $space-xxs;
@@ -345,10 +388,8 @@ export default {
 
   textarea#{$block-name} {
     &__input {
-      $textarea-height: 94px;
-
-      height: auto;
-      min-height: calc(#{$textarea-height} + 2px);
+      height: $tappable-element-xl;
+      min-height: $tappable-element-xl;
       resize: vertical;
     }
   }
@@ -384,6 +425,24 @@ export default {
         cursor: not-allowed;
         background-color: $color-gray-lightest;
         border-color: $color-gray-lightest;
+      }
+    }
+  }
+
+  &--borderless {
+    #{$block-name} {
+      &__input {
+        border: none;
+      }
+    }
+  }
+
+  &--radiusless {
+    #{$block-name} {
+      &__input {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
       }
     }
   }

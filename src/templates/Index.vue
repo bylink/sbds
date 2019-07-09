@@ -119,21 +119,78 @@
 
     <ElSeparator indentTop="l" indentBottom="l" />
 
-    <div style="max-width: 700px; margin-left: 30px;">
+    <div style="margin-left: 30px; display: flex;">
+      <div style="width: 30%; margin-left: 5px;margin-right: 5px;">
+        <ElFieldText
+          name="login1"
+          title="Лейбл"
+          help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
+          v-model="inputText1"
+        >
+        </ElFieldText>
+      </div>
+
+      <div style="width: 30%; margin-left: 5px;margin-right: 5px;">
+        <ElFieldText
+          name="login2"
+          title="Лейбл"
+          help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
+          :errors="['Имя пользователя и пароль не совпадают', 'Поле обязательно для заполнения.']"
+          v-model="inputText2"
+        >
+          <ElSvgIcon slot="append" name="direction"></ElSvgIcon>
+        </ElFieldText>
+      </div>
+
+      <div style="width: 30%; margin-left: 5px;margin-right: 5px;">
+        <ElFieldText name="login3" title="Лейбл" disabled="" v-model="inputText3"> </ElFieldText>
+      </div>
+    </div>
+
+    <div style="display: flex; background-color: #333; padding: 15px;">
+      <div style="width: 33%; border-right: 1px solid gray;">
+        <ElFieldText name="login4" title="Лейбл1" v-model="inputText4" borderless radiusless>
+        </ElFieldText>
+      </div>
+      <div style="width: 33%; border-right: 1px solid gray;">
+        <ElFieldText name="login5" title="Лейбл" v-model="inputText5" borderless radiusless>
+        </ElFieldText>
+      </div>
+      <div style="width: 33%;">
+        <ElFieldText name="login6" title="Лейбл" v-model="inputText6" borderless radiusless>
+        </ElFieldText>
+      </div>
+    </div>
+
+    <div style="width: 700px; padding: 15px;">
       <ElFieldText
-        name="login"
-        title="Лейбл"
+        name="Textarea"
+        title="Лейбл7"
+        type="textarea"
         help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
-        :errors="['Имя пользователя и пароль не совпадают', 'Поле обязательно для заполнения.']"
-        v-model="inputText"
+        v-model="inputText7"
       >
-        <ElSvgIcon slot="append" name="direction"></ElSvgIcon>
       </ElFieldText>
 
-      <ElFieldText name="login2" title="Лейбл" disabled="" v-model="inputText"> </ElFieldText>
+      <ElFieldText name="datePicker" title="Лейбл8" type="date" v-model="inputText8"> </ElFieldText>
     </div>
 
     <ElSeparator indentTop="l" indentBottom="l" />
+
+    <div style="width: 700px; padding: 15px;">
+      <ElFieldPassword
+        name="password123"
+        title="passwordTitle"
+        :errors="['Имя пользователя и пароль не совпадают', 'Поле обязательно для заполнения.']"
+        help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
+        v-model="inputPassword"
+      >
+      </ElFieldPassword>
+    </div>
+
+    <ElSeparator indentTop="l" indentBottom="l" />
+
+    <div style="padding: 15px;"><ElLink>Ссылочка</ElLink></div>
   </div>
 </template>
 
@@ -142,8 +199,10 @@ import ElSvgIcon from "../elements/ElSvgIcon"
 import ElTitle from "../elements/ElTitle"
 import ElSeparator from "../elements/ElSeparator"
 import ElButton from "../elements/ElButton"
+import ElLink from "../elements/ElLink"
 import ElFieldCheckbox from "../elements/ElField/ElFieldCheckbox"
 import ElFieldText from "../elements/ElField/ElFieldText"
+import ElFieldPassword from "../elements/ElField/ElFieldPassword"
 
 export default {
   name: "Index",
@@ -152,16 +211,27 @@ export default {
     ElSvgIcon,
     ElSeparator,
     ElButton,
+    ElLink,
     ElFieldCheckbox,
     ElFieldText,
+    ElFieldPassword,
   },
   props: {},
   data() {
     return {
       checkedRadio: true,
-      inputText: null,
+      inputText1: null,
+      inputText2: null,
+      inputText3: null,
+      inputText4: null,
+      inputText5: null,
+      inputText6: null,
+      inputText7: null,
+      inputText8: null,
+      inputPassword: null,
     }
   },
+  methods: {},
 }
 </script>
 
