@@ -24,7 +24,7 @@
     <ElTitle size="m">Кнопки main</ElTitle>
 
     <ElButton size="l" disabled>Кнопка L</ElButton>
-    <ElButton>Кнопка M</ElButton>
+    <ElButton loading>Кнопка M</ElButton>
     <ElButton size="s">Кнопка S</ElButton>
     <ElButton size="xs">Кнопка XS</ElButton>
     <ElButton size="l" radius="none">Кнопка</ElButton>

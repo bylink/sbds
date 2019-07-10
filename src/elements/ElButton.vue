@@ -8,14 +8,14 @@
     :exact="exact"
   >
     <slot name="icon-prepend" />
-    <btn-loader class="el-button__loader" color="inherit" size="19px"></btn-loader>
+    <btn-loader v-if="loading" class="el-button__loader" color="inherit" size="19px" />
     <span class="el-button__text"> <slot /> </span> <slot name="icon-append" />
   </component>
 </template>
 
 <script>
 import "vue-loaders/dist/vue-loaders.css"
-import BallClipRotateMultipleLoader from "vue-loaders"
+import BtnLoader from "vue-loaders/dist/loaders/ball-clip-rotate-multiple"
 import ElSvgIcon from "./ElSvgIcon"
 import ElTitle from "./ElTitle"
 export default {
@@ -23,7 +23,7 @@ export default {
   components: {
     ElTitle,
     ElSvgIcon,
-    "btn-loader": BallClipRotateMultipleLoader,
+    "btn-loader": BtnLoader.component,
   },
   props: {
     /**
