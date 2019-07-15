@@ -4,10 +4,23 @@
 #
 
 props:
+  media_query_s:
+    value: "(min-width: 375px)"
   media_query_m:
     value: "(min-width: 768px)"
   media_query_l:
     value: "(min-width: 1024px)"
+  media_query_xl:
+    value: "(min-width: 1366px)"
+
+  media_query_s_down:
+    value: "(max-width: 374px)"
+  media_query_m_down:
+    value: "(max-width: 767px)"
+  media_query_l_down:
+    value: "(max-width: 1023px)"
+  media_query_xl_down:
+    value: "(max-width: 1365px)"
 global:
   type: ...
   category: media-query

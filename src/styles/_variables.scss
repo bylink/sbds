@@ -45,3 +45,27 @@ $token-line-heights: (
   "xxxs": $line-height-xxxs,
   "xxxxs": $line-height-xxxxs,
 );
+
+$token-tappable-elements: (
+  "xxl": $tappable-element-xxl,
+  "xl": $tappable-element-xl,
+  "l": $tappable-element-l,
+  "m": $tappable-element-m,
+  "s": $tappable-element-s,
+  "xs": $tappable-element-xs,
+  "xxs": $tappable-element-xxs,
+  "xxxs": $tappable-element-xxxs,
+);
+
+$token-spaces: (
+  "xxxl": $space-xxxl,
+  "xxl": $space-xxl,
+  "xl": $space-xl,
+  "l": $space-l,
+  "m": $space-m,
+  "s": $space-s,
+  "xs": $space-xs,
+  "xxs": $space-xxs,
+  "xxxs": $space-xxxs,
+  "nano": $space-nano,
+);

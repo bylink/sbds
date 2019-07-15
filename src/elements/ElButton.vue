@@ -564,3 +564,55 @@ $colors: $token-colors;
   }
 }
 </style>
+
+<docs>
+  ```jsx
+  let variations = [
+  'main',
+  'main-outline',
+  'gray-light-small',
+  'white',
+  ]
+
+  <div style="text-align: center">
+    <div v-for="(variation, index) in variations" :key="index">
+
+      <ElTitle style="margin-bottom: 20px;" size="l">{{ variation }}</ElTitle> <br>
+
+      <ElButton :variation="variation" class="mc-button--is-active" size="s">
+        Активная
+      </ElButton>
+
+      <ElButton :variation="variation" size="s">
+        Маленькая
+      </ElButton>
+
+      <ElButton :variation="variation" size="s">
+        Маленькая
+      </ElButton>
+
+      <ElButton :variation="variation" loading>
+        Стандартная
+      </ElButton>
+
+      <ElButton :variation="variation" size="l">
+        Большая
+      </ElButton>
+
+      <ElButton uppercase shadow radius="l" :variation="variation" size="l">
+        Добавить
+      </ElButton>
+
+      <ElButton :variation="variation" size="xl">
+        Огромная
+      </ElButton>
+
+      <br><br>
+    </div>
+
+    <ElButton variation="main" size="m" full-width>
+      На всю ширину родителя
+    </ElButton>
+  </div>
+  ```
+</docs>

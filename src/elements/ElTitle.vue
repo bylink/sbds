@@ -105,21 +105,21 @@ $line-heights: $token-line-heights;
     margin-bottom: -1px; // fix overflow
   }
 
-  /*.el-svg-icon {*/
-  /*  font-size: inherit;*/
-  /*  width: 1em;*/
-  /*  height: 1em;*/
-  /*}*/
+  .el-svg-icon {
+    font-size: inherit;
+    width: 1em;
+    height: 1em;
+  }
 
-  /*> .el-svg-icon,*/
-  /*.el-tooltip-target {*/
-  /*  &:first-child {*/
-  /*    margin-right: 0.3em;*/
-  /*  }*/
-  /*  &:last-child {*/
-  /*    margin-left: 0.3em;*/
-  /*  }*/
-  /*}*/
+  > .el-svg-icon,
+  .el-tooltip-target {
+    &:first-child {
+      margin-right: 0.3em;
+    }
+    &:last-child {
+      margin-left: 0.3em;
+    }
+  }
 
   @each $size, $value in $sizes {
     &--size-#{$size} {
@@ -169,3 +169,66 @@ $line-heights: $token-line-heights;
   }
 }
 </style>
+<docs>
+  ```jsx
+  <div>
+    <ElTitle size="s">
+      <ElSvgIcon slot="icon-prepend" name="clock"/>
+      Заголовок
+    </ElTitle>
+
+    <br><br>
+
+    <ElTitle size="s">
+      <ElSvgIcon slot="icon-prepend" name="map"/>
+      Заголовок
+      <ElSvgIcon slot="icon-append" name="user"/>
+    </ElTitle>
+
+    <br><br>
+
+    <ElTitle size="m">
+      <ElSvgIcon slot="icon-prepend" name="wifi"/>
+      Заголовок
+      <ElSvgIcon slot="icon-append" name="user"/>
+    </ElTitle>
+
+    <br><br>
+
+    <ElTitle size="l">
+      <ElSvgIcon slot="icon-prepend" name="wifi"/>
+      Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок
+      <ElSvgIcon slot="icon-append" name="user"/>
+    </ElTitle>
+
+    <br><br>
+
+    <ElTitle :ellipsis="false" size="xl">
+      <ElSvgIcon slot="icon-prepend" name="wifi"/>
+      Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок
+      <ElSvgIcon slot="icon-append" name="user"/>
+    </ElTitle>
+
+    <br><br>
+
+    <ElTitle uppercase size="xxl">
+      <ElSvgIcon slot="icon-prepend" name="wifi"/>
+      Заголовок
+    </ElTitle>
+
+    <br><br>
+
+    <ElTitle size="xxxl">
+      <ElSvgIcon slot="icon-prepend" name="wifi"/>
+      Заголовок
+    </ElTitle>
+
+    <br><br>
+
+    <ElTitle size="xxxxl" line-height="xxxl" color="primary">
+      <ElSvgIcon slot="icon-prepend" name="wifi"/>
+      Заголовок
+    </ElTitle>
+  </div>
+  ```
+</docs>

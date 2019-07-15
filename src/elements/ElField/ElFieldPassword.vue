@@ -112,14 +112,16 @@ export default {
 
 <docs>
     ```jsx
-    let text = 'lalala'
+    let inputPassword = null
     <div style="max-width: 700px;">
-        <ElFieldPassword
-                placeholder="Введите пароль"
-                v-model="text"
-                type="password"
-                name="password"
-        />
+      <ElFieldPassword
+              name="password123"
+              title="passwordTitle"
+              :errors="['Имя пользователя и пароль не совпадают', 'Поле обязательно для заполнения.']"
+              help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
+              v-model="inputPassword"
+      >
+      </ElFieldPassword>
     </div>
     ```
 </docs>

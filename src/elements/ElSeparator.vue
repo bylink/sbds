@@ -35,6 +35,8 @@ export default {
 </script>
 
 <style lang="scss">
+$spaces: $token-spaces;
+
 .el-separator {
   $block-name: &;
 
@@ -42,44 +44,19 @@ export default {
   height: 1px;
   background-color: $color-gray-lighter;
 
-  &--indent-top-xxl {
-    margin-top: $space-xxl;
-  }
-
-  &--indent-bottom-xxl {
-    margin-bottom: $space-xxl;
-  }
-
-  &--indent-top-xl {
-    margin-top: $space-xl;
-  }
-
-  &--indent-bottom-xl {
-    margin-bottom: $space-xl;
-  }
-
-  &--indent-top-l {
-    margin-top: $space-l;
-  }
-
-  &--indent-bottom-l {
-    margin-bottom: $space-l;
-  }
-
-  &--indent-top-m {
-    margin-top: $space-m;
-  }
-
-  &--indent-bottom-m {
-    margin-bottom: $space-m;
-  }
-
-  &--indent-top-s {
-    margin-top: $space-s;
-  }
-
-  &--indent-bottom-s {
-    margin-bottom: $space-s;
+  @each $space, $value in $spaces {
+    &--indent-top-#{$space} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
   }
 }
 </style>
+
+<docs>
+  ```jsx
+  <div>
+    <ElSeparator indent-top="xs" indent-bottom="xs"/>
+  </div>
+  ```
+</docs>

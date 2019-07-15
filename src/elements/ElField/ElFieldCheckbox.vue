@@ -46,10 +46,11 @@
 </template>
 
 <script>
+import ElSeparator from "../ElSeparator"
 import ElTitle from "../ElTitle"
 export default {
   name: "ElFieldCheckbox",
-  components: { ElTitle },
+  components: { ElTitle, ElSeparator },
   props: {
     /**
      *  Тип: чекбокс или радио
@@ -297,26 +298,77 @@ export default {
   ```jsx
   let toggler = null
   let toggler2 = null
+  let checkedRadio = true
   <div>
-    <ElFieldCheckbox
-            :errors="['Имя пользователя и пароль не совпадают', 'Поле обязательно для заполнения.']"
-            name="check"
-            title="Заголовок"
-            help-text="Используйте электронный адрес, указанный при регистрации аккаунта MediaCube."
-            v-model="toggler"
-            main-text="Чекбокс"
-    />
+    <div style="display: flex;">
+      <ElFieldCheckbox
+              main-text="Чекбокс 1"
+              title="Заголовок чекбокса 1"
+              name="checkbox1"
+              help-text="Вспомогательный текст чекбокса."
+              :errors="['Ошибка чекбокса 1', 'Ошибка чекбокса 2']"
+      >
+        <ElTitle tag-name="div" color="gray" :ellipsis="false" line-height="s" size="xs"
+        >Чекбокс и ссылочка <a href="#">keke</a></ElTitle
+        >
+      </ElFieldCheckbox>
 
-    <br>
+      <ElFieldCheckbox
+              main-text="Чекбокс 2"
+              title="Заголовок чекбокса 2"
+              name="checkbox2"
+              help-text="Вспомогательный текст чекбокса."
+              :errors="['Ошибка чекбокса 3', 'Ошибка чекбокса 4']"
+      >
+        <ElTitle tag-name="div" color="gray" :ellipsis="false" line-height="s" size="xs"
+        >Чекбокс и ссылочка <a href="#">keke</a></ElTitle
+        >
+      </ElFieldCheckbox>
 
-    <ElFieldCheckbox
-            disabled
-            name="check2"
-            title="Заголовок"
-            help-text="Используйте электронный адрес, указанный при регистрации аккаунта MediaCube."
-            v-model="toggler2"
-            main-text="Чекбокс неактивный"
-    />
+      <ElFieldCheckbox
+              main-text="Задизейбленный чекбокс"
+              disabled
+              title="Заголовок чекбокса 3"
+              name="checkbox3"
+      >
+      </ElFieldCheckbox>
+    </div>
+
+    <ElSeparator indentTop="l" indentBottom="l" />
+
+    <div style="display: flex;">
+      <ElFieldCheckbox
+              type="radio"
+              :value="checkedRadio"
+              main-text="Радио 1"
+              title="Заголовок Радио 1"
+              name="radio"
+              help-text="Вспомогательный текст radio."
+              :errors="['Ошибка radio 1', 'Ошибка radio 2']"
+      >
+      </ElFieldCheckbox>
+
+      <ElFieldCheckbox
+              type="radio"
+              main-text="Радио 2"
+              title="Заголовок радио 2"
+              name="radio"
+              help-text="Вспомогательный текст radio."
+              :errors="['Ошибка radio 3', 'Ошибка radio 4']"
+      >
+      </ElFieldCheckbox>
+
+      <ElFieldCheckbox
+              type="radio"
+              disabled
+              main-text="Задизейбленный радио 3"
+              title="Заголовок радио 3"
+              name="radio"
+              help-text="Вспомогательный текст radio."
+              :errors="['Ошибка radio 3', 'Ошибка radio 4']"
+      >
+      </ElFieldCheckbox>
+    </div>
   </div>
   ```
 </docs>

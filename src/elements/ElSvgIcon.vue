@@ -43,20 +43,6 @@ export default {
       type: String,
       default: "xs",
     },
-    /**
-     *  Размеры отступа справа:
-     *  `nano, xxxs, xxs, xs, s, m, l, xl`
-     */
-    indentRight: {
-      type: String,
-    },
-    /**
-     *  Размеры отступа слева:
-     *  `nano, xxxs, xxs, xs, s, m, l, xl`
-     */
-    indentLeft: {
-      type: String,
-    },
   },
   data() {
     return {
@@ -75,8 +61,6 @@ export default {
     classes() {
       return {
         [`el-svg-icon--size-${this.size}`]: this.size,
-        [`el-svg-icon--indent-right-${this.indentRight}`]: this.indentRight,
-        [`el-svg-icon--indent-left-${this.indentLeft}`]: this.indentLeft,
       }
     },
   },
@@ -84,6 +68,8 @@ export default {
 </script>
 
 <style lang="scss">
+$sizes: $token-tappable-elements;
+
 .el-svg-icon {
   @include reset();
   @include reset-text-indents();
@@ -93,50 +79,22 @@ export default {
     height: inherit;
   }
 
-  &--size-xxs {
-    width: $tappable_element_xxs;
-    height: $tappable_element_xxs;
-  }
-
-  &--size-xs {
-    width: $tappable_element_xs;
-    height: $tappable_element_xs;
-  }
-
-  &--size-s {
-    width: $tappable_element_s;
-    height: $tappable_element_s;
-  }
-
-  &--size-m {
-    width: $tappable_element_m;
-    height: $tappable_element_m;
-  }
-
-  &--size-l {
-    width: $tappable_element_l;
-    height: $tappable_element_l;
-  }
-
-  &--size-xl {
-    width: $tappable_element_xl;
-    height: $tappable_element_xl;
-  }
-
-  &--indent-right-nano {
-    margin-right: $space-nano;
-  }
-
-  &--indent-right-xxxs {
-    margin-right: $space-xxxs;
-  }
-
-  &--indent-left-nano {
-    margin-left: $space-nano;
-  }
-
-  &--indent-left-xxxs {
-    margin-left: $space-xxxs;
+  @each $size, $value in $sizes {
+    &--size-#{$size} {
+      width: $value;
+      height: $value;
+    }
   }
 }
 </style>
+
+<docs>
+  ```jsx
+  let icons = require('@/utils/load-icons').default;
+  <div>
+    <div v-for="(icon, index) in icons" :key="index">
+      <ElSvgIcon :name="icon" size="m"/> {{ icon }}
+    </div>
+  </div>
+  ```
+</docs>

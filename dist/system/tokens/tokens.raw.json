@@ -301,12 +301,19 @@
       "originalValue": "0.5",
       "name": "opacity_disabled"
     },
-    "tappable_element_xxl": {
+    "container_l": {
       "type": "number",
       "category": "size",
-      "value": "72px",
-      "originalValue": "72px",
-      "name": "tappable_element_xxl"
+      "value": "944px",
+      "originalValue": "944px",
+      "name": "container_l"
+    },
+    "container_m": {
+      "type": "number",
+      "category": "size",
+      "value": "704px",
+      "originalValue": "704px",
+      "name": "container_m"
     },
     "tappable_element_xl": {
       "type": "number",
@@ -314,6 +321,13 @@
       "value": "60px",
       "originalValue": "60px",
       "name": "tappable_element_xl"
+    },
+    "tappable_element_xxl": {
+      "type": "number",
+      "category": "size",
+      "value": "72px",
+      "originalValue": "72px",
+      "name": "tappable_element_xxl"
     },
     "tappable_element_l": {
       "type": "number",
@@ -329,12 +343,19 @@
       "originalValue": "40px",
       "name": "tappable_element_m"
     },
-    "tappable_element_s": {
+    "container_xl": {
       "type": "number",
       "category": "size",
-      "value": "32px",
-      "originalValue": "32px",
-      "name": "tappable_element_s"
+      "value": "1278px",
+      "originalValue": "1278px",
+      "name": "container_xl"
+    },
+    "container_s": {
+      "type": "number",
+      "category": "size",
+      "value": "335px",
+      "originalValue": "335px",
+      "name": "container_s"
     },
     "tappable_element_xs": {
       "type": "number",
@@ -343,12 +364,26 @@
       "originalValue": "24px",
       "name": "tappable_element_xs"
     },
-    "tappable_element_xxs": {
+    "tappable_element_xxxs": {
       "type": "number",
       "category": "size",
       "value": "12px",
       "originalValue": "12px",
+      "name": "tappable_element_xxxs"
+    },
+    "tappable_element_xxs": {
+      "type": "number",
+      "category": "size",
+      "value": "22px",
+      "originalValue": "22px",
       "name": "tappable_element_xxs"
+    },
+    "tappable_element_s": {
+      "type": "number",
+      "category": "size",
+      "value": "32px",
+      "originalValue": "32px",
+      "name": "tappable_element_s"
     },
     "duration_quickly": {
       "type": "number",
@@ -364,6 +399,13 @@
       "originalValue": "0.5s",
       "name": "duration_slowly"
     },
+    "z_index_dropdown": {
+      "type": "number",
+      "category": "z-index",
+      "value": "100",
+      "originalValue": "100",
+      "name": "z_index_dropdown"
+    },
     "z_index_modal": {
       "type": "number",
       "category": "z-index",
@@ -378,6 +420,41 @@
       "originalValue": "100",
       "name": "z_index_sticky"
     },
+    "z_index_header": {
+      "type": "number",
+      "category": "z-index",
+      "value": "10000",
+      "originalValue": "10000",
+      "name": "z_index_header"
+    },
+    "z_index_top_line": {
+      "type": "number",
+      "category": "z-index",
+      "value": "9999",
+      "originalValue": "9999",
+      "name": "z_index_top_line"
+    },
+    "z_index_notification": {
+      "type": "number",
+      "category": "z-index",
+      "value": "10001",
+      "originalValue": "10001",
+      "name": "z_index_notification"
+    },
+    "z_index_overlay": {
+      "type": "number",
+      "category": "z-index",
+      "value": "10002",
+      "originalValue": "10002",
+      "name": "z_index_overlay"
+    },
+    "media_query_s": {
+      "type": "...",
+      "category": "media-query",
+      "value": "(min-width: 375px)",
+      "originalValue": "(min-width: 375px)",
+      "name": "media_query_s"
+    },
     "media_query_m": {
       "type": "...",
       "category": "media-query",
@@ -391,6 +468,41 @@
       "value": "(min-width: 1024px)",
       "originalValue": "(min-width: 1024px)",
       "name": "media_query_l"
+    },
+    "media_query_xl": {
+      "type": "...",
+      "category": "media-query",
+      "value": "(min-width: 1366px)",
+      "originalValue": "(min-width: 1366px)",
+      "name": "media_query_xl"
+    },
+    "media_query_s_down": {
+      "type": "...",
+      "category": "media-query",
+      "value": "(max-width: 374px)",
+      "originalValue": "(max-width: 374px)",
+      "name": "media_query_s_down"
+    },
+    "media_query_m_down": {
+      "type": "...",
+      "category": "media-query",
+      "value": "(max-width: 767px)",
+      "originalValue": "(max-width: 767px)",
+      "name": "media_query_m_down"
+    },
+    "media_query_l_down": {
+      "type": "...",
+      "category": "media-query",
+      "value": "(max-width: 1023px)",
+      "originalValue": "(max-width: 1023px)",
+      "name": "media_query_l_down"
+    },
+    "media_query_xl_down": {
+      "type": "...",
+      "category": "media-query",
+      "value": "(max-width: 1365px)",
+      "originalValue": "(max-width: 1365px)",
+      "name": "media_query_xl_down"
     },
     "shadow_s": {
       "type": "...",

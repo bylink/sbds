@@ -190,7 +190,52 @@
 
     <ElSeparator indentTop="l" indentBottom="l" />
 
-    <div style="padding: 15px;"><ElLink>Ссылочка</ElLink></div>
+    <div style="padding: 15px; background-color: #f2f2f2;">
+      <ElLink href="https://www.google.ru" border="solid" border-color="main">Ссылочка</ElLink>
+      <ElLink
+        href="https://www.google.ru"
+        border="dashed"
+        variation="gray-darkest"
+        border-color="main"
+        >Ссылочка</ElLink
+      >
+      <ElLink variation="white" border="dashed" border-color="white">Ссылочка</ElLink>
+      <ElLink variation="main" border="dashed" border-color="danger">
+        <ElSvgIcon size="xxs" slot="icon-prepend" name="map"></ElSvgIcon>
+        Ссылочка
+      </ElLink>
+      <ElLink size="xxxs" disabled>
+        <ElSvgIcon size="xxs" slot="icon-prepend" name="map"></ElSvgIcon>
+        Ссылочка
+      </ElLink>
+    </div>
+
+    <ElSeparator indentTop="l" indentBottom="l" />
+
+    <ElButton @click.prevent="$modal.show('testModal')">Modal</ElButton>
+    <ElModal name="testModal">
+      <template slot="title"
+        >Заголовок1</template
+      >
+      Контент1
+      <template slot="footer"
+        >Футер</template
+      >
+    </ElModal>
+    <ElFormModal
+      name="testFormModal"
+      submit-text="Войти или зарегистрироваться"
+      linkText="Забыли пароль?"
+    >
+      <template slot="title"
+        >Заголовок2</template
+      >
+      Контент2
+    </ElFormModal>
+
+    <ElSection background="gray" gutter-top="m" gutter-bottom="xl">
+      <ElTitle> ElSection </ElTitle>
+    </ElSection>
   </div>
 </template>
 
@@ -200,9 +245,12 @@ import ElTitle from "../elements/ElTitle"
 import ElSeparator from "../elements/ElSeparator"
 import ElButton from "../elements/ElButton"
 import ElLink from "../elements/ElLink"
+import ElModal from "../elements/ElModal"
+import ElFormModal from "../patterns/ElFormModal"
 import ElFieldCheckbox from "../elements/ElField/ElFieldCheckbox"
 import ElFieldText from "../elements/ElField/ElFieldText"
 import ElFieldPassword from "../elements/ElField/ElFieldPassword"
+import ElSection from "../elements/ElSection"
 
 export default {
   name: "Index",
@@ -212,9 +260,12 @@ export default {
     ElSeparator,
     ElButton,
     ElLink,
+    ElModal,
+    ElFormModal,
     ElFieldCheckbox,
     ElFieldText,
     ElFieldPassword,
+    ElSection,
   },
   props: {},
   data() {

@@ -6,11 +6,13 @@ import Vue from "vue"
 import WebFontLoader from "../src/utils/webFontLoader" // eslint-disable-line no-unused-vars
 import statusLabels from "./utils/statusLabels"
 import activeNav from "./utils/activeNav"
+import VModal from "vue-js-modal"
 import filterSearch from "./utils/filterSearch"
 import "codemirror/mode/jsx/jsx"
 
 Vue.config.productionTip = false
 Vue.mixin(statusLabels)
+Vue.use(VModal)
 
 document.addEventListener("DOMContentLoaded", () => {
   filterSearch.methods.init()

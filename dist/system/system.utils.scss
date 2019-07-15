@@ -40,19 +40,35 @@ $weight-medium: 500;
 $weight-normal: 400;
 $weight-light: 300;
 $opacity-disabled: 0.5;
-$tappable-element-xxl: 72px;
+$container-l: 944px;
+$container-m: 704px;
 $tappable-element-xl: 60px;
+$tappable-element-xxl: 72px;
 $tappable-element-l: 48px;
 $tappable-element-m: 40px;
-$tappable-element-s: 32px;
+$container-xl: 1278px;
+$container-s: 335px;
 $tappable-element-xs: 24px;
-$tappable-element-xxs: 12px;
+$tappable-element-xxxs: 12px;
+$tappable-element-xxs: 22px;
+$tappable-element-s: 32px;
 $duration-quickly: 0.08s;
 $duration-slowly: 0.5s;
+$z-index-dropdown: 100;
 $z-index-modal: 9999;
 $z-index-sticky: 100;
+$z-index-header: 10000;
+$z-index-top-line: 9999;
+$z-index-notification: 10001;
+$z-index-overlay: 10002;
+$media-query-s: (min-width: 375px);
 $media-query-m: (min-width: 768px);
 $media-query-l: (min-width: 1024px);
+$media-query-xl: (min-width: 1366px);
+$media-query-s-down: (max-width: 374px);
+$media-query-m-down: (max-width: 767px);
+$media-query-l-down: (max-width: 1023px);
+$media-query-xl-down: (max-width: 1365px);
 $shadow-s: 0 0 0 1px rgba(92,106,196,.1);
 $spacing-xl: 2px;
 $spacing-l: 1px;
@@ -250,6 +266,34 @@ $spacing-ratio: 1.7;
   }
   ::selection {
     @content;
+  }
+}
+
+@mixin reset-btn() {
+  box-sizing: border-box;
+  display: block;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  background-image: none;
+  cursor: pointer;
+  outline: 0;
+  font-size: 0;
+  line-height: 0;
+  font-family: inherit;
+  -webkit-appearance: none;
+  -webkit-text-fill-color: currentColor;
+
+  &:focus {
+    outline: 0;
   }
 }
 

@@ -58,7 +58,7 @@ export default {
      */
     variation: {
       type: String,
-      default: "main",
+      default: "gray-darken",
     },
     /**
      *  Размеры:
@@ -99,6 +99,20 @@ export default {
       type: Boolean,
       default: false,
     },
+    /**
+     * Подчеркивание
+     */
+    border: {
+      type: String,
+      default: "none",
+    },
+    /**
+     * Цвет подчеркивания
+     */
+    borderColor: {
+      type: String,
+      default: "gray-darken",
+    },
   },
 
   computed: {
@@ -106,6 +120,8 @@ export default {
       return {
         [`el-link--variation-${this.variation}`]: this.variation,
         [`el-link--size-${this.size}`]: this.size,
+        [`el-link--border-${this.border}`]: this.border,
+        [`el-link--border-color-${this.borderColor}`]: this.borderColor,
 
         "el-link--is-active": this.isActive,
         "el-link--disabled": this.disabled,
@@ -147,14 +163,11 @@ $colors: $token-colors;
   $block-name: &;
 
   @include reset();
-  padding: $space_xxs / 2 $space_m;
   font-family: $font-medium;
   letter-spacing: $spacing-m;
   font-weight: $weight-medium;
   font-size: $size-sm;
-  line-height: $line-height-s;
-  border-radius: $radius-xl;
-  height: $tappable-element-l;
+  line-height: $line-height-sm;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
@@ -186,93 +199,120 @@ $colors: $token-colors;
   }
 
   &--size {
-    &-xs {
-      padding: $space_nano $space_s;
+    &-xxxs {
       letter-spacing: normal;
+      line-height: $line-height-xxs;
       font-weight: $weight-medium;
-      font-size: $size-xs;
-      height: $tappable-element-s;
+      font-size: $size-xxxs;
 
       .el-svg-icon,
       .el-avatar {
         &:first-child {
-          margin-right: $space_xs;
+          margin-right: $space_nano;
         }
 
         &:last-child {
-          margin-left: $space_xs;
+          margin-left: $space_nano;
+        }
+      }
+    }
+    &-xxs {
+      letter-spacing: normal;
+      line-height: $line-height-xs;
+      font-weight: $weight-medium;
+      font-size: $size-xxs;
+
+      .el-svg-icon,
+      .el-avatar {
+        &:first-child {
+          margin-right: $space_nano;
+        }
+
+        &:last-child {
+          margin-left: $space_nano;
+        }
+      }
+    }
+    &-xs {
+      letter-spacing: normal;
+      line-height: $line-height-xs;
+      font-weight: $weight-medium;
+      font-size: $size-xs;
+
+      .el-svg-icon,
+      .el-avatar {
+        &:first-child {
+          margin-right: $space_nano;
+        }
+
+        &:last-child {
+          margin-left: $space_nano;
         }
       }
     }
     &-s {
-      padding: $space_xxs / 2 $space_m;
       letter-spacing: normal;
+      line-height: $line-height-s;
       font-weight: $weight-medium;
       font-size: $size-sm;
-      height: $tappable-element-m;
 
       .el-svg-icon,
       .el-avatar {
         &:first-child {
-          margin-right: $space_xs;
+          margin-right: $space_nano;
         }
 
         &:last-child {
-          margin-left: $space_xs;
+          margin-left: $space_nano;
         }
       }
     }
     &-m {
-      padding: $space_xxs / 2 $space_m;
       letter-spacing: $spacing-m;
+      line-height: $line-height-sm;
       font-weight: $weight-medium;
       font-size: $size-sm;
-      height: $tappable-element-l;
 
       .el-svg-icon,
       .el-avatar {
         &:first-child {
-          margin-right: $space_xs;
+          margin-right: $space_nano;
         }
 
         &:last-child {
-          margin-left: $space_xs;
+          margin-left: $space_nano;
         }
       }
     }
     &-l {
-      padding: $space_s / 2 $space_xl;
       letter-spacing: $spacing-m;
       font-weight: $weight-medium;
       font-size: $size-m;
-      height: $tappable-element-xl;
 
       .el-svg-icon,
       .el-avatar {
         &:first-child {
-          margin-right: $space_xs;
+          margin-right: $space_nano;
         }
 
         &:last-child {
-          margin-left: $space_xs;
+          margin-left: $space_nano;
         }
       }
     }
     &-xl {
-      padding: $space_xxs / 2 $space_l;
       letter-spacing: normal;
       font-weight: $weight-medium;
       font-size: $size-l;
-      height: $tappable-element-xl;
 
       .el-svg-icon,
       .el-avatar {
         &:first-child {
-          margin-right: $space_s;
+          margin-right: $space_nano;
         }
 
         &:last-child {
-          margin-left: $space_s;
+          margin-left: $space_nano;
         }
       }
     }
@@ -280,111 +320,49 @@ $colors: $token-colors;
 
   @each $color, $value in $colors {
     &--variation-#{$color} {
-      @if $color == "white" {
-        background-color: transparent;
-        border: 2px solid $value;
+      background-color: transparent;
+      color: $value;
 
-        &:hover,
-        &:focus {
-          background-color: $value;
-          color: $color-pre-black;
-        }
+      &:hover,
+      &:focus,
+      &:active {
+        color: darken($value, 10%);
+      }
 
-        &:active {
-          background-color: $value;
-          color: $color-pre-black;
-        }
-      } @else {
-        background-color: $value;
-        color: $color-white;
-        border: 2px solid transparent;
-
-        &:hover,
-        &:focus {
-          background-color: $color-main-focused;
-        }
-
-        &:active {
-          background-color: $color-main-active;
-        }
-
-        &-invert {
-          background-color: fade-out($value, 0.9);
-          color: $value;
-
-          &:hover,
-          &:focus {
-            background-color: fade-out($value, 0.8);
-          }
-
-          &:active {
-            background-color: fade-out($value, 0.75);
+      &#{$block-name} {
+        &--border-none {
+          & #{$block-name}__text {
+            border: none;
           }
         }
 
-        &-outline {
-          border: 2px solid $value;
-          color: $value;
-
-          &:hover,
-          &:focus {
-            border-color: $color-main-focused;
-            background-color: $color-main-focused;
-            color: $color-white;
-          }
-
-          &:active {
-            border-color: $color-main-active;
-            background-color: $color-main-active;
-            color: $color-white;
+        &--border-solid {
+          & #{$block-name}__text {
+            border-bottom: 1px solid $value;
           }
         }
 
-        &-small {
-          border: 1px solid $value;
-          color: $value;
-          font-size: $size-xxxs;
-          height: $space-s;
-          line-height: $line-height-xxs;
-          padding: $space_nano $space-xxs + 3;
-
-          &:hover,
-          &:focus {
-            border-color: darken($value, 10%);
-            color: darken($value, 15%);
-          }
-
-          &:active {
-            border-color: darken($value, 25%);
-            color: darken($value, 25%);
+        &--border-dashed {
+          & #{$block-name}__text {
+            border-bottom: 1px dashed $value;
           }
         }
+      }
+    }
+  }
 
-        &-link {
-          color: $value;
-          padding: 0;
-          height: auto;
-          width: auto;
-          border: none;
-
-          &:hover,
-          &:focus {
-            color: darken($value, 12%);
-          }
-
-          &:active {
-            color: darken($value, 16%);
-          }
-
-          &#{$block-name} {
-            &--disabled {
-              opacity: $opacity-disabled;
-              background-color: transparent !important;
-              color: $value !important;
-              border-color: transparent !important;
-            }
-          }
+  @each $color, $value in $colors {
+    &--border-color-#{$color} {
+      &:hover,
+      &:focus,
+      &:active {
+        & #{$block-name}__text {
+          border-bottom-color: darken($value, 10%) !important;
         }
+      }
+
+      & #{$block-name}__text {
+        border-color: $value !important;
       }
     }
   }
@@ -411,3 +389,24 @@ $colors: $token-colors;
   }
 }
 </style>
+
+<docs>
+  ```jsx
+  <div style="padding: 15px; background-color: #f2f2f2;">
+    <ElLink href="https://www.google.ru" border="solid">Ссылка</ElLink>
+    <ElLink variation="white" border="dashed">Ссылка</ElLink>
+    <ElLink variation="main" border="dashed">
+      <ElSvgIcon size="xxs" slot="icon-prepend" name="map"></ElSvgIcon>
+      Ссылка
+    </ElLink>
+    <ElLink size="xxxs" disabled>
+      <ElSvgIcon size="xxs" slot="icon-prepend" name="map"></ElSvgIcon>
+      Ссылка
+    </ElLink>
+    <ElLink border="dashed" variation="gray-darkest" border-color="main">
+      <ElSvgIcon size="xxs" slot="icon-prepend" name="map"></ElSvgIcon>
+      Ссылка
+    </ElLink>
+  </div>
+  ```
+</docs>

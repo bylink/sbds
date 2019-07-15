@@ -77,10 +77,10 @@
         {{ errorText }}
       </ElTitle>
       <br v-if="errorText" />
-      <slot name="footer">
-        <ElTitle tag-name="div" :ellipsis="false" line-height="xxxs" size="xxxs" v-if="helpText">{{
-          helpText
-        }}</ElTitle>
+      <slot name="footer"
+        ><ElTitle tag-name="div" :ellipsis="false" line-height="xxxs" size="xxxs" v-if="helpText">
+          {{ helpText }}</ElTitle
+        >
       </slot>
     </div>
   </div>
@@ -451,65 +451,63 @@ export default {
 
 <docs>
     ```jsx
-    let text = null
+
+   let inputText1= null
+   let inputText2= null
+   let inputText3= null
+   let inputText4= null
+   let inputText5= null
+   let inputText6= null
+   let inputText7= null
+   let inputText8= null
     <div style="max-width: 700px">
+      <ElFieldText
+              name="login1"
+              title="Лейбл"
+              help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
+              v-model="inputText1"
+      >
+      </ElFieldText>
+
+      <ElFieldText
+              name="login2"
+              title="Лейбл"
+              help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
+              :errors="['Имя пользователя и пароль не совпадают', 'Поле обязательно для заполнения.']"
+              v-model="inputText2"
+      >
+        <ElSvgIcon slot="append" name="direction"></ElSvgIcon>
+      </ElFieldText>
+
+      <ElFieldText name="login3" title="Лейбл" disabled="" v-model="inputText3"> </ElFieldText>
+
+      <div style="display: flex; background-color: #333; padding: 15px;">
+        <div style="width: 33%; border-right: 1px solid gray;">
+          <ElFieldText name="login4" title="Лейбл1" v-model="inputText4" borderless radiusless>
+          </ElFieldText>
+        </div>
+        <div style="width: 33%; border-right: 1px solid gray;">
+          <ElFieldText name="login5" title="Лейбл" v-model="inputText5" borderless radiusless>
+          </ElFieldText>
+        </div>
+        <div style="width: 33%;">
+          <ElFieldText name="login6" title="Лейбл" v-model="inputText6" borderless radiusless>
+          </ElFieldText>
+        </div>
+      </div>
+
+      <div style="width: 700px; padding: 15px;">
         <ElFieldText
-                placeholder="Введите сообщение"
-                name="login"
-                help-text="Используйте электронный адрес, указанный при регистрации аккаунта MediaCube."
-        >
-            <ElTitle :ellipsis="false" :level="4" slot="header">
-<!--                <ElTooltip placement="right" slot="icon-append" size="s"-->
-<!--                           content="Используйте электронный адрес, указанный при регистрации аккаунта MediaCube.">-->
-<!--                    <ElSvgIcon name="help"/>-->
-<!--                </ElTooltip>-->
-                Электронная почта
-            </ElTitle>
-            <ElSvgIcon slot="prepend" name="face"/>
-            <ElSvgIcon slot="prepend" name="access_time"/>
-            <ElSvgIcon slot="append" name="attach_money"/>
-
-<!--            <ElTooltip slot="append" size="s" content="Вывести все средства">-->
-<!--                <ElButton uppercase variation="gray-darkest-invert" size="s">-->
-<!--                    Все-->
-<!--                </ElButton>-->
-<!--            </ElTooltip>-->
-            <ElButton slot="append" uppercase variation="gray-darkest-invert" size="s">
-                Фонды
-            </ElButton>
-        </ElFieldText>
-
-        <br>
-
-        <ElFieldText
-                placeholder="Disabled"
-                disabled
-                name="pass"
-                title="Заголовок"
-                help-text="Используйте электронный адрес, указанный при регистрации аккаунта MediaCube."
-        />
-
-        <br>
-
-        <ElFieldText
-                :errors="['Имя пользователя и пароль не совпадают', 'Поле обязательно для заполнения.']"
-                name="message"
+                name="Textarea"
+                title="Лейбл7"
                 type="textarea"
-                placeholder="Введите сообщение"
-                title="Textarea"
+                help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
+                v-model="inputText7"
         >
-            <ElButton
-                    variation="primary-link"
-                    slot="append"
-                    size="s-compact"
-            >
-                <ElSvgIcon slot="icon-append" name="send"/>
-            </ElButton>
         </ElFieldText>
 
-        <br>
-
-        <ElFieldText title="Флэтпицкер" name="date" type="date" placeholder="Дата"></ElFieldText>
+        <ElFieldText name="datePicker" title="Лейбл8" type="date" v-model="inputText8"> </ElFieldText>
+      </div>
     </div>
     ```
 </docs>

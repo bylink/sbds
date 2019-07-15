@@ -17,7 +17,18 @@ props:
   tappable_element_xs:
     value: "24px"
   tappable_element_xxs:
+    value: "22px"
+  tappable_element_xxxs:
     value: "12px"
+
+  container_xl:
+    value: "1278px"
+  container_l:
+    value: "944px"
+  container_m:
+    value: "704px"
+  container_s:
+    value: "335px"
 
 global:
   type: number
