@@ -7,8 +7,10 @@
 </template>
 
 <script>
+import ElSvgIcon from "../elements/ElSvgIcon"
 export default {
   name: "ElTitle",
+  components: { ElSvgIcon },
   props: {
     /**
      * Уровень: `h1`, `h2` и т.д.
@@ -198,7 +200,6 @@ $line-heights: $token-line-heights;
     <ElTitle size="l">
       <ElSvgIcon slot="icon-prepend" name="wifi"/>
       Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок
-      <ElSvgIcon slot="icon-append" name="user"/>
     </ElTitle>
 
     <br><br>
@@ -206,7 +207,6 @@ $line-heights: $token-line-heights;
     <ElTitle :ellipsis="false" size="xl">
       <ElSvgIcon slot="icon-prepend" name="wifi"/>
       Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок Заголовок
-      <ElSvgIcon slot="icon-append" name="user"/>
     </ElTitle>
 
     <br><br>
@@ -225,7 +225,7 @@ $line-heights: $token-line-heights;
 
     <br><br>
 
-    <ElTitle size="xxxxl" line-height="xxxl" color="primary">
+    <ElTitle size="xxxxl" line-height="xxxl" color="main">
       <ElSvgIcon slot="icon-prepend" name="wifi"/>
       Заголовок
     </ElTitle>

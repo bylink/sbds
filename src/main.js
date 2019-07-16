@@ -8,10 +8,12 @@ import Meta from "vue-meta"
 
 // Vue Design System: Auto importing components globally
 import DesignSystem from "@/system"
+import VueLazyload from "vue-lazyload"
 import VModal from "vue-js-modal"
 
 Vue.use(DesignSystem)
 Vue.use(Meta)
+Vue.use(VueLazyload)
 Vue.use(VModal)
 
 Vue.config.productionTip = false

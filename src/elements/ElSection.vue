@@ -76,7 +76,7 @@ $spaces: $token-spaces;
     }
   }
 
-  &--container {
+  &__container {
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px;
@@ -102,28 +102,30 @@ $spaces: $token-spaces;
 
 <docs>
   ```jsx
-    <ElSection background="gray" gutter-top="m" gutter-bottom="xl">
-      <ElTitle >
-        ElSection gutter top and bot
-      </ElTitle>
-    </ElSection>
+    <div>
+      <ElSection background="gray" gutter-top="m" gutter-bottom="xl">
+        <ElTitle >
+          ElSection gutter top and bot
+        </ElTitle>
+      </ElSection>
 
-    <ElSection background="gray" gutter-top="m" gutter-bottom="xl">
-      <ElTitle >
-        ElSection gutter top and bot
-      </ElTitle>
-    </ElSection>
+      <ElSection background="gray-lightest" gutter-top="m" gutter-bottom="xl">
+        <ElTitle >
+          ElSection gutter top and bot
+        </ElTitle>
+      </ElSection>
 
-    <ElSection>
-      <ElTitle >
-        ElSection default
-      </ElTitle>
-    </ElSection>
+      <ElSection>
+        <ElTitle >
+          ElSection default
+        </ElTitle>
+      </ElSection>
 
-    <ElSection background="main" gutter-top="m">
-      <ElTitle >
-        ElSection gutter bot
-      </ElTitle>
-    </ElSection>
+      <ElSection background="main" gutter-top="m">
+        <ElTitle >
+          ElSection gutter top
+        </ElTitle>
+      </ElSection>
+    </div>
   ```
 </docs>

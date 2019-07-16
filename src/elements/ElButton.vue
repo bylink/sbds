@@ -587,10 +587,6 @@ $colors: $token-colors;
         Маленькая
       </ElButton>
 
-      <ElButton :variation="variation" size="s">
-        Маленькая
-      </ElButton>
-
       <ElButton :variation="variation" loading>
         Стандартная
       </ElButton>

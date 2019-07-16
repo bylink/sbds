@@ -37,7 +37,10 @@
     <ElButton size="s" variation="main-outline">Кнопка S</ElButton>
     <ElButton size="xs" variation="main-outline">Кнопка XS</ElButton>
 
-    <ElButton size="s" variation="gray-light-small">Применить</ElButton>
+    <div style="display: flex; align-items: center;">
+      <ElButton size="s" variation="gray-light-small">Применить</ElButton
+      ><ElAvatar size="xs" rounded></ElAvatar>
+    </div>
 
     <div
       style="width: 200px;height: 60px;background-color: #333;display: flex;align-items: center;justify-content: center;"
@@ -251,6 +254,8 @@ import ElFieldCheckbox from "../elements/ElField/ElFieldCheckbox"
 import ElFieldText from "../elements/ElField/ElFieldText"
 import ElFieldPassword from "../elements/ElField/ElFieldPassword"
 import ElSection from "../elements/ElSection"
+import ElCard from "../elements/ElCard"
+import ElAvatar from "../elements/ElAvatar"
 
 export default {
   name: "Index",
@@ -266,6 +271,8 @@ export default {
     ElFieldText,
     ElFieldPassword,
     ElSection,
+    ElCard,
+    ElAvatar,
   },
   props: {},
   data() {

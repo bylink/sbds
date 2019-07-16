@@ -301,6 +301,34 @@
       "originalValue": "0.5",
       "name": "opacity_disabled"
     },
+    "avatar_xs": {
+      "type": "number",
+      "category": "size",
+      "value": "24px",
+      "originalValue": "24px",
+      "name": "avatar_xs"
+    },
+    "avatar_l": {
+      "type": "number",
+      "category": "size",
+      "value": "48px",
+      "originalValue": "48px",
+      "name": "avatar_l"
+    },
+    "avatar_m": {
+      "type": "number",
+      "category": "size",
+      "value": "32px",
+      "originalValue": "32px",
+      "name": "avatar_m"
+    },
+    "avatar_s": {
+      "type": "number",
+      "category": "size",
+      "value": "24px",
+      "originalValue": "24px",
+      "name": "avatar_s"
+    },
     "container_l": {
       "type": "number",
       "category": "size",
@@ -384,6 +412,13 @@
       "value": "32px",
       "originalValue": "32px",
       "name": "tappable_element_s"
+    },
+    "avatar_xl": {
+      "type": "number",
+      "category": "size",
+      "value": "56px",
+      "originalValue": "56px",
+      "name": "avatar_xl"
     },
     "duration_quickly": {
       "type": "number",
@@ -546,25 +581,18 @@
       "originalValue": "-1px",
       "name": "spacing_xs"
     },
-    "radius_xxl": {
-      "type": "number",
-      "category": "border-radius",
-      "value": "100px",
-      "originalValue": "100px",
-      "name": "radius_xxl"
-    },
     "radius_xl": {
       "type": "number",
       "category": "border-radius",
-      "value": "60px",
-      "originalValue": "60px",
+      "value": "16px",
+      "originalValue": "16px",
       "name": "radius_xl"
     },
     "radius_l": {
       "type": "number",
       "category": "border-radius",
-      "value": "40px",
-      "originalValue": "40px",
+      "value": "10px",
+      "originalValue": "10px",
       "name": "radius_l"
     },
     "radius_m": {
