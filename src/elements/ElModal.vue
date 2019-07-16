@@ -29,7 +29,7 @@
 import ElSvgIcon from "../elements/ElSvgIcon"
 import ElButton from "../elements/ElButton"
 export default {
-  name: "ELModal",
+  name: "ElModal",
   components: { ElButton, ElSvgIcon },
   props: {
     name: {
