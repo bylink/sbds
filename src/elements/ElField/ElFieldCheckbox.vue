@@ -48,9 +48,10 @@
 <script>
 import ElSeparator from "../ElSeparator"
 import ElTitle from "../ElTitle"
+import ElLink from "../ElLink"
 export default {
   name: "ElFieldCheckbox",
-  components: { ElTitle, ElSeparator },
+  components: { ElTitle, ElSeparator, ElLink },
   props: {
     /**
      *  Тип: чекбокс или радио
@@ -309,7 +310,7 @@ export default {
               :errors="['Ошибка чекбокса 1', 'Ошибка чекбокса 2']"
       >
         <ElTitle tag-name="div" color="gray" :ellipsis="false" line-height="s" size="xs"
-        >Чекбокс и ссылочка <a href="#">keke</a></ElTitle
+        >Чекбокс и ссылочка <ElLink href="#" size="xs" border="solid">Ссылочка</ElLink></ElTitle
         >
       </ElFieldCheckbox>
 

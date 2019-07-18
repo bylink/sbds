@@ -18,34 +18,18 @@ export default {
       default: "gray-lightest",
     },
     /**
-     *  Отступ сверху:
+     *  Отступ сверху и снизу:
      *  `xs, s, m, l, xl и т.д.`
      */
-    gutterTop: {
+    gutterY: {
       type: String,
       default: "m",
     },
     /**
-     *  Отступ снизу:
+     *  Отступ справа и слева:
      *  `xs, s, m, l, xl и т.д.`
      */
-    gutterBottom: {
-      type: String,
-      default: "m",
-    },
-    /**
-     *  Отступ слева:
-     *  `xs, s, m, l, xl и т.д.`
-     */
-    gutterLeft: {
-      type: String,
-      default: "m",
-    },
-    /**
-     *  Отступ справа:
-     *  `xs, s, m, l, xl и т.д.`
-     */
-    gutterRight: {
+    gutterX: {
       type: String,
       default: "m",
     },
@@ -70,10 +54,8 @@ export default {
     classes() {
       return {
         [`el-card--background-${this.background}`]: this.background,
-        [`el-card--gutter-top-${this.gutterTop}`]: this.gutterTop,
-        [`el-card--gutter-bottom-${this.gutterBottom}`]: this.gutterBottom,
-        [`el-card--gutter-left-${this.gutterLeft}`]: this.gutterLeft,
-        [`el-card--gutter-right-${this.gutterRight}`]: this.gutterRight,
+        [`el-card--gutter-y-${this.gutterY}`]: this.gutterY,
+        [`el-card--gutter-x-${this.gutterX}`]: this.gutterX,
         [`el-card--border-radius-${this.radius}`]: this.radius,
         [`el-card--border-color-${this.borderColor}`]: this.borderColor,
       }
@@ -97,26 +79,16 @@ $radiuses: $token-radiuses;
   }
 
   @each $space, $value in $spaces {
-    &--gutter-top-#{$space} {
+    &--gutter-y-#{$space} {
       padding-top: $value;
-    }
-  }
-
-  @each $space, $value in $spaces {
-    &--gutter-bottom-#{$space} {
       padding-bottom: $value;
     }
   }
 
   @each $space, $value in $spaces {
-    &--gutter-left-#{$space} {
-      padding-left: $value;
-    }
-  }
-
-  @each $space, $value in $spaces {
-    &--gutter-right-#{$space} {
+    &--gutter-x-#{$space} {
       padding-right: $value;
+      padding-left: $value;
     }
   }
 
@@ -149,13 +121,13 @@ $radiuses: $token-radiuses;
         </ElTitle>
       </ElCard>
 
-      <ElCard gutter-top="xs" gutter-bottom="s" gutter-left="m" gutter-right="l" border-color="success">
+      <ElCard gutter-top="xs" gutterY="s" gutterX="m" border-color="success">
         <ElTitle>
           ElCard default
         </ElTitle>
       </ElCard>
 
-      <ElCard background="main" gutter-top="m">
+      <ElCard background="main" gutterY="l">
         <ElTitle>
           ElCard gutter bot
         </ElTitle>

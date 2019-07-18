@@ -71,9 +71,17 @@ $token-spaces: (
 );
 
 $token-radiuses: (
-  "xl": $space-xl,
-  "l": $space-l,
-  "m": $space-m,
-  "s": $space-s,
-  "xs": $space-xs,
+  "xl": $radius-xl,
+  "l": $radius-l,
+  "m": $radius-m,
+  "s": $radius-s,
+  "xs": $radius-xs,
+);
+
+$token-avatars: (
+  "xl": $avatar-xl,
+  "l": $avatar-l,
+  "m": $avatar-m,
+  "s": $avatar-s,
+  "xs": $avatar-xs,
 );

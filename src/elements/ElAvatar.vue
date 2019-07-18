@@ -4,11 +4,11 @@
       v-if="lazy && src"
       v-lazy="{ src: src, attempt: 1 }"
       :key="_src"
-      alt=""
+      :alt="alt"
       class="el-avatar__img"
     />
-    <img v-else-if="src" :src="src" alt="" class="el-avatar__img" />
-    <div v-else class="el-avatar__pic"><ElSvgIcon name="Avatar" fill="white" :size="size" /></div>
+    <img v-else-if="src" :src="src" :alt="alt" class="el-avatar__img" />
+    <div v-else class="el-avatar__pic"><ElSvgIcon name="avatar" fill="white" :size="size" /></div>
   </figure>
 </template>
 
@@ -31,6 +31,14 @@ export default {
      *
      */
     src: {
+      type: String,
+      default: null,
+    },
+    /**
+     *  Alt
+     *
+     */
+    alt: {
       type: String,
       default: null,
     },
@@ -64,6 +72,8 @@ export default {
 </script>
 
 <style lang="scss">
+$avatars: $token-avatars;
+
 .el-avatar {
   $block-name: &;
 
@@ -89,24 +99,10 @@ export default {
     object-fit: cover;
   }
 
-  &--size-xs {
-    @include size($avatar-xs);
-  }
-
-  &--size-s {
-    @include size($avatar-s);
-  }
-
-  &--size-m {
-    @include size($avatar-m);
-  }
-
-  &--size-l {
-    @include size($avatar-l);
-  }
-
-  &--size-xl {
-    @include size($avatar-xl);
+  @each $avatar, $value in $avatars {
+    &--size-#{$avatar} {
+      @include size($value);
+    }
   }
 
   &--rounded {
