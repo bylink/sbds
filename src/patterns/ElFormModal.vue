@@ -79,10 +79,12 @@ export default {
 
 <docs>
   ```jsx
-  <ElButton @click.prevent="$modal.show('testFormModal')">Open</ElButton>
-  <ElFormModal name="testFormModal" cancel-text="Отмена" submit-text="Сохранить">
-    <template slot="title">Заголовок</template>
-    Контент
-  </ElFormModal>
+  <div>
+    <ElButton @click.prevent="$modal.show('testFormModal')">Open</ElButton>
+    <ElFormModal name="testFormModal" cancel-text="Отмена" submit-text="Сохранить">
+      <template slot="title">Заголовок</template>
+      Контент
+    </ElFormModal>
+  </div>
   ```
 </docs>

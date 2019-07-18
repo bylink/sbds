@@ -65,7 +65,7 @@
       </div>
       <div class="el-field-text__append"><slot name="append" /></div>
     </div>
-    <div class="el-field-text__footer">
+    <div class="el-field-text__footer" v-if="errorText || helpText">
       <ElTitle
         tag-name="div"
         :ellipsis="false"
@@ -77,10 +77,10 @@
         {{ errorText }}
       </ElTitle>
       <br v-if="errorText" />
-      <slot name="footer"
-        ><ElTitle tag-name="div" :ellipsis="false" line-height="xxxs" size="xxxs" v-if="helpText">
-          {{ helpText }}</ElTitle
-        >
+      <slot name="footer">
+        <ElTitle tag-name="div" :ellipsis="false" line-height="xxxs" size="xxxs" v-if="helpText">
+          {{ helpText }}
+        </ElTitle>
       </slot>
     </div>
   </div>
@@ -498,15 +498,14 @@ export default {
 
       <div style="width: 700px; padding: 15px;">
         <ElFieldText
-                name="Textarea"
-                title="Лейбл7"
-                type="textarea"
-                help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
-                v-model="inputText7"
-        >
-        </ElFieldText>
+          name="Textarea"
+          title="Лейбл7"
+          type="textarea"
+          help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
+          v-model="inputText7"
+        />
 
-        <ElFieldText name="datePicker" title="Лейбл8" type="date" v-model="inputText8"> </ElFieldText>
+        <ElFieldText name="datePicker" title="Лейбл8" type="date" v-model="inputText8"/>
       </div>
     </div>
     ```

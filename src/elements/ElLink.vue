@@ -392,10 +392,11 @@ $colors: $token-colors;
 
 <docs>
   ```jsx
+  let eventClick = eventClick => alert('1')
   <div style="padding: 15px; background-color: #f2f2f2;">
     <ElLink href="https://www.google.ru" border="solid">Ссылка</ElLink>
     <ElLink variation="white" border="dashed">Ссылка</ElLink>
-    <ElLink variation="main" border="dashed">
+    <ElLink variation="main" border="dashed" @click="eventClick">
       <ElSvgIcon size="xxs" slot="icon-prepend" name="map"></ElSvgIcon>
       Ссылка
     </ElLink>

@@ -8,9 +8,7 @@
       class="el-avatar__img"
     />
     <img v-else-if="src" :src="src" alt="" class="el-avatar__img" />
-    <div v-else class="el-avatar__pic">
-      <ElSvgIcon name="Avatar" fill="white" :size="size"></ElSvgIcon>
-    </div>
+    <div v-else class="el-avatar__pic"><ElSvgIcon name="Avatar" fill="white" :size="size" /></div>
   </figure>
 </template>
 
@@ -85,7 +83,7 @@ export default {
     justify-content: center;
   }
 
-  img {
+  &__img {
     width: 100%;
     height: 100%;
     object-fit: cover;

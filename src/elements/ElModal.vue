@@ -147,10 +147,8 @@ export default {
     box-shadow: 0 6px 12px rgba(110, 110, 110, 0.61);
     padding: 32px 40px 40px 40px;
     background-color: $color-white;
-    margin: 0;
+    margin: 0 12px;
     border-radius: 8px;
-    margin-left: 12px;
-    margin-right: 12px;
   }
 
   &__control {

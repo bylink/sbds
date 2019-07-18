@@ -138,13 +138,13 @@ $radiuses: $token-radiuses;
   ```jsx
     <div>
       <ElCard>
-        <ElTitle >
+        <ElTitle>
           ElCard default
         </ElTitle>
       </ElCard>
 
       <ElCard background="white" border-color="main" radius="xl">
-        <ElTitle >
+        <ElTitle>
           ElCard gutter top and bot
         </ElTitle>
       </ElCard>
@@ -156,7 +156,7 @@ $radiuses: $token-radiuses;
       </ElCard>
 
       <ElCard background="main" gutter-top="m">
-        <ElTitle >
+        <ElTitle>
           ElCard gutter bot
         </ElTitle>
       </ElCard>
