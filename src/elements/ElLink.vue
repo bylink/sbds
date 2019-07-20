@@ -100,7 +100,8 @@ export default {
       default: false,
     },
     /**
-     * Подчеркивание
+     * Подчеркивание:
+     *   none, solid, dashed
      */
     border: {
       type: String,
@@ -163,13 +164,13 @@ $colors: $token-colors;
   $block-name: &;
 
   @include reset();
+  vertical-align: inherit;
   font-family: $font-medium;
   letter-spacing: $spacing-m;
   font-weight: $weight-medium;
   font-size: $size-sm;
   line-height: $line-height-sm;
   white-space: nowrap;
-  vertical-align: middle;
   user-select: none;
   text-decoration: none;
   text-transform: none;
@@ -178,7 +179,6 @@ $colors: $token-colors;
   cursor: pointer;
   outline: 0;
   display: inline-flex;
-  border: 1px solid transparent;
   justify-content: center;
   position: relative;
   transition: all $duration-quickly;
@@ -395,19 +395,24 @@ $colors: $token-colors;
   let eventClick = eventClick => alert('1')
   <div style="padding: 15px; background-color: #f2f2f2;">
     <ElLink href="https://www.google.ru" border="solid">Ссылка</ElLink>
+    <br>
     <ElLink variation="white" border="dashed">Ссылка</ElLink>
+    <br>
     <ElLink variation="main" border="dashed" @click="eventClick">
       <ElSvgIcon size="xxs" slot="icon-prepend" name="map"></ElSvgIcon>
       Ссылка
     </ElLink>
+    <br>
     <ElLink size="xxxs" disabled>
       <ElSvgIcon size="xxs" slot="icon-prepend" name="map"></ElSvgIcon>
       Ссылка
     </ElLink>
+    <br>
     <ElLink border="dashed" variation="gray-darkest" border-color="main">
       <ElSvgIcon size="xxs" slot="icon-prepend" name="map"></ElSvgIcon>
       Ссылка
     </ElLink>
+    <br>
   </div>
   ```
 </docs>

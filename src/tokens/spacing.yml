@@ -24,7 +24,6 @@ props:
     value: "4px"
   space_nano:
     value: "2px"
-
 global:
   type: number
   category: space
