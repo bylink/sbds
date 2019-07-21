@@ -19,5 +19,3 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-# Ignore compiled tokens
-src/assets/tokens/
