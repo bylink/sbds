@@ -8,7 +8,12 @@
     :exact="exact"
   >
     <slot name="icon-prepend" />
-    <btn-loader v-if="loading" class="el-button__loader" color="inherit" size="19px" />
+    <btn-loader
+      v-if="loading"
+      class="el-button__loader"
+      color="inherit"
+      style="width: 19px;height: 19px;"
+    />
     <span class="el-button__text"> <slot /> </span> <slot name="icon-append" />
   </component>
 </template>

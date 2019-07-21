@@ -95,11 +95,10 @@ import flatPickr from "vue-flatpickr-component"
 import ElTitle from "../ElTitle"
 import ElSvgIcon from "../ElSvgIcon"
 import ElButton from "../ElButton"
-// import ElTooltip from "../ElTooltip"
 
 export default {
   name: "ElFieldText",
-  components: { /* ElTooltip,*/ ElButton, ElSvgIcon, ElTitle, flatPickr },
+  components: { ElButton, ElSvgIcon, ElTitle, flatPickr },
   props: {
     /**
      *  Тип:
@@ -205,6 +204,18 @@ export default {
     this.calculatePadding()
   },
 
+  created() {
+    this.checkValue()
+  },
+
+  watch: {
+    value() {
+      if (this.value !== null) {
+        this.inputFocused = true
+      }
+    },
+  },
+
   computed: {
     classes() {
       return {
@@ -258,6 +269,12 @@ export default {
   },
 
   methods: {
+    checkValue() {
+      if (this.value !== null) {
+        this.inputFocused = true
+      }
+    },
+
     handleBlur() {
       if (this.value === null || this.value === "") {
         this.inputFocused = false
