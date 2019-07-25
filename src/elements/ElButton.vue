@@ -8,12 +8,7 @@
     :exact="exact"
   >
     <slot name="icon-prepend" />
-    <btn-loader
-      v-if="loading"
-      class="el-button__loader"
-      color="inherit"
-      style="width: 19px;height: 19px;"
-    />
+    <btn-loader v-if="loading" class="el-button__loader" color="inherit" :scale="loaderSize" />
     <span class="el-button__text"> <slot /> </span> <slot name="icon-append" />
   </component>
 </template>
@@ -199,6 +194,9 @@ export default {
 
       return result
     },
+    loaderSize() {
+      return this.variation === "gray-light-small" ? 0.5 : 0.8
+    },
   },
 }
 </script>
@@ -241,10 +239,8 @@ $colors: $token-colors;
 
   &__loader {
     position: absolute !important;
-    left: 50%;
-    top: 50%;
-    transform: translate3d(-50%, -50%, 0);
     display: none !important;
+    margin-top: -1px;
   }
 
   &__text {
@@ -588,7 +584,7 @@ $colors: $token-colors;
         Активная
       </ElButton>
 
-      <ElButton :variation="variation" size="s">
+      <ElButton :variation="variation" size="s" loading>
         Маленькая
       </ElButton>
 
@@ -596,7 +592,7 @@ $colors: $token-colors;
         Стандартная
       </ElButton>
 
-      <ElButton :variation="variation" size="l">
+      <ElButton :variation="variation" size="l" loading>
         Большая
       </ElButton>
 

@@ -225,6 +225,7 @@
         >Футер</template
       >
     </ElModal>
+    <ElButton @click.prevent="$modal.show('testFormModal')">FormModal</ElButton>
     <ElFormModal
       name="testFormModal"
       submit-text="Войти или зарегистрироваться"

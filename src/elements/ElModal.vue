@@ -6,7 +6,7 @@
     :adaptive="true"
     height="auto"
     width="100%"
-    :maxWidth="510"
+    :maxWidth="515"
     @before-open="event => $emit('beforeOpen', event)"
     @before-close="event => $emit('beforeClose', event)"
     @closed="event => $emit('closed', event)"
@@ -53,8 +53,10 @@ export default {
 .el-modal {
   $block-name: &;
 
-  padding-top: 12px;
-  padding-bottom: 12px;
+  @media #{$media-query-m} {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 
   &__btn-close {
     @include reset-btn();
@@ -110,6 +112,13 @@ export default {
       overflow: visible;
       top: auto !important;
       left: auto !important;
+      width: 100% !important;
+      height: 100vh !important;
+
+      @media #{$media-query-m} {
+        width: 515px !important;
+        height: auto !important;
+      }
     }
 
     &.scrollable {
@@ -147,8 +156,13 @@ export default {
     box-shadow: 0 6px 12px rgba(110, 110, 110, 0.61);
     padding: 32px 40px 40px 40px;
     background-color: $color-white;
-    margin: 0 12px;
-    border-radius: 8px;
+    height: 100%;
+
+    @media #{$media-query-m} {
+      margin: 0 12px;
+      height: auto;
+      border-radius: 8px;
+    }
   }
 
   &__control {
