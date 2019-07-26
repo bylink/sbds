@@ -9,17 +9,10 @@
 </template>
 
 <script>
-import ElSvgIcon from "./ElSvgIcon"
-import ElTitle from "./ElTitle"
-
 const req = require.context("../assets/icons/", true, /^\.\/.*\.svg$/)
 
 export default {
   name: "ElLogo",
-  components: {
-    ElTitle,
-    ElSvgIcon,
-  },
   props: {
     /**
      *  Название сервиса
