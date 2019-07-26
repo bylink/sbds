@@ -589,7 +589,7 @@ $colors: $token-colors;
       </ElButton>
 
       <ElButton :variation="variation" size="s" loading>
-
+        Лодер
       </ElButton>
 
       <ElButton :variation="variation">

@@ -21,6 +21,13 @@ export default {
       type: String,
       default: null,
     },
+    /**
+     * Цвет
+     */
+    color: {
+      type: String,
+      default: "gray-lighter",
+    },
   },
 
   computed: {
@@ -28,6 +35,7 @@ export default {
       return {
         [`el-separator--indent-top-${this.indentTop}`]: this.indentTop,
         [`el-separator--indent-bottom-${this.indentBottom}`]: this.indentBottom,
+        [`el-separator--color-${this.color}`]: this.color,
       }
     },
   },
@@ -36,6 +44,7 @@ export default {
 
 <style lang="scss">
 $spaces: $token-spaces;
+$colors: $token-colors;
 
 .el-separator {
   $block-name: &;
@@ -46,6 +55,12 @@ $spaces: $token-spaces;
 
   @each $space, $value in $spaces {
     &--indent-top-#{$space} {
+      margin-top: $value;
+      margin-bottom: $value;
+    }
+  }
+  @each $color, $value in $colors {
+    &--color-#{$color} {
       margin-top: $value;
       margin-bottom: $value;
     }
