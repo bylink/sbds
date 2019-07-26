@@ -56,6 +56,8 @@ $colors: $token-colors;
   @each $space, $value in $spaces {
     &--indent-top-#{$space} {
       margin-top: $value;
+    }
+    &--indent-bottom-#{$space} {
       margin-bottom: $value;
     }
   }

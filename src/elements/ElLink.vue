@@ -56,7 +56,7 @@ export default {
      *  Дизайн:
      *  `main, main-outline, gray-light-small, white и т.д.`
      */
-    variation: {
+    color: {
       type: String,
       default: "gray-darken",
     },
@@ -119,7 +119,7 @@ export default {
   computed: {
     classes() {
       return {
-        [`el-link--variation-${this.variation}`]: this.variation,
+        [`el-link--color-${this.variation}`]: this.variation,
         [`el-link--size-${this.size}`]: this.size,
         [`el-link--border-${this.border}`]: this.border,
         [`el-link--border-color-${this.borderColor}`]: this.borderColor,
@@ -319,7 +319,7 @@ $colors: $token-colors;
   }
 
   @each $color, $value in $colors {
-    &--variation-#{$color} {
+    &--color-#{$color} {
       background-color: transparent;
       color: $value;
 
