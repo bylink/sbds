@@ -5,7 +5,7 @@
 
 props:
   radius_xl:
-    value: "16px"
+    value: "60px"
   radius_l:
     value: "10px"
   radius_m:

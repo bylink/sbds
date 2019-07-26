@@ -37,6 +37,7 @@ export default {
       }
     },
     activator() {
+      console.log(this.$slots)
       return this.$slots.activator[0].elm
     },
   },

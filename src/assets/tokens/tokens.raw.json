@@ -584,8 +584,8 @@
     "radius_xl": {
       "type": "number",
       "category": "border-radius",
-      "value": "16px",
-      "originalValue": "16px",
+      "value": "60px",
+      "originalValue": "60px",
       "name": "radius_xl"
     },
     "radius_l": {

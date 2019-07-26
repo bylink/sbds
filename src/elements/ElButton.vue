@@ -580,19 +580,23 @@ $colors: $token-colors;
 
       <ElTitle style="margin-bottom: 20px;" size="l">{{ variation }}</ElTitle> <br>
 
+      <ElButton :variation="variation" class="mc-button--is-active" size="xs">
+        Маленькая
+      </ElButton>
+
       <ElButton :variation="variation" class="mc-button--is-active" size="s">
         Активная
       </ElButton>
 
       <ElButton :variation="variation" size="s" loading>
-        Маленькая
+
       </ElButton>
 
-      <ElButton :variation="variation" loading>
+      <ElButton :variation="variation">
         Стандартная
       </ElButton>
 
-      <ElButton :variation="variation" size="l" loading>
+      <ElButton :variation="variation" size="l">
         Большая
       </ElButton>
 

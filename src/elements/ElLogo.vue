@@ -120,7 +120,7 @@ export default {
 
   &__title {
     display: block;
-    font-size: $size_xxxs;
+    font-size: $size_xs;
     line-height: $line_height_xxs;
     text-transform: uppercase;
 
@@ -132,8 +132,8 @@ export default {
 
   &__sub-title {
     display: block;
-    font-size: 8px;
-    line-height: 10px;
+    font-size: 10px;
+    line-height: 13px;
     color: $color-gray-dark;
 
     @media #{$media-query-m} {
@@ -143,15 +143,15 @@ export default {
   }
 
   &__svg {
-    margin-right: 6px;
+    margin-right: 8px;
 
     @media #{$media-query-m} {
       margin-right: 11px;
     }
 
     svg {
-      width: 26px;
-      height: 26px;
+      width: 34px;
+      height: 34px;
 
       @media #{$media-query-m} {
         width: 46px;
