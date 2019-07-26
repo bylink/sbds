@@ -52,6 +52,7 @@ export default {
   watch: {
     name: {
       handler(val) {
+        console.log(val)
         this.svg = req("./" + val + ".svg").replace(/^<svg /, `<svg style="fill: ${this.fill}"`)
       },
       immediate: true,
