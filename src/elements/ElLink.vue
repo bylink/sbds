@@ -119,7 +119,7 @@ export default {
   computed: {
     classes() {
       return {
-        [`el-link--color-${this.variation}`]: this.variation,
+        [`el-link--color-${this.color}`]: this.color,
         [`el-link--size-${this.size}`]: this.size,
         [`el-link--border-${this.border}`]: this.border,
         [`el-link--border-color-${this.borderColor}`]: this.borderColor,
@@ -396,9 +396,9 @@ $colors: $token-colors;
   <div style="padding: 15px; background-color: #f2f2f2;">
     <ElLink href="https://www.google.ru" border="solid">Ссылка</ElLink>
     <br>
-    <ElLink variation="white" border="dashed">Ссылка</ElLink>
+    <ElLink color="white" border="dashed">Ссылка</ElLink>
     <br>
-    <ElLink variation="main" border="dashed" @click="eventClick">
+    <ElLink color="main" border="dashed" @click="eventClick">
       <ElSvgIcon size="xxs" slot="icon-prepend" name="map"></ElSvgIcon>
       Ссылка
     </ElLink>
@@ -408,7 +408,7 @@ $colors: $token-colors;
       Ссылка
     </ElLink>
     <br>
-    <ElLink border="dashed" variation="gray-darkest" border-color="main">
+    <ElLink border="dashed" color="gray-darkest" border-color="main">
       <ElSvgIcon size="xxs" slot="icon-prepend" name="map"></ElSvgIcon>
       Ссылка
     </ElLink>
