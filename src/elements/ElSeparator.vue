@@ -63,8 +63,7 @@ $colors: $token-colors;
   }
   @each $color, $value in $colors {
     &--color-#{$color} {
-      margin-top: $value;
-      margin-bottom: $value;
+      background-color: $value;
     }
   }
 }

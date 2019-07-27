@@ -6,8 +6,9 @@
     class="el-link"
     v-on="$listeners"
     :exact="exact"
+    :target="getTarget"
   >
-    <slot name="icon-prepend" /> <span class="el-link__text"> <slot /> </span>
+    <a href=""></a> <slot name="icon-prepend" /> <span class="el-link__text"> <slot /> </span>
     <slot name="icon-append" />
   </component>
 </template>
@@ -114,6 +115,13 @@ export default {
       type: String,
       default: "gray-darken",
     },
+    /**
+     * Ссылка в новом окне
+     */
+    target: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -152,6 +160,9 @@ export default {
       }
 
       return result
+    },
+    getTarget() {
+      return this.target ? "_blank" : "_self"
     },
   },
 }
