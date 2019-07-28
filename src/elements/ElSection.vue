@@ -80,20 +80,18 @@ $spaces: $token-spaces;
     margin-left: auto;
     margin-right: auto;
     padding: 0 20px;
-    max-width: $container-s;
+    min-width: $container-s;
+    max-width: $container-xl;
 
     @media #{$media-query-m} {
-      max-width: $container-m;
       padding: 0 32px;
     }
 
     @media #{$media-query-l} {
-      max-width: $container-l;
       padding: 0 40px;
     }
 
     @media #{$media-query-xl} {
-      max-width: $container-xl;
       padding: 0 44px;
     }
   }
