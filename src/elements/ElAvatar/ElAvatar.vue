@@ -3,17 +3,17 @@
     <img
       v-if="lazy && src"
       v-lazy="{ src: src, attempt: 1 }"
-      :key="_src"
-      :alt="alt"
+      :key="src"
+      alt="profile-image"
       class="el-avatar__img"
     />
-    <img v-else-if="src" :src="src" :alt="alt" class="el-avatar__img" />
+    <img v-else-if="src" :src="src" alt="profile-image" class="el-avatar__img" />
     <div v-else class="el-avatar__pic"><ElSvgIcon name="avatar" fill="white" :size="size" /></div>
   </figure>
 </template>
 
 <script>
-import ElSvgIcon from "../elements/ElSvgIcon"
+import ElSvgIcon from "../ElSvgIcon"
 export default {
   name: "ElAvatar",
   components: { ElSvgIcon },
@@ -31,14 +31,6 @@ export default {
      *
      */
     src: {
-      type: String,
-      default: null,
-    },
-    /**
-     *  Alt
-     *
-     */
-    alt: {
       type: String,
       default: null,
     },

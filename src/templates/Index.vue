@@ -321,7 +321,7 @@ import ElFieldText from "../elements/ElField/ElFieldText"
 import ElFieldPassword from "../elements/ElField/ElFieldPassword"
 import ElSection from "../elements/ElSection"
 import ElCard from "../elements/ElCard"
-import ElAvatar from "../elements/ElAvatar"
+import ElAvatar from "../elements/ElAvatar/ElAvatar"
 import ElWysiwyg from "../elements/ElWysiwyg"
 
 export default {

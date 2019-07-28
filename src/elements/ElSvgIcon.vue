@@ -73,6 +73,7 @@ $sizes: $token-tappable-elements;
 .el-svg-icon {
   @include reset();
   @include reset-text-indents();
+  display: inline-block;
 
   svg {
     width: inherit;
