@@ -8,7 +8,7 @@
     :exact="exact"
     :target="getTarget"
   >
-    <a href=""></a> <slot name="icon-prepend" /> <span class="el-link__text"> <slot /> </span>
+    <slot name="icon-prepend" /> <span class="el-link__text"> <slot /> </span>
     <slot name="icon-append" />
   </component>
 </template>
