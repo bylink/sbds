@@ -10,11 +10,13 @@
 <script>
 import VueClickOutside from "vue-click-outside"
 import ElButton from "../elements/ElButton"
-import ElSvgIcon from "../elements/ElSvgIcon"
+import ElLink from "../elements/ElLink"
+import ElSeparator from "../elements/ElSeparator"
+import ElTitle from "../elements/ElTitle"
 
 export default {
   name: "ElDropdown",
-  components: { ElSvgIcon, ElButton },
+  components: { ElButton, ElLink, ElSeparator, ElTitle },
   directives: {
     "click-outside": VueClickOutside,
   },
@@ -25,7 +27,7 @@ export default {
     },
     position: {
       type: String,
-      default: "left",
+      default: "right",
     },
   },
 
@@ -37,7 +39,6 @@ export default {
       }
     },
     activator() {
-      console.log(this.$slots)
       return this.$slots.activator[0].elm
     },
   },
@@ -79,6 +80,10 @@ export default {
   }
 
   &__body {
+    background-color: $color-white;
+    padding: $space-xs + 2 $space-s $space-s $space-s;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
     position: absolute;
     z-index: $z_index_dropdown;
     top: 100%;
@@ -87,10 +92,9 @@ export default {
     overflow: hidden;
     margin: 0;
     min-width: 85px;
-    background-color: transparent;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(10px);
+    transform: translateY(25px);
     transition: opacity $duration-quickly, transform $duration-quickly;
   }
 
@@ -101,7 +105,7 @@ export default {
         visibility: visible;
         overflow: visible;
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(15px);
       }
     }
   }
@@ -132,38 +136,20 @@ export default {
   <div>
     <ElDropdown v-model="dropIsOpen">
       <ElButton slot="activator">Тогглер</ElButton>
-      <div style="background-color: #f1f1f1;">
-        <ElButton
-                href="#"
-                @click.prevent
-                variation="main"
-        >
-          Профиль
-        </ElButton>
-        <ElButton
-                href="#"
-                @click.prevent
-                variation="main-outline"
-                size="l"
-        >
-          Транзакции
-        </ElButton>
-        <ElButton
-                href="#"
-                @click.prevent
-                variation="white"
-        >
-          Безопасность
-        </ElButton>
-        <ElButton
-                href="#"
-                @click.prevent
-                variation="gray-light-small"
-                size="l"
-        >
-          Выйти
-        </ElButton>
-      </div>
+
+      <ElLink href="#" @click.prevent>
+        <ElTitle size="sm" line-height="sm">История заказов</ElTitle>
+      </ElLink>
+
+      <ElLink href="#" @click.prevent>
+        <ElTitle size="sm" line-height="sm">Настройки</ElTitle>
+      </ElLink>
+
+      <ElLink href="#" @click.prevent>
+        <ElTitle size="sm" line-height="sm">Выход</ElTitle>
+      </ElLink>
+
+      <ElSeparator indent-bottom="s" indent-top="s"></ElSeparator>
     </ElDropdown>
     <br>
     <br>

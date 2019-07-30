@@ -337,7 +337,7 @@ $colors: $token-colors;
       &:hover,
       &:focus,
       &:active {
-        color: darken($value, 10%);
+        color: $color-main;
       }
 
       &#{$block-name} {
@@ -368,7 +368,7 @@ $colors: $token-colors;
       &:focus,
       &:active {
         & #{$block-name}__text {
-          border-bottom-color: darken($value, 10%) !important;
+          border-bottom-color: $color-main !important;
         }
       }
 
