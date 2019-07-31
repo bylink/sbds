@@ -350,6 +350,13 @@
       "originalValue": "60px",
       "name": "tappable_element_xl"
     },
+    "panel_l": {
+      "type": "number",
+      "category": "size",
+      "value": "400px",
+      "originalValue": "400px",
+      "name": "panel_l"
+    },
     "tappable_element_xxl": {
       "type": "number",
       "category": "size",
@@ -363,6 +370,13 @@
       "value": "48px",
       "originalValue": "48px",
       "name": "tappable_element_l"
+    },
+    "panel_m": {
+      "type": "number",
+      "category": "size",
+      "value": "300px",
+      "originalValue": "300px",
+      "name": "panel_m"
     },
     "tappable_element_m": {
       "type": "number",
@@ -398,6 +412,13 @@
       "value": "12px",
       "originalValue": "12px",
       "name": "tappable_element_xxxs"
+    },
+    "panel_s": {
+      "type": "number",
+      "category": "size",
+      "value": "200px",
+      "originalValue": "200px",
+      "name": "panel_s"
     },
     "tappable_element_xxs": {
       "type": "number",
@@ -542,8 +563,8 @@
     "shadow_s": {
       "type": "...",
       "category": "box-shadow",
-      "value": "0 0 0 1px rgba(92,106,196,.1)",
-      "originalValue": "0 0 0 1px rgba(92,106,196,.1)",
+      "value": "0 6px 20px rgba(0, 0, 0, 0.08)",
+      "originalValue": "0 6px 20px rgba(0, 0, 0, 0.08)",
       "name": "shadow_s"
     },
     "spacing_xl": {

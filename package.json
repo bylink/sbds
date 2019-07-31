@@ -115,6 +115,7 @@
     "postcss-url": "^8.0.0",
     "reset-css": "^4.0.1",
     "tinycolor2": "^1.4.1",
+    "v-tooltip": "^2.0.2",
     "vue": "^2.5.17",
     "vue-click-outside": "^1.0.7",
     "vue-flatpickr-component": "^8.1.2",

@@ -41,6 +41,13 @@ props:
   avatar_xl:
     value: "56px"
 
+  panel_l:
+    value: "400px"
+  panel_m:
+    value: "300px"
+  panel_s:
+    value: "200px"
+
 global:
   type: number
   category: size

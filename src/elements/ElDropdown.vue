@@ -82,7 +82,7 @@ export default {
   &__body {
     background-color: $color-white;
     padding: $space-xs + 2 $space-s $space-s $space-s;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: $shadow-s;
     border-radius: 4px;
     position: absolute;
     z-index: $z_index_dropdown;
@@ -96,6 +96,17 @@ export default {
     visibility: hidden;
     transform: translateY(25px);
     transition: opacity $duration-quickly, transform $duration-quickly;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -6px;
+      background-color: $color-white;
+      width: 28px;
+      height: 28px;
+      transform: rotate(135deg);
+    }
   }
 
   &--is-open {
@@ -115,6 +126,10 @@ export default {
       &__body {
         left: auto;
         right: 0;
+
+        &:before {
+          right: 38%;
+        }
       }
     }
   }
@@ -124,6 +139,10 @@ export default {
       &__body {
         left: 0;
         right: auto;
+
+        &:before {
+          right: 56%;
+        }
       }
     }
   }
