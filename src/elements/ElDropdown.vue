@@ -81,7 +81,7 @@ export default {
 
   &__body {
     background-color: $color-white;
-    padding: $space-xs + 2 $space-s $space-s $space-s;
+    padding: $space-xs + 4 $space-s $space-s $space-s;
     box-shadow: $shadow-s;
     border-radius: 4px;
     position: absolute;
@@ -92,6 +92,7 @@ export default {
     overflow: hidden;
     margin: 0;
     min-width: 85px;
+    max-width: 360px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(25px);
@@ -103,8 +104,8 @@ export default {
       position: absolute;
       top: -6px;
       background-color: $color-white;
-      width: 28px;
-      height: 28px;
+      width: 27px;
+      height: 27px;
       transform: rotate(135deg);
     }
   }

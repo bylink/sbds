@@ -143,3 +143,23 @@
     outline: 0;
   }
 }
+
+@mixin custom-scroll() {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 8px;
+    transition: background 0.3s;
+  }
+
+  ::-webkit-scrollbar-track {
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #c9c9c9;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #c1c1c1;
+  }
+  ::-webkit-scrollbar-thumb:active {
+  }
+}

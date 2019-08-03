@@ -62,6 +62,7 @@ $spaces: $token-spaces;
   border: none;
   border-radius: 50%;
   box-sizing: content-box;
+  display: inline-block;
 
   @each $space, $value in $spaces {
     &--size-#{$space} {

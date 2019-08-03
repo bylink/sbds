@@ -392,6 +392,7 @@ $colors: $token-colors;
 
   &--full-width {
     width: 100%;
+    justify-content: flex-start;
   }
 
   &--disabled {
