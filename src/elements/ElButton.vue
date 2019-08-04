@@ -484,13 +484,13 @@ $colors: $token-colors;
     text-transform: uppercase;
   }
 
-  &--is-active,
+  /*  &--is-active,
   &.nuxt-link-active {
     color: $color-main;
     background-color: transparent;
     border-color: transparent;
     pointer-events: none;
-  }
+  }*/
 
   &--radius {
     &-xl {
