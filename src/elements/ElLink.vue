@@ -201,9 +201,9 @@ $colors: $token-colors;
   -webkit-text-fill-color: currentColor;
 
   &__text {
-    display: inline-flex;
     @include ellipsis($display: inline-block);
     @include layout-flex-fix();
+    display: inline-flex;
 
     &:empty {
       display: none;
