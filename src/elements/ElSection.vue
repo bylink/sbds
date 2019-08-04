@@ -54,9 +54,6 @@ $spaces: $token-spaces;
 
 .el-section {
   $block-name: &;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   @each $color, $value in $colors {
     &--background-#{$color} {

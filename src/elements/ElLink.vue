@@ -203,7 +203,6 @@ $colors: $token-colors;
   &__text {
     @include ellipsis($display: inline-block);
     @include layout-flex-fix();
-    display: inline-flex;
 
     &:empty {
       display: none;
