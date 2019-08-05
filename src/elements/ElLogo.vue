@@ -150,8 +150,8 @@ export default {
     }
 
     svg {
-      width: 34px;
-      height: 34px;
+      width: 26px;
+      height: 26px;
 
       @media #{$media-query-m} {
         width: 46px;
