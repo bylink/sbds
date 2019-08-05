@@ -47,7 +47,6 @@ export default {
     inactiveColor: {
       type: String,
       default: "#c1c1c1",
-      required: true,
     },
     /**
      *  Размер звёзд
