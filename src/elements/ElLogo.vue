@@ -70,7 +70,7 @@ export default {
     },
 
     svg() {
-      return req("./" + "Logo" + ".svg").replace(/^<svg /, "<svg style='fill: currentColor'")
+      return req("./" + "logo" + ".svg").replace(/^<svg /, "<svg style='fill: currentColor'")
     },
 
     defaultTag() {
