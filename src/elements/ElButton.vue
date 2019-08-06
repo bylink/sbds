@@ -435,13 +435,15 @@ $colors: $token-colors;
 
           &:hover,
           &:focus {
-            border-color: darken($value, 10%);
-            color: darken($value, 15%);
+            border-color: $color-pre-black;
+            color: $color-white;
+            background-color: $color-pre-black;
           }
 
           &:active {
-            border-color: darken($value, 25%);
-            color: darken($value, 25%);
+            border-color: $color-pre-black;
+            color: $color-white;
+            background-color: $color-pre-black;
           }
 
           &#{$block-name} {

@@ -92,11 +92,15 @@ export default {
     overflow: hidden;
     margin: 0;
     min-width: 85px;
-    max-width: 360px;
+    max-width: 342px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(25px);
     transition: opacity $duration-quickly, transform $duration-quickly;
+
+    @media #{$media-query-m} {
+      max-width: 360px;
+    }
 
     &:before {
       content: "";

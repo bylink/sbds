@@ -33,17 +33,28 @@
         @tag="handleTag"
         @search-change="handleSearchChange"
         :internal-search="internalSearch"
+        @open="handleOpen"
+        @close="handleClose"
       >
         <span slot="noResult">Ничего не найдено</span>
       </multiselect>
     </div>
     <div class="el-field-select__footer">
-      <ElTitle tag-name="div" :ellipsis="false" color="danger" size="s" v-if="errorText">
+      <ElTitle
+        tag-name="div"
+        :ellipsis="false"
+        color="danger"
+        line-height="xxxs"
+        size="xxxs"
+        v-if="errorText"
+      >
         {{ errorText }}
       </ElTitle>
       <br v-if="errorText" />
       <slot name="footer">
-        <ElTitle tag-name="div" :ellipsis="false" size="s" v-if="helpText">{{ helpText }}</ElTitle>
+        <ElTitle tag-name="div" :ellipsis="false" line-height="xxxs" size="xxxs" v-if="helpText">{{
+          helpText
+        }}</ElTitle>
       </slot>
     </div>
   </div>
@@ -161,16 +172,10 @@ export default {
     },
 
     titleSize() {
-      if (this.isDate) {
-        return "xxxs"
-      }
       return this.inputFocused ? "xxxs" : "s"
     },
 
     titleLineHeight() {
-      if (this.isDate) {
-        return "xxs"
-      }
       return this.inputFocused ? "xxs" : "s"
     },
 
@@ -209,6 +214,17 @@ export default {
       this.$emit("tag", value)
     },
 
+    handleOpen() {
+      this.inputFocused = true
+    },
+
+    handleClose() {
+      if (this.value !== null && this.value.length !== 0) {
+        return
+      }
+      this.inputFocused = false
+    },
+
     handleSearchChange(value) {
       this.$emit("search-change", value)
     },
@@ -218,7 +234,7 @@ export default {
     },
 
     checkValue() {
-      if (this.value !== null) {
+      if (this.value !== null && this.value.length !== 0) {
         this.inputFocused = true
       }
     },
@@ -230,7 +246,7 @@ export default {
 
   watch: {
     value() {
-      if (this.value !== null) {
+      if (this.value !== null && this.value.length !== 0) {
         this.inputFocused = true
       }
     },
@@ -248,13 +264,21 @@ $colors: $token-colors;
   @include custom-scroll();
   font-family: $font-regular;
 
+  &--focused {
+    & #{$block-name} {
+      &__header {
+        top: $space-xxs;
+      }
+    }
+  }
+
   &__header {
     @include reset-text-indents();
     display: block;
     position: absolute;
     left: $space-xs;
-    top: $space-xxs;
-    z-index: 51;
+    top: $space-xs;
+    z-index: 2;
     pointer-events: none;
     transition: all 0.15s ease;
   }
@@ -272,6 +296,8 @@ $colors: $token-colors;
       padding-left: 0;
       background-color: transparent;
       margin-bottom: 0;
+      font-size: $size-s;
+      padding-top: 2px;
     }
 
     &__input {
@@ -279,6 +305,7 @@ $colors: $token-colors;
 
     &__select {
       height: $tappable-element-m - 2px;
+      top: $space-xxs + 2px;
       &::before {
         border-color: $color-gray-dark transparent transparent;
       }
@@ -382,6 +409,7 @@ $colors: $token-colors;
     }
 
     &--active {
+      z-index: 1;
       .multiselect {
         &__tags {
           border-color: $color-gray-light;
