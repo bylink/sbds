@@ -55,7 +55,7 @@ export default {
      */
     size: {
       type: String,
-      default: "m",
+      default: "xxs",
     },
   },
   directives: {
@@ -209,7 +209,7 @@ export default {
     }
   }
 
-  &--size-m {
+  &--size-xxs {
     &.tooltip {
       .tooltip-inner {
         font-size: $size-xxs;
