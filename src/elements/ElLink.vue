@@ -415,6 +415,7 @@ $colors: $token-colors;
     &:hover,
     &:focus,
     &:active {
+      color: inherit;
       border: none;
     }
   }
