@@ -67,6 +67,13 @@ export default {
       type: Boolean,
       default: false,
     },
+    /**
+     * Uppercase
+     */
+    inline: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     tag() {
@@ -80,6 +87,7 @@ export default {
         [`el-title--color-${this.color}`]: this.color,
         "el-title--ellipsis": this.ellipsis,
         "el-title--uppercase": this.uppercase,
+        "el-title--inline": this.inline,
       }
     },
   },
@@ -109,8 +117,8 @@ $line-heights: $token-line-heights;
 
   .el-svg-icon {
     font-size: inherit;
-    width: 1em;
-    height: 1em;
+    /*width: 1em;*/
+    /*height: 1em;*/
   }
 
   > .el-svg-icon,
@@ -148,6 +156,9 @@ $line-heights: $token-line-heights;
 
   &--uppercase {
     text-transform: uppercase;
+  }
+  &--inline {
+    width: auto;
   }
 
   &--color {
