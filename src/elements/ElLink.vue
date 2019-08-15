@@ -411,6 +411,7 @@ $colors: $token-colors;
   &--simple {
     color: inherit;
     border-bottom: 1px solid $color-main;
+    transition: none;
 
     &:hover,
     &:focus,
