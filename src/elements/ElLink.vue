@@ -122,6 +122,13 @@ export default {
       type: Boolean,
       default: false,
     },
+    /**
+     * Ссылка простая
+     */
+    simple: {
+      type: Boolean,
+      default: false,
+    },
   },
 
   computed: {
@@ -136,6 +143,7 @@ export default {
         "el-link--disabled": this.disabled,
         "el-link--full-width": this.fullWidth,
         "el-link--uppercase": this.uppercase,
+        "el-link--simple": this.simple,
       }
     },
     defaultTag() {
@@ -398,6 +406,17 @@ $colors: $token-colors;
   &--disabled {
     pointer-events: none;
     opacity: $opacity-disabled;
+  }
+
+  &----simple {
+    color: inherit;
+    border-bottom: 1px solid $color-main;
+
+    &:hover,
+    &:focus,
+    &:active {
+      border: none;
+    }
   }
 }
 </style>

@@ -32,8 +32,10 @@ $spaces: $token-spaces;
     color: inherit;
     border-bottom: 1px solid $color-main;
 
-    &:hover {
-      text-decoration: none;
+    &:hover,
+    &:focus,
+    &:active {
+      border: none;
     }
   }
 

@@ -94,7 +94,7 @@ export default {
      */
     radius: {
       type: String,
-      default: "xl",
+      default: "xxl",
     },
     /**
      *  Тень
