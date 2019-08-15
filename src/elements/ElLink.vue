@@ -408,7 +408,7 @@ $colors: $token-colors;
     opacity: $opacity-disabled;
   }
 
-  &----simple {
+  &--simple {
     color: inherit;
     border-bottom: 1px solid $color-main;
 
