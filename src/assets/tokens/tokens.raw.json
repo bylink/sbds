@@ -602,11 +602,18 @@
       "originalValue": "-1px",
       "name": "spacing_xs"
     },
-    "radius_xl": {
+    "radius_xxl": {
       "type": "number",
       "category": "border-radius",
       "value": "60px",
       "originalValue": "60px",
+      "name": "radius_xxl"
+    },
+    "radius_xl": {
+      "type": "number",
+      "category": "border-radius",
+      "value": "16px",
+      "originalValue": "16px",
       "name": "radius_xl"
     },
     "radius_l": {

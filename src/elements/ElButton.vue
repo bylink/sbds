@@ -214,7 +214,7 @@ $colors: $token-colors;
   font-weight: $weight-medium;
   font-size: $size-sm;
   line-height: $line-height-s;
-  border-radius: $radius-xl;
+  border-radius: $radius-xxl;
   height: $tappable-element-l;
   white-space: nowrap;
   vertical-align: middle;
@@ -495,6 +495,9 @@ $colors: $token-colors;
   }*/
 
   &--radius {
+    &-xxl {
+      border-radius: $radius-xxl;
+    }
     &-xl {
       border-radius: $radius-xl;
     }

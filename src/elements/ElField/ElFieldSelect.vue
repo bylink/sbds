@@ -344,7 +344,7 @@ $colors: $token-colors;
       align-items: center;
       padding: $space-xxxs $space-xs;
       padding-left: $space-m / 2;
-      border-radius: $radius-xl;
+      border-radius: $radius-xxl;
       font-size: $size-m - 1;
       height: $tappable-element-s;
       margin-bottom: $space-xxxs;

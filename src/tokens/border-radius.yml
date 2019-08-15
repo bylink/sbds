@@ -4,8 +4,10 @@
 #
 
 props:
-  radius_xl:
+  radius_xxl:
     value: "60px"
+  radius_xl:
+    value: "16px"
   radius_l:
     value: "10px"
   radius_m:
