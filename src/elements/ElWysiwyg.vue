@@ -27,6 +27,16 @@ $spaces: $token-spaces;
     }
   }
 
+  a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 1px solid $color-main;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   img {
     margin-bottom: $space-l;
     max-width: 100%;
