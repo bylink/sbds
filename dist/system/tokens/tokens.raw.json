@@ -388,8 +388,8 @@
     "container_xl": {
       "type": "number",
       "category": "size",
-      "value": "1278px",
-      "originalValue": "1278px",
+      "value": "1366px",
+      "originalValue": "1366px",
       "name": "container_xl"
     },
     "container_s": {

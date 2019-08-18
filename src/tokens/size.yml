@@ -22,7 +22,7 @@ props:
     value: "12px"
 
   container_xl:
-    value: "1278px"
+    value: "1366px"
   container_l:
     value: "944px"
   container_m:
