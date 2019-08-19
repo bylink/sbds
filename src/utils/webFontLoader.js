@@ -9,6 +9,6 @@ WebFont.load({
     families: ["Formular-Regular", "Formular-Medium", "Formular-Bold"],
     // You need both of these paths since Styleguidist
     // tries to find static assets from the root.
-    urls: ["/assets/fonts/fonts.css", "/fonts/fonts.css"],
+    urls: ["/fonts/fonts.css"],
   },
 })
