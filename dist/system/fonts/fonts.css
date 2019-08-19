@@ -2,7 +2,7 @@
   font-family: "Formular-Regular";
   font-style: normal;
   font-weight: 400;
-  src: url("./Formular-Regular.otf") format("otf"),
+  src:
     url("./formular-regular-webfont.woff") format("woff"),
     url("./formular-regular-webfont.woff2") format("woff2");
 }
@@ -11,7 +11,7 @@
   font-family: "Formular-Medium";
   font-style: normal;
   font-weight: 400;
-  src: url("./Formular-Medium.otf") format("otf"),
+  src:
     url("./formular-medium-webfont.woff") format("woff"),
     url("./formular-medium-webfont.woff2") format("woff2");
 }
@@ -20,6 +20,7 @@
   font-family: "Formular-Bold";
   font-style: normal;
   font-weight: 400;
-  src: url("./Formular-Bold.otf") format("otf"), url("./formular-bold-webfont.woff") format("woff"),
+  src:
+  url("./formular-bold-webfont.woff") format("woff"),
     url("./formular-bold-webfont.woff2") format("woff2");
 }
