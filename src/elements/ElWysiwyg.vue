@@ -1,10 +1,16 @@
 <template>
-  <div class="content"><slot /></div>
+  <div class="content" v-html="content"></div>
 </template>
 
 <script>
 export default {
   name: "ElWysiwyg",
+  props: {
+    content: {
+      type: Text,
+      default: "",
+    },
+  },
 }
 </script>
 
