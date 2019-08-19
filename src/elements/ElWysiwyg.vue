@@ -7,7 +7,7 @@ export default {
   name: "ElWysiwyg",
   props: {
     content: {
-      type: Text,
+      type: String,
       default: "",
     },
   },
