@@ -80,6 +80,10 @@ export default {
 <style lang="scss">
 .pt-form-modal {
   $block-name: &;
+
+  & .el-link {
+    margin-top: 32px;
+  }
 }
 </style>
 
