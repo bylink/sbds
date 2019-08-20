@@ -16,9 +16,11 @@
       <div>
         <ElLink
           v-if="linkText"
+          @click.prevent="handleClickLink"
           variation="gray-darkest"
           size="xxs"
           border="dashed"
+          color="gray-darkest"
           border-color="main"
         >
           {{ linkText }}
@@ -66,6 +68,10 @@ export default {
     handleSubmit() {
       if (this.loading) return
       this.$emit("submit")
+    },
+    handleClickLink() {
+      if (this.loading) return
+      this.$emit("clickLink")
     },
   },
 }
