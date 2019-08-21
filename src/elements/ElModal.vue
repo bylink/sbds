@@ -146,9 +146,13 @@ export default {
     margin-bottom: 0;
     color: hsl(0, 0%, 13%);
     font-family: $font-regular;
-    font-size: $size-xl;
+    font-size: $size-l;
     font-weight: $weight-normal;
     line-height: $line-height-l;
+    @media #{$media-query-m} {
+      font-size: $size-xl;
+      line-height: $line-height-sm;
+    }
   }
 
   &__inner {
@@ -162,6 +166,7 @@ export default {
       margin: 0 12px;
       height: auto;
       border-radius: 8px;
+      padding: 24px 20px 20px 20px;
     }
   }
 
