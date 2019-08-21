@@ -158,7 +158,7 @@ export default {
   &__inner {
     position: relative;
     box-shadow: 0 6px 12px rgba(110, 110, 110, 0.61);
-    padding: 32px 40px 40px 40px;
+    padding: 24px 20px 20px 20px;
     background-color: $color-white;
     height: 100%;
 
@@ -166,7 +166,7 @@ export default {
       margin: 0 12px;
       height: auto;
       border-radius: 8px;
-      padding: 24px 20px 20px 20px;
+      padding: 32px 40px 40px 40px;
     }
   }
 
