@@ -74,6 +74,13 @@ export default {
       type: Boolean,
       default: false,
     },
+    /**
+     * По центру
+     */
+    center: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     tag() {
@@ -88,6 +95,7 @@ export default {
         "el-title--ellipsis": this.ellipsis,
         "el-title--uppercase": this.uppercase,
         "el-title--inline": this.inline,
+        "el-title--center": this.center,
       }
     },
   },
@@ -187,6 +195,18 @@ $media-titles: $token-media-titles;
       &__text {
         @include ellipsis($display: inline-block);
         @include layout-flex-fix();
+      }
+    }
+  }
+
+  &--center {
+    display: flex;
+    justify-content: center;
+
+    & .el-svg-icon {
+      @media #{$media-query-m} {
+        width: 56px;
+        height: 56px;
       }
     }
   }
