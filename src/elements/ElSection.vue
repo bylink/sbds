@@ -7,8 +7,8 @@
             <el-title
               class="el-section__title--default"
               v-if="title"
-              size="xxl"
-              line-height="xl"
+              size="xxxl"
+              line-height="xxl"
               :ellipsis="false"
             >
               {{ title }}
@@ -81,6 +81,11 @@ $spaces: $token-spaces;
 
 .el-section {
   $block-name: &;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
 
   @each $color, $value in $colors {
     &--background-#{$color} {
