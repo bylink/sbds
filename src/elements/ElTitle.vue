@@ -135,17 +135,48 @@ $media-titles: $token-media-titles;
   @each $size, $value in $sizes {
     &--size-#{$size} {
       font-size: $value;
-      @each $media, $font in $media-titles($size) {
+      /*      @each $media, $font in $media-titles($size) {
         @media (max-width: $media) {
           font-size: $font;
         }
-      }
+      }*/
     }
   }
 
   @each $line-height, $value in $line-heights {
     &--line-height-#{$line-height} {
       line-height: $value;
+    }
+  }
+
+  &--size-xxxxl {
+    @media #{$media-query-m-down} {
+      font-size: $size-xl;
+      line-height: $line-height-xl;
+    }
+  }
+  &--size-xxxl {
+    @media #{$media-query-m-down} {
+      font-size: $size-xl;
+      line-height: $line-height-l;
+    }
+  }
+  &--size-xxl {
+    @media #{$media-query-m-down} {
+      font-size: $size-xl;
+      line-height: $line-height-l;
+    }
+  }
+  &--size-xl {
+    @media #{$media-query-m-down} {
+      font-size: $size-l;
+      line-height: $line-height-l;
+    }
+  }
+  &--size-l {
+    @media #{$media-query-m-down} {
+      font-size: $size-ml;
+      line-height: $line-height-ml;
     }
   }
 
