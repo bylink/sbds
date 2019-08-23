@@ -16,8 +16,25 @@
     <div class="el-field-text__main">
       <div class="el-field-text__prepend"><slot name="prepend" /></div>
       <div class="el-field-text__input-wrapper">
+        <ElFieldTel
+          v-if="isPhone"
+          class="el-field-text__input"
+          :style="inputStyles"
+          :placeholder="placeholder"
+          :value="value"
+          :name="name"
+          ref="input"
+          :disabled="disabled"
+          :id="name"
+          v-model="value"
+          @focus="inputFocused = true"
+          @blur="handleBlur"
+          v-on="listeners"
+          @input="value => handleInput(value)"
+        />
+
         <flat-pickr
-          v-if="isDate"
+          v-else-if="isDate"
           class="el-field-text__input"
           :style="inputStyles"
           :placeholder="placeholder"
@@ -32,6 +49,7 @@
           v-on="listeners"
           @input="value => handleInput(value)"
         ></flat-pickr>
+
         <textarea
           v-else-if="isTextarea"
           class="el-field-text__input"
@@ -46,6 +64,7 @@
           v-on="listeners"
           @input="$event => handleInput($event.target.value)"
         ></textarea>
+
         <input
           v-else
           class="el-field-text__input"
@@ -95,10 +114,11 @@ import flatPickr from "vue-flatpickr-component"
 import ElTitle from "../ElTitle"
 import ElSvgIcon from "../ElSvgIcon"
 import ElButton from "../ElButton"
+import ElFieldTel from "./ElFieldTel"
 
 export default {
   name: "ElFieldText",
-  components: { ElButton, ElSvgIcon, ElTitle, flatPickr },
+  components: { ElFieldTel, ElButton, ElSvgIcon, ElTitle, flatPickr },
   props: {
     /**
      *  Тип:
@@ -249,6 +269,10 @@ export default {
 
     isDate() {
       return this.type === "date"
+    },
+
+    isPhone() {
+      return this.type === "phone"
     },
 
     errorText() {
@@ -477,6 +501,7 @@ export default {
    let inputText6= null
    let inputText7= null
    let inputText8= null
+   let inputText9= "+"
     <div style="max-width: 700px">
       <ElFieldText
               name="login1"
@@ -523,6 +548,8 @@ export default {
         />
 
         <ElFieldText name="datePicker" title="Лейбл8" type="date" v-model="inputText8"/>
+
+        <ElFieldText name="phone" title="Лейбл9" type="phone" v-model="inputText9"/>
       </div>
     </div>
     ```
