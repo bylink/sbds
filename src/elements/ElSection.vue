@@ -1,23 +1,25 @@
 <template>
   <div class="el-section" :class="classes">
-    <div class="el-section__top">
-      <div class="el-section__top-left">
-        <slot name="title">
-          <el-title
-            class="el-section__title--default"
-            v-if="title"
-            size="xxl"
-            line-height="xl"
-            :ellipsis="false"
-          >
-            {{ title }}
-          </el-title>
-        </slot>
+    <div class="el-section__container">
+      <div class="el-section__top">
+        <div class="el-section__top-left">
+          <slot name="title">
+            <el-title
+              class="el-section__title--default"
+              v-if="title"
+              size="xxl"
+              line-height="xl"
+              :ellipsis="false"
+            >
+              {{ title }}
+            </el-title>
+          </slot>
+        </div>
+        <div class="el-section__top-right"></div>
       </div>
-      <div class="el-section__top-right"></div>
-    </div>
 
-    <div class="el-section__container"><slot /></div>
+      <slot />
+    </div>
   </div>
 </template>
 
