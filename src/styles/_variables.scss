@@ -85,3 +85,25 @@ $token-avatars: (
   "s": $avatar-s,
   "xs": $avatar-xs,
 );
+
+$token-media-titles: (
+  "xxxxl": (
+    "767px": $size-xl,
+  ),
+  "xxxl": (
+    "767px": $size-xl,
+  ),
+  //"xxxxl": $size-xxxxl,
+  //"xxxl": $size-xxxl,
+  //"xxl": $size-xxl,
+  //"xl": $size-xl,
+  //"l": $size-l,
+  //"ml": $size-ml,
+  //"m": $size-m,
+  //"sm": $size-sm,
+  //"s": $size-s,
+  //"xs": $size-xs,
+  //"xxs": $size-xxs,
+  //"xxxs": $size-xxxs,
+  //"xxxxs": $size-xxxxs,
+);

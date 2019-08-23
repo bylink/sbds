@@ -97,6 +97,7 @@ export default {
 <style lang="scss">
 $sizes: $token-sizes;
 $line-heights: $token-line-heights;
+$media-titles: $token-media-titles;
 
 .el-title {
   $block-name: &;
@@ -134,6 +135,11 @@ $line-heights: $token-line-heights;
   @each $size, $value in $sizes {
     &--size-#{$size} {
       font-size: $value;
+      @each $media, $font in $media-titles($size) {
+        @media (max-width: $media) {
+          font-size: $font;
+        }
+      }
     }
   }
 
