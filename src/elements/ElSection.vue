@@ -1,5 +1,22 @@
 <template>
   <div class="el-section" :class="classes">
+    <div class="el-section__top">
+      <div class="el-section__top-left">
+        <slot name="title">
+          <el-title
+            class="el-section__title--default"
+            v-if="title"
+            size="xxl"
+            line-height="xl"
+            :ellipsis="false"
+          >
+            {{ title }}
+          </el-title>
+        </slot>
+      </div>
+      <div class="el-section__top-right"></div>
+    </div>
+
     <div class="el-section__container"><slot /></div>
   </div>
 </template>
@@ -32,6 +49,14 @@ export default {
      *  `xs, s, m, l, xl и т.д.`
      */
     gutterBottom: {
+      type: String,
+      default: null,
+    },
+    /**
+     *  тайтл
+     *
+     */
+    title: {
       type: String,
       default: null,
     },
@@ -70,6 +95,19 @@ $spaces: $token-spaces;
   @each $space, $value in $spaces {
     &--gutter-bottom-#{$space} {
       padding-bottom: $value;
+    }
+  }
+
+  &__title--default {
+    padding-bottom: $space-m;
+    @media #{$media-query-m} {
+      padding-bottom: $space-l;
+    }
+    @media #{$media-query-l} {
+      padding-bottom: $space-l;
+    }
+    @media #{$media-query-xl} {
+      padding-bottom: $space-l;
     }
   }
 
