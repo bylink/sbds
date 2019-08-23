@@ -66,6 +66,27 @@ $colors: $token-colors;
       background-color: $value;
     }
   }
+
+  &--indent-top-xl,
+  &--indent-bottom-xl {
+    @media #{$media-query-m-down} {
+      margin-top: $space-m;
+    }
+  }
+
+  &--indent-top-l,
+  &--indent-bottom-l {
+    @media #{$media-query-m-down} {
+      margin-top: $space-m;
+    }
+  }
+
+  &--indent-top-m,
+  &--indent-bottom-m {
+    @media #{$media-query-m-down} {
+      margin-top: $space-s;
+    }
+  }
 }
 </style>
 
