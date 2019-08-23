@@ -212,6 +212,7 @@ $media-titles: $token-media-titles;
   &--center {
     display: flex;
     justify-content: center;
+    text-align: center;
 
     & .el-svg-icon {
       @media #{$media-query-m} {
