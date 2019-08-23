@@ -187,6 +187,16 @@ $media-titles: $token-media-titles;
       line-height: $line-height-ml;
     }
   }
+  &--size-sm {
+    @media #{$media-query-l-down} {
+      font-size: $size-xs;
+      line-height: $line-height-s;
+    }
+    @media #{$media-query-m-down} {
+      font-size: $size-xxs;
+      line-height: $line-height-xs;
+    }
+  }
 
   &--ellipsis {
     align-items: center;
