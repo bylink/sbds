@@ -160,8 +160,9 @@ export default {
     box-shadow: 0 6px 12px rgba(110, 110, 110, 0.61);
     padding: 24px 20px 20px 20px;
     background-color: $color-white;
-    height: 100%;
-
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     @media #{$media-query-m} {
       margin: 0 12px;
       height: auto;
@@ -176,6 +177,12 @@ export default {
     padding-top: 25px;
     margin-left: -3px;
     margin-right: -3px;
+    margin-top: auto;
+    text-align: center;
+    @media #{$media-query-m} {
+      margin-top: 0;
+      text-align: left;
+    }
 
     &:empty {
       display: none;
@@ -184,6 +191,10 @@ export default {
     .el-button {
       margin-left: 3px;
       margin-right: 3px;
+      width: 100%;
+      @media #{$media-query-m} {
+        width: auto;
+      }
     }
   }
 }

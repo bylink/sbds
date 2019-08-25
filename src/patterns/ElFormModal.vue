@@ -1,6 +1,6 @@
 <template>
   <El-modal
-    class="pt-form-modal"
+    class="el-form-modal"
     :name="name"
     @beforeOpen="event => $emit('beforeOpen', event)"
     @beforeClose="event => $emit('beforeClose', event)"
@@ -78,11 +78,14 @@ export default {
 </script>
 
 <style lang="scss">
-.pt-form-modal {
+.el-form-modal {
   $block-name: &;
 
   & .el-link {
-    margin-top: 32px;
+    margin-top: 24px;
+    @media #{$media-query-m} {
+      margin-top: 32px;
+    }
   }
 }
 </style>
