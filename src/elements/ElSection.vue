@@ -87,6 +87,10 @@ $spaces: $token-spaces;
     justify-content: space-between;
   }
 
+  &__top-left {
+    flex-grow: 1;
+  }
+
   @each $color, $value in $colors {
     &--background-#{$color} {
       background-color: $value;
