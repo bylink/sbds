@@ -107,8 +107,6 @@ export default {
 </script>
 <style lang="scss">
 .el-rating {
-  min-height: 24px;
-
   & .custom-text {
     font-family: $font-medium;
     font-size: $size-xxxs;
