@@ -172,8 +172,6 @@ export default {
   }
 
   &__control {
-    display: flex;
-    justify-content: flex-end;
     padding-top: 25px;
     margin-left: -3px;
     margin-right: -3px;
