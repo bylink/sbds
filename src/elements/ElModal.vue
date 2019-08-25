@@ -17,7 +17,7 @@
         <div class="el-modal__title"><slot name="title" /></div>
       </div>
       <div class="el-modal__body"><slot /></div>
-      <div class="mc-modal__control" v-if="$slots.footer"><slot name="footer"></slot></div>
+      <div class="el-modal__control" v-if="$slots.footer"><slot name="footer"></slot></div>
       <button type="button" class="el-modal__btn-close" @click.prevent="close">
         <ElSvgIcon class="el-modal__icon-close" name="popup_close" />
       </button>
