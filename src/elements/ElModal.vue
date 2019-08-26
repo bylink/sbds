@@ -1,6 +1,7 @@
 <template>
   <modal
     class="el-modal"
+    :class="classes"
     :name="name"
     :scrollable="true"
     :adaptive="true"
@@ -36,10 +37,21 @@ export default {
       type: String,
       required: true,
     },
+    isLarge: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     close() {
       this.$modal.hide(this.name)
+    },
+  },
+  computed: {
+    classes() {
+      return {
+        "el-modal--large": this.isLarge,
+      }
     },
   },
 }
@@ -192,6 +204,15 @@ export default {
       width: 100%;
       @media #{$media-query-m} {
         width: auto;
+      }
+    }
+  }
+  &--large {
+    &.v--modal-overlay {
+      .v--modal-box {
+        @media #{$media-query-m} {
+          width: 842px !important;
+        }
       }
     }
   }

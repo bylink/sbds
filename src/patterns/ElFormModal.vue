@@ -2,6 +2,7 @@
   <El-modal
     class="el-form-modal"
     :name="name"
+    :is-large="isLarge"
     @beforeOpen="event => $emit('beforeOpen', event)"
     @beforeClose="event => $emit('beforeClose', event)"
     @opened="event => $emit('opened', event)"
@@ -62,6 +63,10 @@ export default {
     visibleFooter: {
       type: Boolean,
       default: true,
+    },
+    isLarge: {
+      type: Boolean,
+      default: false,
     },
   },
   methods: {
