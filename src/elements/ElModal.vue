@@ -172,11 +172,12 @@ export default {
     box-shadow: 0 6px 12px rgba(110, 110, 110, 0.61);
     padding: 24px 20px 20px 20px;
     background-color: $color-white;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     @media #{$media-query-m} {
       margin: 0 12px;
+      min-height: unset;
       height: auto;
       border-radius: 8px;
       padding: 32px 40px 40px 40px;
