@@ -405,8 +405,8 @@ export default {
 
   textarea#{$block-name} {
     &__input {
-      height: $tappable-element-xl;
-      min-height: $tappable-element-xl;
+      height: 88px;
+      min-height: 88px;
       resize: vertical;
     }
   }
