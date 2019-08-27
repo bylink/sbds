@@ -150,7 +150,7 @@ export default {
   &__header {
     padding-bottom: $space-m;
     position: relative;
-    padding-right: 33px;
+    padding-right: 30px;
   }
 
   &__title {
