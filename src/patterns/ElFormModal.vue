@@ -14,6 +14,17 @@
       <El-button @click.prevent="handleSubmit" :loading="loading" :disabled="submitDisabled">
         {{ submitText }}
       </El-button>
+
+      <ElLink
+        v-if="cancelText"
+        @click.prevent="handleCancel"
+        variation="gray-darkest"
+        size="xxs"
+        color="gray"
+      >
+        {{ cancelText }}
+      </ElLink>
+
       <div>
         <ElLink
           v-if="linkText"
@@ -74,6 +85,10 @@ export default {
       if (this.loading) return
       this.$emit("submit")
     },
+    handleCancel() {
+      if (this.loading) return
+      this.$emit("cancel")
+    },
     handleClickLink() {
       if (this.loading) return
       this.$emit("clickLink")
@@ -90,6 +105,11 @@ export default {
     margin-top: 24px;
     @media #{$media-query-m} {
       margin-top: 32px;
+    }
+  }
+  & .el-button {
+    @media #{$media-query-m} {
+      margin-right: 32px;
     }
   }
 }
