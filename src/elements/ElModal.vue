@@ -150,13 +150,13 @@ export default {
   &__header {
     padding-bottom: $space-m;
     position: relative;
-    padding-right: 20px;
+    padding-right: 33px;
   }
 
   &__title {
     margin-top: 0;
     margin-bottom: 0;
-    color: hsl(0, 0%, 13%);
+    color: $color-gray-darkest;
     font-family: $font-regular;
     font-size: $size-l;
     font-weight: $weight-normal;
