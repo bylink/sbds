@@ -160,10 +160,10 @@ export default {
     font-family: $font-regular;
     font-size: $size-l;
     font-weight: $weight-normal;
-    line-height: $line-height-l;
+    line-height: $line-height-sm;
     @media #{$media-query-m} {
       font-size: $size-xl;
-      line-height: $line-height-sm;
+      line-height: $line-height-l;
     }
   }
 
