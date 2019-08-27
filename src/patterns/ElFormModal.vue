@@ -19,7 +19,7 @@
         v-if="cancelText"
         @click.prevent="handleCancel"
         variation="gray-darkest"
-        size="xxs"
+        size="xs"
         color="gray"
       >
         {{ cancelText }}
