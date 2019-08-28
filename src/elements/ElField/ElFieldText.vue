@@ -200,8 +200,11 @@ export default {
     }
   },
 
-  created() {
+  beforeMount() {
     this.calculatePadding()
+  },
+
+  created() {
     this.checkValue()
   },
 
