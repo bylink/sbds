@@ -201,11 +201,11 @@ export default {
   },
 
   mounted() {
-    this.checkValue()
+    this.calculatePadding()
   },
 
   created() {
-    this.calculatePadding()
+    this.checkValue()
   },
 
   watch: {
