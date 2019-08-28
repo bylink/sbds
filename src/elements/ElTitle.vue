@@ -52,7 +52,7 @@ export default {
      */
     family: {
       type: String,
-      default: "heading",
+      default: "regular",
     },
     /**
      * Если нужен другой тэг

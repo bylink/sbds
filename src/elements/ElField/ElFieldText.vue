@@ -200,11 +200,8 @@ export default {
     }
   },
 
-  mounted() {
-    this.calculatePadding()
-  },
-
   created() {
+    this.calculatePadding()
     this.checkValue()
   },
 
