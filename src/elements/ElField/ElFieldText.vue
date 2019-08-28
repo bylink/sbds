@@ -201,7 +201,8 @@ export default {
   },
 
   created() {
-    this.calculatePadding(), this.checkValue()
+    this.calculatePadding()
+    this.checkValue()
   },
 
   watch: {
