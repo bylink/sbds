@@ -90,7 +90,6 @@ export default {
      */
     name: {
       type: String,
-      default: null,
     },
   },
 

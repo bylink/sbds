@@ -350,6 +350,13 @@
       "originalValue": "60px",
       "name": "tappable_element_xl"
     },
+    "tappable_element_xxxl": {
+      "type": "number",
+      "category": "size",
+      "value": "80px",
+      "originalValue": "80px",
+      "name": "tappable_element_xxxl"
+    },
     "panel_l": {
       "type": "number",
       "category": "size",
@@ -433,6 +440,13 @@
       "value": "32px",
       "originalValue": "32px",
       "name": "tappable_element_s"
+    },
+    "avatar_xxxl": {
+      "type": "number",
+      "category": "size",
+      "value": "117px",
+      "originalValue": "117px",
+      "name": "avatar_xxxl"
     },
     "avatar_xl": {
       "type": "number",
