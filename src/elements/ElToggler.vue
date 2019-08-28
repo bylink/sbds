@@ -2,7 +2,7 @@
   <div class="el-toggler" :class="classes">
     <div class="el-toggler__inner" @click="opened = !opened">
       <slot name="toggler">
-        <!--        <el-svg-icon name="arrow_job" />-->
+        <el-svg-icon name="arrow_job" />
         <el-title class="el-toggler__title" :variation="color" size="xl" line-height="l">
           {{ title }}
         </el-title>
