@@ -24,7 +24,10 @@ $spaces: $token-spaces;
   p {
     font-size: $size-sm;
     line-height: $line-height-sm;
-    padding-bottom: $space-m;
+    padding-bottom: $space-s;
+    @media #{$media-query-m} {
+      padding-bottom: $space-m;
+    }
 
     b {
       font-weight: $weight-medium;
@@ -63,15 +66,24 @@ $spaces: $token-spaces;
   }
 
   h3 {
-    font-size: $size-xxl;
-    line-height: $line-height-xl;
-    padding-bottom: $space-m;
-  }
-
-  h4 {
     font-size: $size-xl;
     line-height: $line-height-l;
     padding-bottom: $space-s;
+    @media #{$media-query-m} {
+      font-size: $size-xxl;
+      line-height: $line-height-xl;
+      padding-bottom: $space-m;
+    }
+  }
+
+  h4 {
+    font-size: $size-l;
+    line-height: $line-height-ml;
+    padding-bottom: $space-s;
+    @media #{$media-query-m} {
+      font-size: $size-xl;
+      line-height: $line-height-l;
+    }
   }
 
   h5 {
@@ -85,7 +97,10 @@ $spaces: $token-spaces;
   ul {
     list-style: none;
     margin-left: $space-s / 2;
-    padding-bottom: $space-l;
+    padding-bottom: $space-m;
+    @media #{$media-query-m} {
+      padding-bottom: $space-l;
+    }
   }
 
   ol {
@@ -131,12 +146,17 @@ $spaces: $token-spaces;
   blockquote {
     quotes: none;
     padding-left: $space-l;
-    font-size: $size-l;
-    line-height: $line-height-ml;
+    font-size: $size-ml;
+    line-height: $line-height-m;
     padding-top: $space-xxs;
-    padding-bottom: $space-l;
+    padding-bottom: $space-m;
     position: relative;
     color: $color-gray-darkest;
+    @media #{$media-query-m} {
+      padding-bottom: $space-l;
+      font-size: $size-l;
+      line-height: $line-height-ml;
+    }
 
     &:before {
       position: absolute;
