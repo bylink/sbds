@@ -200,12 +200,8 @@ export default {
     }
   },
 
-  mounted() {
-    this.calculatePadding()
-  },
-
   created() {
-    this.checkValue()
+    this.calculatePadding(), this.checkValue()
   },
 
   watch: {
