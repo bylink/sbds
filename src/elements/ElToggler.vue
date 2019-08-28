@@ -62,9 +62,9 @@ $colors: $token-colors;
     display: flex;
     align-items: center;
     user-select: none;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     @media #{$media-query-m} {
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     & .el-svg-icon {
@@ -78,6 +78,10 @@ $colors: $token-colors;
 
   &__body {
     padding-left: 38px;
+    margin-top: 32px;
+    @media #{$media-query-m} {
+      margin-top: 40px;
+    }
   }
 
   &--opened {
