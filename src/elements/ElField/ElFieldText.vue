@@ -78,7 +78,14 @@
       </ElTitle>
       <br v-if="errorText" />
       <slot name="footer">
-        <ElTitle tag-name="div" :ellipsis="false" line-height="xxxs" size="xxxs" v-if="helpText">
+        <ElTitle
+          tag-name="div"
+          color="gray"
+          :ellipsis="false"
+          line-height="xxxs"
+          size="xxxs"
+          v-if="helpText"
+        >
           {{ helpText }}
         </ElTitle>
       </slot>
