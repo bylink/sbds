@@ -218,6 +218,23 @@ $colors: $token-colors;
   }
 
   &--size {
+    &-xxxxs {
+      letter-spacing: normal;
+      line-height: $line-height-xxxs;
+      font-weight: $weight-medium;
+      font-size: $size-xxxxs;
+
+      .el-svg-icon,
+      .el-avatar {
+        &:first-child {
+          margin-right: $space_nano;
+        }
+
+        &:last-child {
+          margin-left: $space_nano;
+        }
+      }
+    }
     &-xxxs {
       letter-spacing: normal;
       line-height: $line-height-xxs;
