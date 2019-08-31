@@ -55,7 +55,7 @@ export default {
     toggle() {
       this.opened = !this.opened
       if (this.opened) {
-        this.$on("opened")
+        this.$emit("opened")
       }
     },
   },
