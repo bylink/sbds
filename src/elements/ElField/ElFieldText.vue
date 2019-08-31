@@ -97,7 +97,14 @@
       </ElTitle>
       <br v-if="errorText" />
       <slot name="footer">
-        <ElTitle tag-name="div" :ellipsis="false" line-height="xxxs" size="xxxs" v-if="helpText">
+        <ElTitle
+          tag-name="div"
+          color="gray"
+          :ellipsis="false"
+          line-height="xxxs"
+          size="xxxs"
+          v-if="helpText"
+        >
           {{ helpText }}
         </ElTitle>
       </slot>
@@ -207,7 +214,7 @@ export default {
      */
     name: {
       type: String,
-      required: true,
+      default: null,
     },
   },
 
@@ -429,8 +436,8 @@ export default {
 
   textarea#{$block-name} {
     &__input {
-      height: $tappable-element-xl;
-      min-height: $tappable-element-xl;
+      height: 88px;
+      min-height: 88px;
       resize: vertical;
     }
   }

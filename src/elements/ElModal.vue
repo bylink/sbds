@@ -1,6 +1,7 @@
 <template>
   <modal
     class="el-modal"
+    :class="classes"
     :name="name"
     :scrollable="true"
     :adaptive="true"
@@ -17,7 +18,7 @@
         <div class="el-modal__title"><slot name="title" /></div>
       </div>
       <div class="el-modal__body"><slot /></div>
-      <div class="mc-modal__control" v-if="$slots.footer"><slot name="footer"></slot></div>
+      <div class="el-modal__control" v-if="$slots.footer"><slot name="footer"></slot></div>
       <button type="button" class="el-modal__btn-close" @click.prevent="close">
         <ElSvgIcon class="el-modal__icon-close" name="popup_close" />
       </button>
@@ -36,10 +37,21 @@ export default {
       type: String,
       required: true,
     },
+    isLarge: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     close() {
       this.$modal.hide(this.name)
+    },
+  },
+  computed: {
+    classes() {
+      return {
+        "el-modal--large": this.isLarge,
+      }
     },
   },
 }
@@ -138,20 +150,20 @@ export default {
   &__header {
     padding-bottom: $space-m;
     position: relative;
-    padding-right: 20px;
+    padding-right: 30px;
   }
 
   &__title {
     margin-top: 0;
     margin-bottom: 0;
-    color: hsl(0, 0%, 13%);
+    color: $color-gray-darkest;
     font-family: $font-regular;
     font-size: $size-l;
     font-weight: $weight-normal;
-    line-height: $line-height-l;
+    line-height: $line-height-sm;
     @media #{$media-query-m} {
       font-size: $size-xl;
-      line-height: $line-height-sm;
+      line-height: $line-height-l;
     }
   }
 
@@ -160,10 +172,12 @@ export default {
     box-shadow: 0 6px 12px rgba(110, 110, 110, 0.61);
     padding: 24px 20px 20px 20px;
     background-color: $color-white;
-    height: 100%;
-
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     @media #{$media-query-m} {
       margin: 0 12px;
+      min-height: unset;
       height: auto;
       border-radius: 8px;
       padding: 32px 40px 40px 40px;
@@ -171,11 +185,15 @@ export default {
   }
 
   &__control {
-    display: flex;
-    justify-content: flex-end;
     padding-top: 25px;
     margin-left: -3px;
     margin-right: -3px;
+    margin-top: auto;
+    text-align: center;
+    @media #{$media-query-m} {
+      margin-top: 0;
+      text-align: left;
+    }
 
     &:empty {
       display: none;
@@ -184,6 +202,19 @@ export default {
     .el-button {
       margin-left: 3px;
       margin-right: 3px;
+      width: 100%;
+      @media #{$media-query-m} {
+        width: auto;
+      }
+    }
+  }
+  &--large {
+    &.v--modal-overlay {
+      .v--modal-box {
+        @media #{$media-query-m} {
+          width: 842px !important;
+        }
+      }
     }
   }
 }

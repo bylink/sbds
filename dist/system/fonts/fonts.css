@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Formular-Regular";
-  src: url("./Formular.woff2") format("woff2"),
-    url("./Formular.woff") format("woff");
+  src: url("./Formular.woff2") format("woff2"), url("./Formular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,8 +15,7 @@
 
 @font-face {
   font-family: "Formular-Bold";
-  src:  url("./Formular-Bold.woff2") format("woff2"),
-    url("./Formular-Bold.woff") format("woff");
+  src: url("./Formular-Bold.woff2") format("woff2"), url("./Formular-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }

@@ -1,7 +1,8 @@
 <template>
   <El-modal
-    class="pt-form-modal"
+    class="el-form-modal"
     :name="name"
+    :is-large="isLarge"
     @beforeOpen="event => $emit('beforeOpen', event)"
     @beforeClose="event => $emit('beforeClose', event)"
     @opened="event => $emit('opened', event)"
@@ -13,6 +14,17 @@
       <El-button @click.prevent="handleSubmit" :loading="loading" :disabled="submitDisabled">
         {{ submitText }}
       </El-button>
+
+      <ElLink
+        v-if="cancelText"
+        @click.prevent="handleCancel"
+        variation="gray-darkest"
+        size="xs"
+        color="gray"
+      >
+        {{ cancelText }}
+      </ElLink>
+
       <div>
         <ElLink
           v-if="linkText"
@@ -63,11 +75,19 @@ export default {
       type: Boolean,
       default: true,
     },
+    isLarge: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     handleSubmit() {
       if (this.loading) return
       this.$emit("submit")
+    },
+    handleCancel() {
+      if (this.loading) return
+      this.$emit("cancel")
     },
     handleClickLink() {
       if (this.loading) return
@@ -78,11 +98,21 @@ export default {
 </script>
 
 <style lang="scss">
-.pt-form-modal {
+.el-form-modal {
   $block-name: &;
 
   & .el-link {
-    margin-top: 32px;
+    margin-top: 24px;
+    @media #{$media-query-m} {
+      margin-top: 32px;
+    }
+  }
+  &__control {
+    & .el-button {
+      @media #{$media-query-m} {
+        margin-right: 32px;
+      }
+    }
   }
 }
 </style>

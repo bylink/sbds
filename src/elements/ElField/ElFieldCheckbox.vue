@@ -280,7 +280,7 @@ export default {
   }
 
   &__name-text {
-    display: inline-block;
+    display: inline-flex;
 
     &:before {
       content: "";

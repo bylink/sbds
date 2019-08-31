@@ -207,7 +207,7 @@ $colors: $token-colors;
 .el-button {
   $block-name: &;
 
-  @include reset();
+  box-sizing: border-box;
   padding: $space_xxs / 2 $space_m;
   font-family: $font-medium;
   letter-spacing: $spacing-m;

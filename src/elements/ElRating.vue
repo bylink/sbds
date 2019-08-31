@@ -120,7 +120,7 @@ export default {
 <docs>
   ```jsx
   <div>
-    <ElRating show-rating/>
+    <ElRating :rating="3" show-rating/>
   </div>
   ```
 </docs>

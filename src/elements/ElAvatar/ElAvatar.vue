@@ -112,12 +112,14 @@ $avatars: $token-avatars;
     <ElAvatar size="m"/>
     <ElAvatar size="l"/>
     <ElAvatar size="xl"/>
+    <ElAvatar size="xxxl"/>
 
     <ElAvatar size="xs" rounded/>
     <ElAvatar size="s" rounded/>
     <ElAvatar size="m" rounded/>
     <ElAvatar size="l" rounded/>
     <ElAvatar size="xl" rounded lazy/>
+    <ElAvatar size="xxxl" rounded />
 
   </div>
   ```

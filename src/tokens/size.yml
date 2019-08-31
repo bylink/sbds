@@ -4,6 +4,8 @@
 #
 
 props:
+  tappable_element_xxxl:
+    value: "80px"
   tappable_element_xxl:
     value: "72px"
   tappable_element_xl:
@@ -40,6 +42,8 @@ props:
     value: "48px"
   avatar_xl:
     value: "56px"
+  avatar_xxxl:
+    value: "117px"
 
   panel_l:
     value: "400px"

@@ -1,6 +1,25 @@
 <template>
   <div class="el-section" :class="classes">
-    <div class="el-section__container"><slot /></div>
+    <div class="el-section__container">
+      <div class="el-section__top">
+        <div class="el-section__top-left">
+          <slot name="title">
+            <el-title
+              class="el-section__title--default"
+              v-if="title"
+              size="xxxl"
+              line-height="xxl"
+              :ellipsis="false"
+            >
+              {{ title }}
+            </el-title>
+          </slot>
+        </div>
+        <div class="el-section__top-right"></div>
+      </div>
+
+      <slot />
+    </div>
   </div>
 </template>
 
@@ -35,6 +54,14 @@ export default {
       type: String,
       default: null,
     },
+    /**
+     *  тайтл
+     *
+     */
+    title: {
+      type: String,
+      default: null,
+    },
   },
   computed: {
     classes() {
@@ -55,6 +82,15 @@ $spaces: $token-spaces;
 .el-section {
   $block-name: &;
 
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__top-left {
+    flex-grow: 1;
+  }
+
   @each $color, $value in $colors {
     &--background-#{$color} {
       background-color: $value;
@@ -70,6 +106,19 @@ $spaces: $token-spaces;
   @each $space, $value in $spaces {
     &--gutter-bottom-#{$space} {
       padding-bottom: $value;
+    }
+  }
+
+  &__title--default {
+    padding-bottom: $space-m;
+    @media #{$media-query-m} {
+      padding-bottom: $space-l;
+    }
+    @media #{$media-query-l} {
+      padding-bottom: $space-l;
+    }
+    @media #{$media-query-xl} {
+      padding-bottom: $space-l;
     }
   }
 

@@ -52,7 +52,7 @@ export default {
      */
     family: {
       type: String,
-      default: "heading",
+      default: "regular",
     },
     /**
      * Если нужен другой тэг
@@ -74,6 +74,13 @@ export default {
       type: Boolean,
       default: false,
     },
+    /**
+     * По центру
+     */
+    center: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     tag() {
@@ -88,6 +95,7 @@ export default {
         "el-title--ellipsis": this.ellipsis,
         "el-title--uppercase": this.uppercase,
         "el-title--inline": this.inline,
+        "el-title--center": this.center,
       }
     },
   },
@@ -97,6 +105,7 @@ export default {
 <style lang="scss">
 $sizes: $token-sizes;
 $line-heights: $token-line-heights;
+$media-titles: $token-media-titles;
 
 .el-title {
   $block-name: &;
@@ -134,12 +143,48 @@ $line-heights: $token-line-heights;
   @each $size, $value in $sizes {
     &--size-#{$size} {
       font-size: $value;
+      /*      @each $media, $font in $media-titles($size) {
+        @media (max-width: $media) {
+          font-size: $font;
+        }
+      }*/
     }
   }
 
   @each $line-height, $value in $line-heights {
     &--line-height-#{$line-height} {
       line-height: $value;
+    }
+  }
+
+  &--size-xxxxl {
+    @media #{$media-query-m-down} {
+      font-size: $size-xl;
+      line-height: $line-height-xl;
+    }
+  }
+  &--size-xxxl {
+    @media #{$media-query-m-down} {
+      font-size: $size-xl;
+      line-height: $line-height-l;
+    }
+  }
+  &--size-xxl {
+    @media #{$media-query-m-down} {
+      font-size: $size-xl;
+      line-height: $line-height-l;
+    }
+  }
+  &--size-xl {
+    @media #{$media-query-m-down} {
+      font-size: $size-l;
+      line-height: $line-height-l;
+    }
+  }
+  &--size-l {
+    @media #{$media-query-m-down} {
+      font-size: $size-ml;
+      line-height: $line-height-ml;
     }
   }
 
@@ -150,6 +195,19 @@ $line-heights: $token-line-heights;
       &__text {
         @include ellipsis($display: inline-block);
         @include layout-flex-fix();
+      }
+    }
+  }
+
+  &--center {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    & .el-svg-icon {
+      @media #{$media-query-m} {
+        width: 56px;
+        height: 56px;
       }
     }
   }
