@@ -1,6 +1,6 @@
 <template>
   <div class="el-toggler" :class="classes">
-    <div class="el-toggler__inner" @click="opened = !opened">
+    <div class="el-toggler__inner" @click="toggle">
       <slot name="toggler">
         <el-svg-icon name="arrow_job" />
         <el-title class="el-toggler__title" :variation="color" size="xl" line-height="l">
@@ -47,6 +47,15 @@ export default {
       return {
         [`el-toggler--color-${this.color}`]: this.color,
         "el-toggler--opened": this.opened,
+      }
+    },
+  },
+
+  methods: {
+    toggle() {
+      this.opened = !this.opened
+      if (this.opened) {
+        this.$on("opened")
       }
     },
   },
