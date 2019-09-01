@@ -57,7 +57,8 @@ export default {
 
   methods: {
     onAccept(value) {
-      console.log("accept", value)
+      this.$emit("input", value)
+      // console.log("accept", value)
     },
     onComplete(value) {
       console.log("complete", value)
