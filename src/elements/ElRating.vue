@@ -92,7 +92,7 @@ export default {
 
   data() {
     return {
-      total: null,
+      total: this.rating,
     }
   },
 
