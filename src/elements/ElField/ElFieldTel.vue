@@ -57,7 +57,7 @@ export default {
 
   methods: {
     onAccept(value) {
-      this.$emit("input", value)
+      this.$emit("input", value.replace(/\D/gm, ""))
       // console.log("accept", value)
     },
     onComplete(value) {
