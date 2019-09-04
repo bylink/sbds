@@ -1,6 +1,6 @@
 <template>
   <star-rating
-    v-model="total"
+    v-model="getTotal"
     class="el-rating"
     :active-color="activeColor"
     :inactive-color="inactiveColor"
@@ -92,7 +92,7 @@ export default {
 
   data() {
     return {
-      total: this.rating,
+      total: this.getTotal,
     }
   },
 
@@ -103,9 +103,10 @@ export default {
   },
 
   computed: {
+    getTotal() {
+      return +this.rating
+    },
     getRating() {
-      let x = +this.rating
-      console.log(typeof x)
       return +this.rating
     },
   },
