@@ -28,12 +28,15 @@ $spaces: $token-spaces;
     @media #{$media-query-m} {
       padding-bottom: $space-m;
     }
+  }
 
-    b {
-      font-weight: $weight-medium;
-      color: $color-main;
-      font-family: $font-medium;
-      padding-bottom: $space-s;
+  b {
+    font-weight: $weight-medium;
+    color: $color-main;
+    font-family: $font-medium;
+    padding-bottom: $space-s;
+    @media #{$media-query-m} {
+      padding-bottom: $space-m;
     }
   }
 
