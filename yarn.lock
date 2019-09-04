@@ -6174,6 +6174,11 @@ ignore@^4.0.6:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-4.0.6.tgz#750e3db5862087b4737ebac8207ffd1ef27b25fc"
   integrity sha512-cyFDKrqc/YdcWFniJhzI42+AzS+gNwmUzOSFcRCQYwySuBBBy/KjuxWLZ/FHEH6Moq1NizMOBWyTcv8O4OZIMg==
 
+imask@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/imask/-/imask-5.2.1.tgz#1576ca468ee32b2983618f5fbfd8d93d0351e826"
+  integrity sha512-MiYUC6zP3sHldoXovnbpYc9UXjL8t4GuiZGGgillFljzJaN/osq8AeCuS1DUwzwRydMLi8F9ZK3xHkOrXjuNcw==
+
 immer@1.7.2:
   version "1.7.2"
   resolved "https://registry.yarnpkg.com/immer/-/immer-1.7.2.tgz#a51e9723c50b27e132f6566facbec1c85fc69547"
@@ -12678,6 +12683,13 @@ vue-hot-reload-api@^2.3.0:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.3.tgz#2756f46cb3258054c5f4723de8ae7e87302a1ccf"
   integrity sha512-KmvZVtmM26BQOMK1rwUZsrqxEGeKiYSZGA7SNWE6uExx8UX/cj9hq2MRV/wWC3Cq6AoeDGk57rL9YMFRel/q+g==
+
+vue-imask@^5.2.0:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/vue-imask/-/vue-imask-5.2.1.tgz#334f60c59884f13ee478e6d3b02a803fedb100cc"
+  integrity sha512-u2BlHRdivYle+0F3uV7gbP82rbtKOL0D+B4e11hxJRdk6GbDHo/FmoQe6XZqaV1w2WWYzs6D1Y9zT042rxJ3yg==
+  dependencies:
+    imask "^5.2.1"
 
 vue-jest@^3.0.1:
   version "3.0.4"

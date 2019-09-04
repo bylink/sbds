@@ -96,6 +96,7 @@ $dot-colors: $token-colors;
   display: inline-flex;
   position: relative;
   border-radius: 50%;
+  background-color: #fff;
 
   & .el-notification {
     position: absolute;
