@@ -69,7 +69,7 @@ export default {
      *
      */
     rating: {
-      type: Number,
+      type: [Number, String],
       default: 0,
     },
     /**
