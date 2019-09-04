@@ -7,7 +7,7 @@
     :show-rating="showRating"
     :star-size="starSize"
     :read-only="readOnly"
-    :rating="rating"
+    :rating="getRating"
     :increment="increment"
     :inline="inline"
     text-class="custom-text"
@@ -102,7 +102,11 @@ export default {
     },
   },
 
-  computed: {},
+  computed: {
+    getRating() {
+      return +this.rating
+    },
+  },
 }
 </script>
 <style lang="scss">
