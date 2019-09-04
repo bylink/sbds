@@ -104,6 +104,7 @@ export default {
 
   computed: {
     getRating() {
+      console.log(+this.rating)
       return +this.rating
     },
   },
