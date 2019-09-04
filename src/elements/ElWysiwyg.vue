@@ -31,6 +31,8 @@ $spaces: $token-spaces;
   }
 
   b {
+    font-size: $size-sm;
+    display: block;
     font-weight: $weight-medium;
     color: $color-main;
     font-family: $font-medium;
