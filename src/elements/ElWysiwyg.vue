@@ -31,8 +31,9 @@ $spaces: $token-spaces;
 
     b {
       font-weight: $weight-medium;
-      color: $color-gray-darkest;
+      color: $color-main;
       font-family: $font-medium;
+      padding-bottom: $space-s;
     }
   }
 
