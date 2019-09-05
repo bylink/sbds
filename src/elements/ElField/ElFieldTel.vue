@@ -2,6 +2,7 @@
   <IMaskComponent
     v-model="phoneNumber"
     :mask="mask"
+    ref="input"
     :overwrite="false"
     :dispatch="dispatch"
     @accept="onAccept"
@@ -27,8 +28,7 @@ export default {
 
   data() {
     return {
-      selectedCountry: this.country,
-      phoneNumber: this.value,
+      phoneNumber: this.value || "+",
       mask: [
         {
           mask: "+000 {00} 000-00-00",
