@@ -83,6 +83,7 @@
       </div>
       <div class="el-field-text__append"><slot name="append" /></div>
     </div>
+
     <div class="el-field-text__footer" v-if="errorText || helpText">
       <ElTitle
         tag-name="div"
