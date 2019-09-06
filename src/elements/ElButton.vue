@@ -97,6 +97,14 @@ export default {
       default: "xxl",
     },
     /**
+     *  Tag:
+     *  `button, div, a, и т.д.`
+     */
+    defaultTag: {
+      type: String,
+      default: "button",
+    },
+    /**
      *  Тень
      *
      */
@@ -169,9 +177,6 @@ export default {
         "el-button--uppercase": this.uppercase,
         "el-button--shadow": this.shadow,
       }
-    },
-    defaultTag() {
-      return "button"
     },
     tag() {
       if (this.to) {
