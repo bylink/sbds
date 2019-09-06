@@ -9,38 +9,36 @@
     @closed="event => $emit('closed', event)"
   >
     <slot name="title" slot="title"></slot>
-    <form @submit.prevent="handleSubmit">
-      <slot></slot>
+    <form @submit.prevent="handleSubmit"><slot></slot></form>
+    <template v-if="visibleFooter" slot="footer">
+      <El-button @click.prevent="handleSubmit" :loading="loading" :disabled="submitDisabled">
+        {{ submitText }}
+      </El-button>
 
-      <template v-if="visibleFooter" slot="footer">
-        <El-button @click.prevent="handleSubmit" :loading="loading" :disabled="submitDisabled">
-          {{ submitText }}
-        </El-button>
+      <ElLink
+        v-if="cancelText"
+        @click.prevent="handleCancel"
+        variation="gray-darkest"
+        size="xs"
+        color="gray"
+      >
+        {{ cancelText }}
+      </ElLink>
 
+      <div>
         <ElLink
-          v-if="cancelText"
-          @click.prevent="handleCancel"
+          v-if="linkText"
+          @click.prevent="handleClickLink"
           variation="gray-darkest"
-          size="xs"
-          color="gray"
+          size="xxs"
+          border="dashed"
+          color="gray-darkest"
+          border-color="main"
         >
-          {{ cancelText }}
+          {{ linkText }}
         </ElLink>
-        <div>
-          <ElLink
-            v-if="linkText"
-            @click.prevent="handleClickLink"
-            variation="gray-darkest"
-            size="xxs"
-            border="dashed"
-            color="gray-darkest"
-            border-color="main"
-          >
-            {{ linkText }}
-          </ElLink>
-        </div>
-      </template>
-    </form>
+      </div>
+    </template>
   </El-modal>
 </template>
 
