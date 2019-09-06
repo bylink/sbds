@@ -1,14 +1,15 @@
 <template>
   <ElFieldText
+    ref="input"
     :type="type"
     :value="value"
-    @input="handleInput"
     :title="title"
     :disabled="disabled"
     :name="name"
     :placeholder="placeholder"
     :helpText="helpText"
     :errors="errors"
+    @input="handleInput"
   >
     <ElButton
       variation="gray-darker-link"
