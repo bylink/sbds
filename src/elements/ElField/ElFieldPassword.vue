@@ -13,6 +13,7 @@
   >
     <ElButton
       variation="gray-darker-link"
+      default-tag="div"
       slot="append"
       size="s-compact"
       @click.prevent="handleToggleClick"
