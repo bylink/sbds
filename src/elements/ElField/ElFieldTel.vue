@@ -7,7 +7,7 @@
     :dispatch="dispatch"
     @accept="onAccept"
     @complete="onComplete"
-    v-on="listeners"
+    @focus="onFocus"
   />
 </template>
 
@@ -29,7 +29,7 @@ export default {
 
   data() {
     return {
-      phoneNumber: this.value || "+",
+      phoneNumber: this.value,
       mask: [
         {
           mask: "+000 {00} 000-00-00",
@@ -59,10 +59,12 @@ export default {
   methods: {
     onAccept(value) {
       this.$emit("input", value.replace(/\D/gm, ""))
-      // console.log("accept", value)
     },
     onComplete() {
       this.$emit("complete")
+    },
+    onFocus() {
+      this.$emit("focus")
     },
   },
 }

@@ -509,7 +509,7 @@ export default {
    let inputText6= null
    let inputText7= null
    let inputText8= null
-   let inputText9= "+"
+   let inputText9= null
     <div style="max-width: 700px">
       <ElFieldText
               name="login1"
