@@ -60,8 +60,8 @@ export default {
       this.$emit("input", value.replace(/\D/gm, ""))
       // console.log("accept", value)
     },
-    onComplete(value) {
-      console.log("complete", value)
+    onComplete() {
+      this.$emit("complete")
     },
   },
 }
