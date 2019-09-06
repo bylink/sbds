@@ -7,6 +7,7 @@
     :dispatch="dispatch"
     @accept="onAccept"
     @complete="onComplete"
+    v-on="listeners"
   />
 </template>
 
