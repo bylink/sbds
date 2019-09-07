@@ -272,13 +272,16 @@ $colors: $token-colors;
     }
   }
 
+  &__main {
+    background-color: $color-white;
+  }
+
   &__header {
     @include reset-text-indents();
     display: block;
     position: absolute;
     left: $space-xs;
     top: $space-xs;
-    z-index: 2;
     pointer-events: none;
     transition: all 0.15s ease;
   }
@@ -316,6 +319,7 @@ $colors: $token-colors;
       border: 1px solid $color-gray-lighter;
       border-radius: $radius-s - 1 !important;
       padding: $space_s + 2 $space-xl $space-xxs $space-xs;
+      background-color: transparent;
       height: 60px;
       cursor: pointer;
 
