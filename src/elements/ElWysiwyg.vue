@@ -114,7 +114,6 @@ $spaces: $token-spaces;
     font-size: $size-ml;
     line-height: $line-height-sm;
     padding-bottom: $space-s;
-    text-transform: uppercase;
     @media #{$media-query-m} {
       font-size: $size-l;
       line-height: $line-height-l;
