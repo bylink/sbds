@@ -414,7 +414,6 @@ $colors: $token-colors;
     }
 
     &--active {
-      z-index: 1;
       .multiselect {
         &__tags {
           border-color: $color-gray-light;
