@@ -18,7 +18,7 @@
       size="s-compact"
       @click.prevent="handleToggleClick"
     >
-      <ElSvgIcon slot="icon-append" :name="type === 'password' ? 'pwd_eye' : 'popup_close'" />
+      <ElSvgIcon slot="icon-append" :name="type === 'password' ? 'pwd_eye' : 'pwd_eye_opened'" />
     </ElButton>
     <slot name="footer" slot="footer" />
   </ElFieldText>

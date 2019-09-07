@@ -28,6 +28,9 @@ $spaces: $token-spaces;
     @media #{$media-query-m} {
       padding-bottom: $space-m;
     }
+    b {
+      padding-bottom: 0;
+    }
   }
 
   b {
@@ -71,7 +74,7 @@ $spaces: $token-spaces;
     padding-top: $space-xxs;
   }
 
-  h3 {
+  h2 {
     font-size: $size-xl;
     line-height: $line-height-l;
     padding-bottom: $space-s;
@@ -79,6 +82,21 @@ $spaces: $token-spaces;
       font-size: $size-xxl;
       line-height: $line-height-xl;
       padding-bottom: $space-m;
+    }
+  }
+
+  h3 {
+    font-size: $size-ml;
+    line-height: $line-height-s;
+    padding-bottom: $space-s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    @media #{$media-query-m} {
+      font-size: $size-l;
+      line-height: $line-height-sm;
+      padding-bottom: $space-m;
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
   }
 
@@ -96,7 +114,10 @@ $spaces: $token-spaces;
     font-size: $size-ml;
     line-height: $line-height-sm;
     padding-bottom: $space-s;
-    text-transform: uppercase;
+    @media #{$media-query-m} {
+      font-size: $size-l;
+      line-height: $line-height-l;
+    }
   }
 
   ol,
