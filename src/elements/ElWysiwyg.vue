@@ -38,8 +38,9 @@ $spaces: $token-spaces;
     display: block;
     font-weight: $weight-medium;
     color: $color-main;
-    font-family: $font-medium;
+    font-family: $font-bold;
     padding-bottom: $space-s;
+    line-height: $line-height-sm;
     @media #{$media-query-m} {
       padding-bottom: $space-m;
     }
@@ -50,13 +51,15 @@ $spaces: $token-spaces;
     display: block;
     font-weight: $weight-medium;
     color: $color-main;
-    font-family: $font-medium;
+    line-height: $line-height-sm;
+    font-family: $font-bold;
   }
 
   a {
     text-decoration: none;
     color: inherit;
     border-bottom: 1px solid $color-main;
+    line-height: $line-height-sm;
 
     &:hover,
     &:focus,
@@ -78,8 +81,7 @@ $spaces: $token-spaces;
   h5,
   h6 {
     color: $color-gray-darkest;
-    font-family: $font-medium;
-    padding-top: $space-xxs;
+    font-family: $font-regular;
   }
 
   h2 {
