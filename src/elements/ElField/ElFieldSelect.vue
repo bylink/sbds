@@ -302,6 +302,9 @@ $colors: $token-colors;
       margin-bottom: 0;
       font-size: $size-s;
       padding-top: 2px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     &__input {
