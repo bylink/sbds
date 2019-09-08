@@ -45,6 +45,14 @@ $spaces: $token-spaces;
     }
   }
 
+  strong {
+    font-size: $size-sm;
+    display: block;
+    font-weight: $weight-medium;
+    color: $color-main;
+    font-family: $font-medium;
+  }
+
   a {
     text-decoration: none;
     color: inherit;
