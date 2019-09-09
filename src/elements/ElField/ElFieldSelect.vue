@@ -275,6 +275,7 @@ $colors: $token-colors;
 
   &__main {
     background-color: $color-white;
+    border-radius: 3px;
   }
 
   &__header {
