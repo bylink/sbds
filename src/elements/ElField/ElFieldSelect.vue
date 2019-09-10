@@ -570,7 +570,6 @@ $colors: $token-colors;
   }
 
   &--borderless {
-    color: #999;
     .multiselect {
       &__tags {
         border: none !important;
@@ -581,7 +580,7 @@ $colors: $token-colors;
   &--radiusless {
     .multiselect {
       &__tags {
-        border-radius: 0;
+        border-radius: 0 !important;
       }
     }
   }
