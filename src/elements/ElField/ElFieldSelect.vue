@@ -578,7 +578,7 @@ $colors: $token-colors;
   }
 
   &--radiusless {
-    &#{$block-name}__main {
+    & #{$block-name}__main {
       border-radius: 0 !important;
     }
   }
