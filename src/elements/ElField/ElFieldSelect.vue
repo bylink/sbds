@@ -329,7 +329,7 @@ $colors: $token-colors;
       cursor: pointer;
 
       &:hover {
-        border-color: $color-gray-light;
+        border-color: $color-gray;
       }
     }
 
