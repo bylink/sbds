@@ -489,8 +489,6 @@ export default {
   &--radiusless {
     #{$block-name} {
       &__input {
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
         border-radius: 0;
       }
     }

@@ -39,7 +39,7 @@
         <span slot="noResult">Ничего не найдено</span>
       </multiselect>
     </div>
-    <div class="el-field-select__footer">
+    <div class="el-field-select__footer" v-if="!disableFooter">
       <ElTitle
         tag-name="div"
         :ellipsis="false"
@@ -142,6 +142,11 @@ export default {
       default: true,
     },
 
+    disableFooter: {
+      type: Boolean,
+      default: false,
+    },
+
     value: {
       default: null,
     },
@@ -155,6 +160,24 @@ export default {
       type: String,
       default: null,
     },
+
+    /**
+     *  Без границ
+     *
+     */
+    borderless: {
+      type: Boolean,
+      default: false,
+    },
+
+    /**
+     *  Без радиусов
+     *
+     */
+    radiusless: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -167,6 +190,8 @@ export default {
         "el-field-select--error": this.errorText,
         "el-field-select--disabled": this.disabled,
         "el-field-select--focused": this.inputFocused,
+        "el-field-select--borderless": this.borderless,
+        "el-field-select--radiusless": this.radiusless,
         [`el-field-select--bg-${this.backgroundColor}`]: this.backgroundColor,
       }
     },
@@ -543,6 +568,23 @@ $colors: $token-colors;
       }
     }
   }
+
+  &--borderless {
+    color: #999;
+    .multiselect {
+      &__tags {
+        border: none !important;
+      }
+    }
+  }
+
+  &--radiusless {
+    .multiselect {
+      &__tags {
+        border-radius: 0;
+      }
+    }
+  }
 }
 </style>
 
@@ -568,6 +610,8 @@ $colors: $token-colors;
     <ElFieldSelect
             help-text="Используйте электронный адрес, указанный при регистрации аккаунта MediaCube."
             title="Single"
+            borderless
+            radiusless
             :allow-empty="true"
             :multiple="false"
             v-model="categoriesModel2"
