@@ -578,10 +578,8 @@ $colors: $token-colors;
   }
 
   &--radiusless {
-    .multiselect {
-      &__tags {
-        border-radius: 0 !important;
-      }
+    &#{$block-name}__main {
+      border-radius: 0 !important;
     }
   }
 }
