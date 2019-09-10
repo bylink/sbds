@@ -178,6 +178,15 @@ export default {
       type: Boolean,
       default: false,
     },
+
+    /**
+     *  Без стрелки
+     *
+     */
+    arrowDisabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -192,6 +201,7 @@ export default {
         "el-field-select--focused": this.inputFocused,
         "el-field-select--borderless": this.borderless,
         "el-field-select--radiusless": this.radiusless,
+        "el-field-select--arrow-disabled": this.arrowDisabled,
         [`el-field-select--bg-${this.backgroundColor}`]: this.backgroundColor,
       }
     },
@@ -580,6 +590,14 @@ $colors: $token-colors;
   &--radiusless {
     & #{$block-name}__main {
       border-radius: 0 !important;
+    }
+  }
+
+  &--arrow-disabled {
+    .multiselect {
+      &__select {
+        display: none !important;
+      }
     }
   }
 }
