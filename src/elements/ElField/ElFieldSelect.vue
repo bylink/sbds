@@ -321,7 +321,7 @@ $colors: $token-colors;
 
     &__tags {
       @include reset-text-indents();
-      border: 1px solid $color-gray-lighter;
+      border: 1px solid $color-gray-light;
       border-radius: $radius-s - 1 !important;
       padding: $space_s + 2 $space-xl $space-xxs $space-xs;
       background-color: transparent;
