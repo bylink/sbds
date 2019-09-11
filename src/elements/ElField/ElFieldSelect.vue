@@ -277,7 +277,6 @@ export default {
 
   created() {
     this.checkValue()
-    console.log(this.options)
   },
 
   watch: {
