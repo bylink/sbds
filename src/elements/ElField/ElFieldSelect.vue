@@ -39,7 +39,7 @@
         <span slot="noResult">Ничего не найдено</span>
       </multiselect>
     </div>
-    <div class="el-field-select__footer">
+    <div class="el-field-select__footer" v-if="!disableFooter">
       <ElTitle
         tag-name="div"
         :ellipsis="false"
@@ -142,6 +142,11 @@ export default {
       default: true,
     },
 
+    disableFooter: {
+      type: Boolean,
+      default: false,
+    },
+
     value: {
       default: null,
     },
@@ -155,6 +160,33 @@ export default {
       type: String,
       default: null,
     },
+
+    /**
+     *  Без границ
+     *
+     */
+    borderless: {
+      type: Boolean,
+      default: false,
+    },
+
+    /**
+     *  Без радиусов
+     *
+     */
+    radiusless: {
+      type: Boolean,
+      default: false,
+    },
+
+    /**
+     *  Без стрелки
+     *
+     */
+    arrowDisabled: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -167,6 +199,9 @@ export default {
         "el-field-select--error": this.errorText,
         "el-field-select--disabled": this.disabled,
         "el-field-select--focused": this.inputFocused,
+        "el-field-select--borderless": this.borderless,
+        "el-field-select--radiusless": this.radiusless,
+        "el-field-select--arrow-disabled": this.arrowDisabled,
         [`el-field-select--bg-${this.backgroundColor}`]: this.backgroundColor,
       }
     },
@@ -242,7 +277,6 @@ export default {
 
   created() {
     this.checkValue()
-    console.log(this.options)
   },
 
   watch: {
@@ -275,6 +309,7 @@ $colors: $token-colors;
 
   &__main {
     background-color: $color-white;
+    border-radius: 3px;
   }
 
   &__header {
@@ -320,7 +355,7 @@ $colors: $token-colors;
 
     &__tags {
       @include reset-text-indents();
-      border: 1px solid $color-gray-lighter;
+      border: 1px solid $color-gray-light;
       border-radius: $radius-s - 1 !important;
       padding: $space_s + 2 $space-xl $space-xxs $space-xs;
       background-color: transparent;
@@ -328,7 +363,7 @@ $colors: $token-colors;
       cursor: pointer;
 
       &:hover {
-        border-color: $color-gray-light;
+        border-color: $color-gray;
       }
     }
 
@@ -542,6 +577,28 @@ $colors: $token-colors;
       }
     }
   }
+
+  &--borderless {
+    .multiselect {
+      &__tags {
+        border: none !important;
+      }
+    }
+  }
+
+  &--radiusless {
+    & #{$block-name}__main {
+      border-radius: 0 !important;
+    }
+  }
+
+  &--arrow-disabled {
+    .multiselect {
+      &__select {
+        display: none !important;
+      }
+    }
+  }
 }
 </style>
 
@@ -567,6 +624,8 @@ $colors: $token-colors;
     <ElFieldSelect
             help-text="Используйте электронный адрес, указанный при регистрации аккаунта MediaCube."
             title="Single"
+            borderless
+            radiusless
             :allow-empty="true"
             :multiple="false"
             v-model="categoriesModel2"

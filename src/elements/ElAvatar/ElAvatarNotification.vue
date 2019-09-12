@@ -2,6 +2,7 @@
   <section class="el-avatar-notification" :class="classes">
     <ElAvatar :size="size" :src="src" :lazy="lazy" rounded />
     <ElNotification
+      v-if="isNotification"
       :size="dotSize"
       :background="dotColor"
       :border="dotBorder"
@@ -71,6 +72,14 @@ export default {
      *
      */
     lazy: {
+      type: Boolean,
+      default: false,
+    },
+    /**
+     *  показать точку
+     *
+     */
+    isNotification: {
       type: Boolean,
       default: false,
     },

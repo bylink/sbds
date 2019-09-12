@@ -8,7 +8,7 @@
       class="el-avatar__img"
     />
     <img v-else-if="src" :src="src" alt="profile-image" class="el-avatar__img" />
-    <div v-else class="el-avatar__pic"><ElSvgIcon name="avatar" fill="white" :size="size" /></div>
+    <div v-else class="el-avatar__pic"><ElSvgIcon name="avatar" :size="size" /></div>
   </figure>
 </template>
 
