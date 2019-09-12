@@ -1,13 +1,12 @@
 <template>
   <star-rating
-    v-model="getTotal"
+    v-model="total"
     class="el-rating"
     :active-color="activeColor"
     :inactive-color="inactiveColor"
     :show-rating="showRating"
     :star-size="starSize"
     :read-only="readOnly"
-    :rating="getRating"
     :increment="increment"
     :inline="inline"
     text-class="custom-text"
@@ -68,7 +67,7 @@ export default {
      *  Рейтинг
      *
      */
-    rating: {
+    value: {
       type: [Number, String],
       default: 0,
     },
@@ -92,22 +91,13 @@ export default {
 
   data() {
     return {
-      total: this.getTotal,
+      total: this.value,
     }
   },
 
   watch: {
     total(value) {
       this.$emit("input", value)
-    },
-  },
-
-  computed: {
-    getTotal() {
-      return +this.rating
-    },
-    getRating() {
-      return +this.rating
     },
   },
 }
@@ -126,8 +116,9 @@ export default {
 
 <docs>
   ```jsx
+  let test = 3
   <div>
-    <ElRating :rating="3" show-rating/>
+    <ElRating v-model="test" show-rating/>
   </div>
   ```
 </docs>
