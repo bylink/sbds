@@ -494,6 +494,17 @@ export default {
     }
   }
 }
+
+.flatpickr-calendar {
+  box-shadow: none;
+  border-radius: 0;
+  border: 1px solid $color-gray-lighten;
+
+  &:before,
+  &:after {
+    display: none;
+  }
+}
 </style>
 
 <docs>
