@@ -499,6 +499,7 @@ export default {
   box-shadow: none;
   border-radius: 0;
   border: 1px solid $color-gray-lighten;
+  margin-top: -2px;
 
   &:before,
   &:after {
