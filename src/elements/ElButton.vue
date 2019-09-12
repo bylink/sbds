@@ -433,6 +433,7 @@ $colors: $token-colors;
         &-small {
           border: 1px solid $value;
           color: $value;
+          font-family: $font-regular;
           font-size: $size-xxxs;
           height: $space-s;
           line-height: $line-height-xxs;
