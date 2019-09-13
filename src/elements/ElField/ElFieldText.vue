@@ -563,6 +563,9 @@ export default {
     opacity: 1;
     color: $color-gray;
   }
+  & .vdpCell.today {
+    color: $color-main;
+  }
   & .vdpCellContent {
     font-size: $size-xs;
     line-height: $line_height_s;
@@ -582,7 +585,6 @@ export default {
     line-height: $line_height_s;
     color: $color_gray_darkest;
     border: none;
-
     &:hover,
     &:active,
     &:focus {
@@ -592,6 +594,7 @@ export default {
   & .vdpOuterWrap {
     right: 0;
     padding: 0;
+    animation: none !important;
   }
   & .vdpInnerWrap {
     max-width: unset;
@@ -605,22 +608,41 @@ export default {
   & .vdpClearInput {
     display: none;
   }
-  & .vdpArrowPrev:after {
-    border-right-color: $color-main;
+  & .vdpArrowPrev {
+    left: 3%;
+    &:after {
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid black;
+      border-left: 2px solid black;
+      border-right: none;
+      border-bottom: none;
+      border-radius: 0 1px 0 1px;
+      transform: rotate(-45deg);
+    }
   }
-
-  & .vdpArrowNext:after {
-    border-left-color: $color-main;
+  & .vdpArrowNext {
+    right: 3%;
+    &:after {
+      width: 10px;
+      height: 10px;
+      border-top: 2px solid black;
+      border-left: 2px solid black;
+      border-right: none;
+      border-bottom: none;
+      border-radius: 0 1px 0 1px;
+      transform: rotate(135deg);
+    }
   }
-}
-
-.vdpCell.selectable:hover .vdpCellContent,
-.vdpCell.selected .vdpCellContent {
-  background: #cc99cd;
-}
-
-.vdpCell.today {
-  color: #cc99cd;
+  & .vdpArrow:focus,
+  .vdpArrow:hover {
+    &:before {
+      background-color: #fff;
+    }
+    &:after {
+      border-color: $color-main;
+    }
+  }
 }
 </style>
 
