@@ -32,22 +32,35 @@
           @input="value => handleInput(value)"
         />
 
-        <flat-pickr
-          v-else-if="isDate"
-          class="el-field-text__input"
-          :style="inputStyles"
-          :placeholder="placeholder"
-          :value="value"
-          :name="name"
-          ref="input"
-          :disabled="disabled"
-          :id="name"
-          v-model="date"
-          @focus="inputFocused = true"
-          @blur="handleBlur"
-          v-on="listeners"
-          @input="value => handleInput(value)"
-        ></flat-pickr>
+        <!--        <flat-pickr-->
+        <!--          v-else-if="isDate"-->
+        <!--          class="el-field-text__input"-->
+        <!--          :style="inputStyles"-->
+        <!--          :placeholder="placeholder"-->
+        <!--          :value="value"-->
+        <!--          :name="name"-->
+        <!--          ref="input"-->
+        <!--          :disabled="disabled"-->
+        <!--          :id="name"-->
+        <!--          v-model="date"-->
+        <!--          @focus="inputFocused = true"-->
+        <!--          @blur="handleBlur"-->
+        <!--          v-on="listeners"-->
+        <!--          @input="value => handleInput(value)"-->
+        <!--        />-->
+
+        <div class="date-pick__wrapper" v-else-if="isDate">
+          <el-title color="gray" size="xxxs" line-height="xxs"> Дата поездки </el-title>
+          <date-pick
+            v-model="date"
+            :isDateDisabled="isPastDate"
+            :nextMonthCaption="nextMonthCaption"
+            :prevMonthCaption="prevMonthCaption"
+            :weekdays="weekdays"
+            :months="months"
+            format="DD-MM-YYYY"
+          />
+        </div>
 
         <textarea
           v-else-if="isTextarea"
@@ -116,7 +129,8 @@
 import _omit from "lodash/omit"
 
 import tokens from "../../assets/tokens/tokens"
-import flatPickr from "vue-flatpickr-component"
+import DatePick from "vue-date-pick"
+import "vue-date-pick/dist/vueDatePick.css"
 
 import ElTitle from "../ElTitle"
 import ElSvgIcon from "../ElSvgIcon"
@@ -125,7 +139,7 @@ import ElFieldTel from "./ElFieldTel"
 
 export default {
   name: "ElFieldText",
-  components: { ElFieldTel, ElButton, ElSvgIcon, ElTitle, flatPickr },
+  components: { ElFieldTel, ElButton, ElSvgIcon, ElTitle, DatePick },
   props: {
     /**
      *  Тип:
@@ -223,7 +237,25 @@ export default {
       prependWidth: 0,
       appendWidth: 0,
       inputFocused: false,
-      date: new Date(),
+      // date: new Date(),
+      date: "13-09-2019",
+      nextMonthCaption: "Следующий месяц",
+      prevMonthCaption: "Предыдущий месяц",
+      weekdays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
+      months: [
+        "Январь",
+        "Февраль",
+        "Март",
+        "Апрель",
+        "Май",
+        "Июнь",
+        "Июль",
+        "Август",
+        "Сентябрь",
+        "Октябрь",
+        "Ноябрь",
+        "Декабрь",
+      ],
     }
   },
 
@@ -244,6 +276,9 @@ export default {
   },
 
   computed: {
+    dateString() {
+      return this.date.toString()
+    },
     classes() {
       return {
         "el-field-text--error": this.errorText,
@@ -301,6 +336,10 @@ export default {
   },
 
   methods: {
+    isPastDate(date) {
+      const currentDate = new Date()
+      return date < currentDate
+    },
     checkValue() {
       if (this.value !== null) {
         this.inputFocused = true
@@ -336,7 +375,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "~flatpickr/dist/flatpickr";
+@import "~vue-date-pick/dist/vueDatePick";
 
 .el-field-text {
   $block-name: &;
@@ -495,16 +534,92 @@ export default {
   }
 }
 
-.flatpickr-calendar {
-  box-shadow: none;
-  border-radius: 0;
-  border: 1px solid $color-gray-lighten;
-  margin-top: -2px;
+.date-pick__wrapper {
+  position: relative;
+  & .el-title {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    z-index: 21;
+  }
+}
+.vdpComponent {
+  width: 100%;
+  z-index: 20;
+  font-family: $font-regular;
 
-  &:before,
-  &:after {
+  & .vdpHeader {
+    background: #fff;
+  }
+
+  & .vdpHeadCellContent {
+    font-size: $size-xs;
+    line-height: $line_height_s;
+    color: $color_gray_dark;
+  }
+  & .vdpCell.disabled,
+  & .vdpCell.outOfRange {
+    opacity: 1;
+    color: $color-gray;
+  }
+  & .vdpCellContent {
+    font-size: $size-xs;
+    line-height: $line_height_s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .vdpCell.selectable:hover .vdpCellContent,
+  .vdpCell.selected .vdpCellContent {
+    background-color: $color-main;
+  }
+  &.vdpWithInput > input {
+    height: 60px;
+    width: 100%;
+    padding: 26px 16px 8px 16px;
+    font-size: $size_s;
+    line-height: $line_height_s;
+    color: $color_gray_darkest;
+    border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+    }
+    outline: none;
+  }
+  & .vdpOuterWrap {
+    right: 0;
+    padding: 0;
+  }
+  & .vdpInnerWrap {
+    max-width: unset;
+    border-radius: 0 0 3px 3px;
+  }
+  & .vdpPeriodControls button {
+    font-family: $font-regular;
+    font-size: $size_s;
+    line-height: $line-height-s;
+  }
+  & .vdpClearInput {
     display: none;
   }
+  & .vdpArrowPrev:after {
+    border-right-color: $color-main;
+  }
+
+  & .vdpArrowNext:after {
+    border-left-color: $color-main;
+  }
+}
+
+.vdpCell.selectable:hover .vdpCellContent,
+.vdpCell.selected .vdpCellContent {
+  background: #cc99cd;
+}
+
+.vdpCell.today {
+  color: #cc99cd;
 }
 </style>
 
