@@ -59,6 +59,7 @@
             :weekdays="weekdays"
             :months="months"
             format="DD-MM-YYYY"
+            mobileBreakpointWidth="0"
           />
         </div>
 
