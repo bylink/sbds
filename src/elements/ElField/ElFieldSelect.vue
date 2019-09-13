@@ -427,6 +427,7 @@ $colors: $token-colors;
 
     &__content-wrapper {
       top: calc(100% - 1px);
+      width: calc(100% + 1);
       border: 1px solid $color-gray-light;
       border-radius: 0 0 3px 3px;
       box-shadow: $shadow-s;
