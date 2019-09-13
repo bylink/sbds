@@ -124,9 +124,10 @@ export default {
     font-size: $size_xxxs;
     line-height: $line_height_xxxs;
     text-transform: uppercase;
+    font-family: $font-bold;
 
     @media #{$media-query-m} {
-      font-size: $size-ml;
+      font-size: $size-m;
       line-height: $line-height-sm;
     }
   }
