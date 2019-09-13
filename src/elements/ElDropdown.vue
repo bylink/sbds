@@ -77,6 +77,7 @@ export default {
 
   &__toggler {
     outline: none;
+    user-select: none;
   }
 
   &__body {
@@ -133,7 +134,7 @@ export default {
         right: 0;
 
         &:before {
-          right: 38%;
+          right: 22%;
         }
       }
     }

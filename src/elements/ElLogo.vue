@@ -105,6 +105,7 @@ export default {
 <style lang="scss">
 .el-logo {
   $block-name: &;
+  user-select: none;
 
   @include reset-text-indents();
 
