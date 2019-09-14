@@ -32,23 +32,6 @@
           @input="value => handleInput(value)"
         />
 
-        <!--        <flat-pickr-->
-        <!--          v-else-if="isDate"-->
-        <!--          class="el-field-text__input"-->
-        <!--          :style="inputStyles"-->
-        <!--          :placeholder="placeholder"-->
-        <!--          :value="value"-->
-        <!--          :name="name"-->
-        <!--          ref="input"-->
-        <!--          :disabled="disabled"-->
-        <!--          :id="name"-->
-        <!--          v-model="date"-->
-        <!--          @focus="inputFocused = true"-->
-        <!--          @blur="handleBlur"-->
-        <!--          v-on="listeners"-->
-        <!--          @input="value => handleInput(value)"-->
-        <!--        />-->
-
         <div class="date-pick__wrapper" v-else-if="isDate">
           <el-title color="gray" size="xxxs" line-height="xxs"> Дата поездки </el-title>
           <date-pick
@@ -59,7 +42,7 @@
             :weekdays="weekdays"
             :months="months"
             format="DD-MM-YYYY"
-            mobileBreakpointWidth="0"
+            :mobileBreakpointWidth="0"
           />
         </div>
 
