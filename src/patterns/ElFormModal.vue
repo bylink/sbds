@@ -103,12 +103,15 @@ export default {
 
   &__inner {
     width: 100%;
+    @media #{$media-query-m} {
+      margin-bottom: 32px;
+    }
   }
 
   &__link {
     margin-bottom: 24px;
     @media #{$media-query-m} {
-      margin-bottom: 32px;
+      margin-bottom: 0;
     }
   }
 }
