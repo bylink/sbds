@@ -10,8 +10,8 @@
   >
     <slot name="title" slot="title"></slot>
     <form @submit.prevent="handleSubmit">
-      <slot></slot>
-      <template v-if="visibleFooter" slot="footer">
+      <slot />
+      <div v-if="visibleFooter" slot="footer">
         <El-button @click.prevent="handleSubmit" :loading="loading" :disabled="submitDisabled">
           {{ submitText }}
         </El-button>
@@ -39,7 +39,7 @@
             {{ linkText }}
           </ElLink>
         </div>
-      </template>
+      </div>
     </form>
   </El-modal>
 </template>
@@ -85,7 +85,7 @@ export default {
   methods: {
     handleSubmit() {
       if (this.loading) return
-      this.$emit("sub`mit")
+      this.$emit("submit")
     },
     handleCancel() {
       if (this.loading) return
@@ -104,10 +104,7 @@ export default {
   $block-name: &;
 
   &__inner {
-    margin-top: 24px;
-    width: 100%;
     @media #{$media-query-m} {
-      margin-top: 32px;
     }
   }
 }
@@ -117,7 +114,7 @@ export default {
   ```jsx
   <div>
     <ElButton @click.prevent="$modal.show('testFormModal')">Open</ElButton>
-    <ElFormModal name="testFormModal" cancel-text="Отмена" submit-text="Сохранить">
+    <ElFormModal name="testFormModal" cancel-text="Отмена" submit-text="Сохранить" link-text="123">
       <template slot="title">Заголовок</template>
       Контент
     </ElFormModal>
