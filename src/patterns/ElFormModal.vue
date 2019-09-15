@@ -3,6 +3,7 @@
     class="el-form-modal"
     :name="name"
     :is-large="isLarge"
+    :is-medium="isMedium"
     @beforeOpen="event => $emit('beforeOpen', event)"
     @beforeClose="event => $emit('beforeClose', event)"
     @opened="event => $emit('opened', event)"
