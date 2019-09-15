@@ -16,6 +16,7 @@
 
       <ElLink
         v-if="cancelText"
+        class="el-form-modal__link"
         @click.prevent="handleCancel"
         variation="gray-darkest"
         size="xs"
@@ -102,9 +103,12 @@ export default {
 
   &__inner {
     width: 100%;
-    margin-top: 24px;
+  }
+
+  &__link {
+    margin-bottom: 24px;
     @media #{$media-query-m} {
-      margin-top: 32px;
+      margin-bottom: 32px;
     }
   }
 }

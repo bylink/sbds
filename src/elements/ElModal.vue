@@ -187,7 +187,7 @@ export default {
   }
 
   &__body-inner {
-    margin-bottom: 25px;
+    margin-bottom: 40px;
   }
 
   &__inner {
