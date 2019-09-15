@@ -25,7 +25,7 @@
         {{ cancelText }}
       </ElLink>
 
-      <div style="width: 100%;">
+      <div class="el-form-modal__inner">
         <ElLink
           v-if="linkText"
           @click.prevent="handleClickLink"
@@ -101,8 +101,9 @@ export default {
 .el-form-modal {
   $block-name: &;
 
-  & .el-link {
+  &__inner {
     margin-top: 24px;
+    width: 100%;
     @media #{$media-query-m} {
       margin-top: 32px;
     }

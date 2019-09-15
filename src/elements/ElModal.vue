@@ -194,6 +194,7 @@ export default {
       margin-top: 0;
       text-align: left;
       display: flex;
+      flex-wrap: wrap;
     }
 
     &:empty {
