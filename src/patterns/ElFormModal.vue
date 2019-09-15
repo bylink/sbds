@@ -25,7 +25,7 @@
         {{ cancelText }}
       </ElLink>
 
-      <div>
+      <div style="width: 100%;">
         <ElLink
           v-if="linkText"
           @click.prevent="handleClickLink"
