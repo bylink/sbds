@@ -107,13 +107,6 @@ export default {
       margin-top: 32px;
     }
   }
-  &__control {
-    & .el-button {
-      @media #{$media-query-m} {
-        margin-right: 32px;
-      }
-    }
-  }
 }
 </style>
 

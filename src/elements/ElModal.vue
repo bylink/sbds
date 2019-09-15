@@ -193,6 +193,7 @@ export default {
     @media #{$media-query-m} {
       margin-top: 0;
       text-align: left;
+      display: flex;
     }
 
     &:empty {
@@ -205,6 +206,7 @@ export default {
       width: 100%;
       @media #{$media-query-m} {
         width: auto;
+        margin-right: 32px;
       }
     }
   }
