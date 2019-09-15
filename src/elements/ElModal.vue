@@ -253,7 +253,7 @@ export default {
     &.v--modal-overlay {
       .v--modal-box {
         @media #{$media-query-m} {
-          width: 515px !important;
+          width: 561px !important;
         }
       }
     }
