@@ -83,7 +83,7 @@ export default {
   methods: {
     handleSubmit() {
       if (this.loading) return
-      this.$emit("submit")
+      this.$emit("sub`mit")
     },
     handleCancel() {
       if (this.loading) return
