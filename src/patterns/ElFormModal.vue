@@ -79,6 +79,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    isMedium: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     handleSubmit() {

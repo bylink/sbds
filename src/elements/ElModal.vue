@@ -45,6 +45,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    isMedium: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     close() {
@@ -59,6 +63,7 @@ export default {
     classes() {
       return {
         "el-modal--large": this.isLarge,
+        "el-modal--medium": this.isMedium,
       }
     },
   },
@@ -240,6 +245,15 @@ export default {
       .v--modal-box {
         @media #{$media-query-m} {
           width: 842px !important;
+        }
+      }
+    }
+  }
+  &--medium {
+    &.v--modal-overlay {
+      .v--modal-box {
+        @media #{$media-query-m} {
+          width: 515px !important;
         }
       }
     }
