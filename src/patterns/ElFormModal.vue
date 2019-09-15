@@ -104,7 +104,10 @@ export default {
   &__inner {
     width: 100%;
     @media #{$media-query-m} {
-      margin-bottom: 32px;
+      margin-top: 32px;
+    }
+    &:empty {
+      display: none;
     }
   }
 
@@ -121,7 +124,7 @@ export default {
   ```jsx
   <div>
     <ElButton @click.prevent="$modal.show('testFormModal')">Open</ElButton>
-    <ElFormModal name="testFormModal" cancel-text="Отмена" submit-text="Сохранить" link-text="123">
+    <ElFormModal name="testFormModal" cancel-text="Отмена" submit-text="Сохранить">
       <template slot="title">Заголовок</template>
       Контент
     </ElFormModal>
