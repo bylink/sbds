@@ -56,7 +56,7 @@ export default {
     },
     loading: {
       type: Boolean,
-      default: false,
+      default: true,
     },
     cancelText: {
       type: String,
