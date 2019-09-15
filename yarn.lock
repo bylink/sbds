@@ -5231,11 +5231,6 @@ flat-cache@^2.0.1:
     rimraf "2.6.3"
     write "1.0.3"
 
-flatpickr@^4.6.1:
-  version "4.6.2"
-  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.2.tgz#50e1b4fc84fbf67c5b0919ba3ddc330221f126da"
-  integrity sha512-bRfBPyxohUQWgCTg6jPALUO1t/x+sRJ/S/RVti/NzYvHqGRpCAesKSWKLzOuLmpu+vGHfXBld4SXvOCLFgYb+g==
-
 flatted@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-2.0.1.tgz#69e57caa8f0eacbc281d2e2cb458d46fdb449e08"
@@ -12633,6 +12628,13 @@ vue-click-outside@^1.0.7:
   resolved "https://registry.yarnpkg.com/vue-click-outside/-/vue-click-outside-1.0.7.tgz#cdd2b1605e3c4944784e1794eae4a12a0f700bd6"
   integrity sha1-zdKxYF48SUR4TheU6uShKg9wC9Y=
 
+vue-date-pick@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/vue-date-pick/-/vue-date-pick-1.2.1.tgz#8c0e7aa72482248ce59c14de30e0c5b8e31d650b"
+  integrity sha512-5kHAS08nGvNCAekb5XDOaQR+7TrECxy0DmQ7N9TiMljXsjmo4xmxvHyOuGhFDB0OaVWs4boXlzQIkDsGiji6Gw==
+  dependencies:
+    vue "^2.5.17"
+
 vue-docgen-api@^2.6.1:
   version "2.6.12"
   resolved "https://registry.yarnpkg.com/vue-docgen-api/-/vue-docgen-api-2.6.12.tgz#0121e681b9e6148ec6675277a9b1a94623b0958c"
@@ -12671,13 +12673,6 @@ vue-eslint-parser@^2.0.3:
     espree "^3.5.2"
     esquery "^1.0.0"
     lodash "^4.17.4"
-
-vue-flatpickr-component@^8.1.2:
-  version "8.1.3"
-  resolved "https://registry.yarnpkg.com/vue-flatpickr-component/-/vue-flatpickr-component-8.1.3.tgz#65279cfc4910504dbc726dcfc14700d27045bd18"
-  integrity sha512-x12gR2c+qbtvERjYzsxjIs1hcZASnii6ULfkHWrBG/eY1JcclsOIsxeukWYgXLmb7q0k6T2szsFwDBN98WiKnQ==
-  dependencies:
-    flatpickr "^4.6.1"
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.3"

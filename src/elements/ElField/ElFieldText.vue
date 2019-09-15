@@ -35,14 +35,21 @@
         <div class="date-pick__wrapper" v-else-if="isDate">
           <el-title color="gray" size="xxxs" line-height="xxs"> Дата поездки </el-title>
           <date-pick
-            v-model="date"
             :isDateDisabled="isPastDate"
             :nextMonthCaption="nextMonthCaption"
             :prevMonthCaption="prevMonthCaption"
             :weekdays="weekdays"
             :months="months"
-            format="DD-MM-YYYY"
+            :style="inputStyles"
+            :placeholder="placeholder"
+            format="DD.MM.YYYY"
+            ref="input"
             :mobileBreakpointWidth="0"
+            :value="value"
+            @focus="inputFocused = true"
+            @blur="handleBlur"
+            v-on="listeners"
+            @input="value => handleInput(value)"
           />
         </div>
 
@@ -222,7 +229,6 @@ export default {
       appendWidth: 0,
       inputFocused: false,
       // date: new Date(),
-      date: "13-09-2019",
       nextMonthCaption: "Следующий месяц",
       prevMonthCaption: "Предыдущий месяц",
       weekdays: ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"],
@@ -630,66 +636,67 @@ export default {
 </style>
 
 <docs>
-    ```jsx
+  ```jsx
 
-   let inputText1= null
-   let inputText2= null
-   let inputText3= null
-   let inputText4= null
-   let inputText5= null
-   let inputText6= null
-   let inputText7= null
-   let inputText8= null
-   let inputText9= null
-    <div style="max-width: 700px">
-      <ElFieldText
-              name="login1"
-              title="Лейбл"
-              help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
-              v-model="inputText1"
-      >
-      </ElFieldText>
+  let inputText1= null
+  let inputText2= null
+  let inputText3= null
+  let inputText4= null
+  let inputText5= null
+  let inputText6= null
+  let inputText7= null
+  let inputText8= '22.09.2019'
 
-      <ElFieldText
-              name="login2"
-              title="Лейбл"
-              help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
-              :errors="['Имя пользователя и пароль не совпадают', 'Поле обязательно для заполнения.']"
-              v-model="inputText2"
-      >
-        <ElSvgIcon slot="append" name="direction"></ElSvgIcon>
-      </ElFieldText>
+  let inputText9= null
+  <div style="max-width: 700px">
+    <ElFieldText
+            name="login1"
+            title="Лейбл"
+            help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
+            v-model="inputText1"
+    >
+    </ElFieldText>
 
-      <ElFieldText name="login3" title="Лейбл" disabled="" v-model="inputText3"> </ElFieldText>
+    <ElFieldText
+            name="login2"
+            title="Лейбл"
+            help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
+            :errors="['Имя пользователя и пароль не совпадают', 'Поле обязательно для заполнения.']"
+            v-model="inputText2"
+    >
+      <ElSvgIcon slot="append" name="direction"></ElSvgIcon>
+    </ElFieldText>
 
-      <div style="display: flex; background-color: #333; padding: 15px;">
-        <div style="width: 33%; border-right: 1px solid gray;">
-          <ElFieldText name="login4" title="Лейбл1" v-model="inputText4" borderless radiusless>
-          </ElFieldText>
-        </div>
-        <div style="width: 33%; border-right: 1px solid gray;">
-          <ElFieldText name="login5" title="Лейбл" v-model="inputText5" borderless radiusless>
-          </ElFieldText>
-        </div>
-        <div style="width: 33%;">
-          <ElFieldText name="login6" title="Лейбл" v-model="inputText6" borderless radiusless>
-          </ElFieldText>
-        </div>
+    <ElFieldText name="login3" title="Лейбл" disabled="" v-model="inputText3"> </ElFieldText>
+
+    <div style="display: flex; background-color: #333; padding: 15px;">
+      <div style="width: 33%; border-right: 1px solid gray;">
+        <ElFieldText name="login4" title="Лейбл1" v-model="inputText4" borderless radiusless>
+        </ElFieldText>
       </div>
-
-      <div style="width: 700px; padding: 15px;">
-        <ElFieldText
-          name="Textarea"
-          title="Лейбл7"
-          type="textarea"
-          help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
-          v-model="inputText7"
-        />
-
-        <ElFieldText name="datePicker" title="Лейбл8" type="date" v-model="inputText8"/>
-
-        <ElFieldText name="phone" title="Лейбл9" type="phone" v-model="inputText9"/>
+      <div style="width: 33%; border-right: 1px solid gray;">
+        <ElFieldText name="login5" title="Лейбл" v-model="inputText5" borderless radiusless>
+        </ElFieldText>
+      </div>
+      <div style="width: 33%;">
+        <ElFieldText name="login6" title="Лейбл" v-model="inputText6" borderless radiusless>
+        </ElFieldText>
       </div>
     </div>
-    ```
+
+    <div style="width: 700px; padding: 15px;">
+      <ElFieldText
+              name="Textarea"
+              title="Лейбл7"
+              type="textarea"
+              help-text="Используйте электронный адрес, указанный при регистрации аккаунта."
+              v-model="inputText7"
+      />
+
+      <ElFieldText name="datePicker" title="Лейбл8" type="date" v-model="inputText8"/>
+
+      <ElFieldText name="phone" title="Лейбл9" type="phone" v-model="inputText9"/>
+    </div>
+  </div>
+  ```
 </docs>
