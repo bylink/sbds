@@ -8,39 +8,36 @@
     @opened="event => $emit('opened', event)"
     @closed="event => $emit('closed', event)"
   >
-    <slot name="title" slot="title"></slot>
-    <form @submit.prevent="handleSubmit">
-      <slot />
-      <div v-if="visibleFooter" slot="footer">
-        <El-button @click.prevent="handleSubmit" :loading="loading" :disabled="submitDisabled">
-          {{ submitText }}
-        </El-button>
+    <slot name="title" slot="title"></slot> <slot @submit="handleSubmit"></slot>
+    <template v-if="visibleFooter" slot="footer">
+      <El-button @click.prevent="handleSubmit" :loading="loading" :disabled="submitDisabled">
+        {{ submitText }}
+      </El-button>
 
+      <ElLink
+        v-if="cancelText"
+        @click.prevent="handleCancel"
+        variation="gray-darkest"
+        size="xs"
+        color="gray"
+      >
+        {{ cancelText }}
+      </ElLink>
+
+      <div class="el-form-modal__inner">
         <ElLink
-          v-if="cancelText"
-          @click.prevent="handleCancel"
+          v-if="linkText"
+          @click.prevent="handleClickLink"
           variation="gray-darkest"
-          size="xs"
-          color="gray"
+          size="xxs"
+          border="dashed"
+          color="gray-darkest"
+          border-color="main"
         >
-          {{ cancelText }}
+          {{ linkText }}
         </ElLink>
-
-        <div class="el-form-modal__inner">
-          <ElLink
-            v-if="linkText"
-            @click.prevent="handleClickLink"
-            variation="gray-darkest"
-            size="xxs"
-            border="dashed"
-            color="gray-darkest"
-            border-color="main"
-          >
-            {{ linkText }}
-          </ElLink>
-        </div>
       </div>
-    </form>
+    </template>
   </El-modal>
 </template>
 
@@ -104,7 +101,10 @@ export default {
   $block-name: &;
 
   &__inner {
+    width: 100%;
+    margin-top: 24px;
     @media #{$media-query-m} {
+      margin-top: 32px;
     }
   }
 }

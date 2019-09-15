@@ -17,8 +17,12 @@
       <div class="el-modal__header" v-if="$slots.title">
         <div class="el-modal__title"><slot name="title" /></div>
       </div>
-      <div class="el-modal__body"><slot /></div>
-      <div class="el-modal__control" v-if="$slots.footer"><slot name="footer"></slot></div>
+      <div class="el-modal__body">
+        <form @submit.prevent="handleSubmit">
+          <div class="el-modal__body-inner"><slot /></div>
+          <div class="el-modal__control" v-if="$slots.footer"><slot name="footer" /></div>
+        </form>
+      </div>
       <button type="button" class="el-modal__btn-close" @click.prevent="close">
         <ElSvgIcon class="el-modal__icon-close" name="popup_close" />
       </button>
@@ -45,6 +49,10 @@ export default {
   methods: {
     close() {
       this.$modal.hide(this.name)
+    },
+    handleSubmit() {
+      if (this.loading) return
+      this.$emit("submit")
     },
   },
   computed: {
@@ -167,6 +175,17 @@ export default {
     }
   }
 
+  &__body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    & form {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
   &__inner {
     position: relative;
     box-shadow: 0 6px 12px rgba(110, 110, 110, 0.61);
@@ -205,9 +224,11 @@ export default {
       margin-left: 3px;
       margin-right: 3px;
       width: 100%;
+      margin-bottom: 24px;
       @media #{$media-query-m} {
         width: auto;
         margin-right: 32px;
+        margin-bottom: 0;
       }
     }
   }
