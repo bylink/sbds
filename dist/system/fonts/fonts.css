@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Formular-Regular";
+  src: url("./Formular.woff2") format("woff2"), url("./Formular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Formular-Medium";
+  src: url("./Formular-MediumItalic.woff2") format("woff2"),
+    url("./Formular-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Formular-Bold";
+  src: url("./Formular-Bold.woff2") format("woff2"), url("./Formular-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/*@font-face {*/
+/*  font-family: "Formular";*/
+/*  src:  url("./Formular-Italic.woff2") format("woff2"),*/
+/*    url("./Formular-Italic.woff") format("woff");*/
+/*  font-weight: normal;*/
+/*  font-style: italic;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: "Formular";*/
+/*  src: url("./Formular-Black.eot");*/
+/*  src: url("./Formular-Black.eot?#iefix") format("embedded-opentype"),*/
+/*    url("./Formular-Black.woff2") format("woff2"),*/
+/*    url("./Formular-Black.woff") format("woff"),*/
+/*    url("./Formular-Black.ttf") format("truetype");*/
+/*  font-weight: 900;*/
+/*  font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: "Formular";*/
+/*  src: url("./Formular-Medium.eot");*/
+/*  src: url("./Formular-Medium.eot?#iefix") format("embedded-opentype"),*/
+/*    url("./Formular-Medium.woff2") format("woff2"),*/
+/*    url("./Formular-Medium.woff") format("woff"),*/
+/*    url("./Formular-Medium.ttf") format("truetype");*/
+/*  font-weight: 500;*/
+/*  font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: "Formular";*/
+/*  src: url("./Formular-BoldItalic.eot");*/
+/*  src: url("./Formular-BoldItalic.eot?#iefix") format("embedded-opentype"),*/
+/*    url("./Formular-BoldItalic.woff2") format("woff2"),*/
+/*    url("./Formular-BoldItalic.woff") format("woff"),*/
+/*    url("./Formular-BoldItalic.ttf") format("truetype");*/
+/*  font-weight: bold;*/
+/*  font-style: italic;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: "Formular";*/
+/*  src: url("./Formular-Light.eot");*/
+/*  src: url("./Formular-Light.eot?#iefix") format("embedded-opentype"),*/
+/*    url("./Formular-Light.woff2") format("woff2"),*/
+/*    url("./Formular-Light.woff") format("woff"),*/
+/*    url("./Formular-Light.ttf") format("truetype");*/
+/*  font-weight: 300;*/
+/*  font-style: normal;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: "Formular";*/
+/*  src: url("./Formular-BlackItalic.eot");*/
+/*  src: url("./Formular-BlackItalic.eot?#iefix") format("embedded-opentype"),*/
+/*    url("./Formular-BlackItalic.woff2") format("woff2"),*/
+/*    url("./Formular-BlackItalic.woff") format("woff"),*/
+/*    url("./Formular-BlackItalic.ttf") format("truetype");*/
+/*  font-weight: 900;*/
+/*  font-style: italic;*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: "Formular";*/
+/*  src: url("./Formular-LightItalic.eot");*/
+/*  src: url("./Formular-LightItalic.eot?#iefix") format("embedded-opentype"),*/
+/*    url("./Formular-LightItalic.woff2") format("woff2"),*/
+/*    url("./Formular-LightItalic.woff") format("woff"),*/
+/*    url("./Formular-LightItalic.ttf") format("truetype");*/
+/*  font-weight: 300;*/
+/*  font-style: italic;*/
+/*}*/
