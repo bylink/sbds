@@ -186,6 +186,10 @@ export default {
     }
   }
 
+  &__body-inner {
+    margin-bottom: 25px;
+  }
+
   &__inner {
     position: relative;
     box-shadow: 0 6px 12px rgba(110, 110, 110, 0.61);
@@ -204,7 +208,6 @@ export default {
   }
 
   &__control {
-    padding-top: 25px;
     margin-left: -3px;
     margin-right: -3px;
     margin-top: auto;
