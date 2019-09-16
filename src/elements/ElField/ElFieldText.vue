@@ -387,13 +387,14 @@ export default {
     position: absolute;
     left: $space-xs;
     top: $space-xs;
-    z-index: 1;
+    z-index: 2;
     pointer-events: none;
     transition: all 0.15s ease;
   }
 
   &__main {
     position: relative;
+    z-index: 1;
   }
 
   &__prepend,
