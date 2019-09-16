@@ -12,7 +12,7 @@
       :inline="inline"
       text-class="custom-text"
     ></star-rating>
-    <div class="el-field-text__footer" v-if="errorText">
+    <div class="el-rating__errors" v-if="errorText">
       <ElTitle
         tag-name="div"
         :ellipsis="false"
