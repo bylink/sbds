@@ -185,7 +185,6 @@ $spaces: $token-spaces;
     padding-left: $space-l;
     font-size: $size-ml;
     line-height: $line-height-m;
-    padding-top: $space-xxs;
     padding-bottom: $space-m;
     position: relative;
     color: $color-gray-darkest;
