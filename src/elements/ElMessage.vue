@@ -2,7 +2,7 @@
   <div class="el-message" :class="classes">
     <el-card gutter-x="xs" gutter-y="xs" :border-color="getColor" background="white" radius="xl">
       <div class="el-message__inner">
-        <el-title :color="getColor" size="sm" line-height="sm">
+        <el-title :color="getColor" size="sm" line-height="sm" :ellipsis="false">
           <el-svg-icon
             :name="getIcon"
             slot="icon-prepend"
