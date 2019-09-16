@@ -1,16 +1,30 @@
 <template>
-  <star-rating
-    v-model="total"
-    class="el-rating"
-    :active-color="activeColor"
-    :inactive-color="inactiveColor"
-    :show-rating="showRating"
-    :star-size="starSize"
-    :read-only="readOnly"
-    :increment="increment"
-    :inline="inline"
-    text-class="custom-text"
-  ></star-rating>
+  <div>
+    <star-rating
+      v-model="total"
+      class="el-rating"
+      :active-color="activeColor"
+      :inactive-color="inactiveColor"
+      :show-rating="showRating"
+      :star-size="starSize"
+      :read-only="readOnly"
+      :increment="increment"
+      :inline="inline"
+      text-class="custom-text"
+    ></star-rating>
+    <div class="el-field-text__footer" v-if="errorText">
+      <ElTitle
+        tag-name="div"
+        :ellipsis="false"
+        color="danger"
+        line-height="xxxs"
+        size="xxxs"
+        v-if="errorText"
+      >
+        {{ errorText }}
+      </ElTitle>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -87,6 +101,14 @@ export default {
       type: Boolean,
       default: false,
     },
+    /**
+     *  Ошибки
+     *
+     */
+    errors: {
+      type: [Array, Object],
+      default: null,
+    },
   },
 
   data() {
@@ -98,6 +120,13 @@ export default {
   watch: {
     total(value) {
       this.$emit("input", value)
+    },
+  },
+  computed: {
+    errorText() {
+      if (this.errors == null || this.errors.length === 0) return null
+      if (typeof this.errors === "object") return Object.values(this.errors)[0]
+      return this.errors.join(", ")
     },
   },
 }
@@ -118,7 +147,11 @@ export default {
   ```jsx
   let test = 3
   <div>
-    <ElRating v-model="test" show-rating/>
+    <ElRating
+      v-model="test"
+      show-rating
+      :errors="['Имя пользователя и пароль не совпадают', 'Поле обязательно для заполнения.']"
+    />
   </div>
   ```
 </docs>
