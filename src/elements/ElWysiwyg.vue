@@ -166,6 +166,7 @@ $spaces: $token-spaces;
       position: relative;
       font-size: $size-sm;
       line-height: $line-height-sm;
+      word-break: break-word;
 
       &:before {
         content: "";
