@@ -30,7 +30,7 @@ props:
   container_m:
     value: "704px"
   container_s:
-    value: "335px"
+    value: "280px"
 
   avatar_xs:
     value: "24px"

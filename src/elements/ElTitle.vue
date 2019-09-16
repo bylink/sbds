@@ -259,7 +259,7 @@ $media-titles: $token-media-titles;
     <br><br>
 
     <ElTitle size="m">
-      <ElSvgIcon slot="icon-prepend" name="wifi"/>
+      <ElSvgIcon slot="icon-prepend" name="question"/>
       Заголовок
       <ElSvgIcon slot="icon-append" name="user"/>
     </ElTitle>
