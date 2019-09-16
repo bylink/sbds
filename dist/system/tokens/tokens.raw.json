@@ -402,8 +402,8 @@
     "container_s": {
       "type": "number",
       "category": "size",
-      "value": "335px",
-      "originalValue": "335px",
+      "value": "280px",
+      "originalValue": "280px",
       "name": "container_s"
     },
     "tappable_element_xs": {
