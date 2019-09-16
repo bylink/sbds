@@ -395,6 +395,7 @@ export default {
 
   &__main {
     position: relative;
+    z-index: 1;
   }
 
   &__prepend,
