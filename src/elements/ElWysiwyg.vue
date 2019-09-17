@@ -58,7 +58,6 @@ $spaces: $token-spaces;
   a {
     text-decoration: none;
     color: inherit;
-    border-bottom: 1px solid $color-main;
     line-height: $line-height-sm;
 
     &:hover,
