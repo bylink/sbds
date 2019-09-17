@@ -33,6 +33,7 @@
         />
 
         <div class="date-pick__wrapper" v-else-if="isDate">
+          123
           <date-pick
             :isDateDisabled="isPastDate"
             :nextMonthCaption="nextMonthCaption"
@@ -526,11 +527,12 @@ export default {
 
 .date-pick__wrapper {
   position: relative;
+  background-color: #fff;
   & .el-title {
     position: absolute;
     top: 8px;
     left: 15px;
-    z-index: 21;
+    z-index: 20;
   }
 }
 .vdpComponent {
@@ -574,6 +576,7 @@ export default {
     line-height: $line_height_s;
     color: $color_gray_darkest;
     border: none;
+    background-color: transparent;
     &:hover,
     &:active,
     &:focus {
