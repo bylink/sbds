@@ -33,7 +33,6 @@
         />
 
         <div class="date-pick__wrapper" v-else-if="isDate">
-          123
           <date-pick
             :isDateDisabled="isPastDate"
             :nextMonthCaption="nextMonthCaption"
