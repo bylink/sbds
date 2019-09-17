@@ -365,6 +365,10 @@ $colors: $token-colors;
       &:hover {
         border-color: $color-gray;
       }
+
+      & input {
+        padding: 0 !important;
+      }
     }
 
     &__tags-wrap {
