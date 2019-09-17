@@ -63,7 +63,7 @@ $spaces: $token-spaces;
     &:hover,
     &:focus,
     &:active {
-      border: none;
+      color: $color-main;
     }
   }
 
