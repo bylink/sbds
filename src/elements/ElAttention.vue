@@ -1,10 +1,10 @@
 <template>
-  <div class="el-attention" :class="classes">
+  <div v-if="isVisible" class="el-attention" :class="classes">
     <el-title :ellipsis="false" inline :color="color" size="xs" line-height="s">
       {{ text }}
     </el-title>
     <el-button :to="to" variation="gray-light-small"> Подробнее </el-button>
-    <div class="el-attention__close">
+    <div class="el-attention__close" @click="isVisible = false">
       <el-svg-icon size="xxs" :fill="color" name="popup_close" />
     </div>
   </div>
@@ -37,7 +37,9 @@ export default {
   },
 
   data() {
-    return {}
+    return {
+      isVisible: true,
+    }
   },
   computed: {
     classes() {
@@ -47,8 +49,6 @@ export default {
       }
     },
   },
-
-  methods: {},
 }
 </script>
 
