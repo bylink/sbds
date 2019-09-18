@@ -35,6 +35,10 @@ props:
     value: "hsla({!green}, 42%, 1)"
     category: color_group_new
 
+  color_mint: ############ ##00BFA5
+    value: "hsla(172, 100%, 37%, 1)"
+    category: color_group_new
+
   color_danger: ############ #F42A2A
     value: "hsla({!red}, 56%, 1)"
     category: color_group_new
