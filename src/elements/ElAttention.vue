@@ -58,7 +58,7 @@ $colors: $token-colors;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 10px 20px;
   width: 100%;
   z-index: 15;
 
