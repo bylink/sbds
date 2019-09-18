@@ -1,9 +1,9 @@
 <template>
   <div class="el-attention" :class="classes">
     <el-title :ellipsis="false" inline :color="color" size="xs" line-height="s">
-      Акция! Скидка после 1-ой поездки 1 рубль *
+      {{ text }}
     </el-title>
-    <el-button variation="gray-light-small"> Подробнее </el-button>
+    <el-button :to="to" variation="gray-light-small"> Подробнее </el-button>
     <div class="el-attention__close">
       <el-svg-icon size="xxs" :fill="color" name="popup_close" />
     </div>
@@ -25,6 +25,14 @@ export default {
     color: {
       type: String,
       default: "white",
+    },
+    text: {
+      type: String,
+      default: "",
+    },
+    to: {
+      type: String,
+      default: "",
     },
   },
 
