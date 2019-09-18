@@ -80,10 +80,18 @@ $colors: $token-colors;
     margin-right: 17px;
   }
 
+  & .el-button {
+    display: none;
+    @media #{$media-query-m} {
+      display: block;
+    }
+  }
+
   &__close {
     margin-left: auto;
     cursor: pointer;
     padding: 3px;
+    align-self: flex-start;
     & .el-svg-icon {
       display: flex;
       align-items: center;
