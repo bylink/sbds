@@ -122,7 +122,7 @@ export default {
 
   data() {
     return {
-      total: this.value,
+      total: parseInt(this.value),
     }
   },
 
