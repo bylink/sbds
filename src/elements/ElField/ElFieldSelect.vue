@@ -39,6 +39,9 @@
         <span slot="noResult">Ничего не найдено</span>
       </multiselect>
     </div>
+    <div v-if="icon" class="el-field-select__icon" @click="handleChangeDirection">
+      <el-svg-icon name="direction" />
+    </div>
     <div class="el-field-select__footer" v-if="!disableFooter">
       <ElTitle
         tag-name="div"
@@ -64,9 +67,10 @@
 import Multiselect from "vue-multiselect"
 import "vue-multiselect/dist/vue-multiselect.min.css"
 import ElTitle from "../ElTitle"
+import ElSvgIcon from "../ElSvgIcon"
 export default {
   name: "ElFieldSelect",
-  components: { ElTitle, Multiselect },
+  components: { ElTitle, Multiselect, ElSvgIcon },
 
   props: {
     /**
@@ -187,6 +191,15 @@ export default {
       type: Boolean,
       default: false,
     },
+
+    /**
+     *  Иконка стрелок
+     *
+     */
+    icon: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -233,6 +246,10 @@ export default {
     },
   },
   methods: {
+    handleChangeDirection() {
+      this.$emit("handleChangeDirection")
+      console.log(123)
+    },
     handleChange(value) {
       this.$emit("original-input", value)
       if (value != null) {
@@ -604,6 +621,14 @@ $colors: $token-colors;
       }
     }
   }
+
+  &__icon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    cursor: pointer;
+    z-index: 50;
+  }
 }
 </style>
 
@@ -651,6 +676,8 @@ $colors: $token-colors;
             v-model="categoriesModel4"
             :options="categories.map(c => ({ name: c.title, value: c.id }))"
             :searchable="false"
+            arrow-disabled
+            icon
     />
   </div>
   ```
