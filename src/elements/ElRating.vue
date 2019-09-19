@@ -122,7 +122,7 @@ export default {
 
   data() {
     return {
-      total: parseInt(this.value),
+      total: +this.value,
     }
   },
 
@@ -154,11 +154,13 @@ export default {
 
 <docs>
   ```jsx
-  let test = 3
+  let test = 3.45
   <div>
     <ElRating
       v-model="test"
       show-rating
+      :fixedPoints="2"
+      :increment="0.01"
       :errors="['Имя пользователя и пароль не совпадают', 'Поле обязательно для заполнения.']"
     />
   </div>
