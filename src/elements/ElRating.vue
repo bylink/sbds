@@ -10,6 +10,7 @@
       :read-only="readOnly"
       :increment="increment"
       :inline="inline"
+      :fixed-points="fixedPoints"
       text-class="custom-text"
     ></star-rating>
     <div class="el-rating__errors" v-if="errorText">
@@ -92,6 +93,14 @@ export default {
     increment: {
       type: Number,
       default: 1,
+    },
+    /**
+     *  Числел после запятой
+     *
+     */
+    fixedPoints: {
+      type: Number,
+      default: 0,
     },
     /**
      *  Инлайн

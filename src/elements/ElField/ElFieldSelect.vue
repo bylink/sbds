@@ -248,7 +248,6 @@ export default {
   methods: {
     handleChangeDirection() {
       this.$emit("handleChangeDirection")
-      console.log(123)
     },
     handleChange(value) {
       this.$emit("original-input", value)
