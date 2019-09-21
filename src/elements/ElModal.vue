@@ -67,6 +67,12 @@ export default {
       }
     },
   },
+
+  mounted() {
+    this.vhFix()
+    let vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty("--vh", `${vh}px`)
+  },
 }
 </script>
 
@@ -200,7 +206,8 @@ export default {
     box-shadow: 0 6px 12px rgba(110, 110, 110, 0.61);
     padding: 24px 20px 20px 20px;
     background-color: $color-white;
-    min-height: 100vh;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     display: flex;
     flex-direction: column;
     @media #{$media-query-m} {
