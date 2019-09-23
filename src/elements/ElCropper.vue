@@ -1,5 +1,5 @@
 <template>
-  <section class="el-cropper">
+  <div class="el-cropper">
     <VueCropper
       ref="cropper"
       :aspect-ratio="1 / 1"
@@ -13,7 +13,7 @@
       alt="Avatar"
     >
     </VueCropper>
-  </section>
+  </div>
 </template>
 
 <script>
