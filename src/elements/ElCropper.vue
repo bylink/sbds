@@ -1,5 +1,19 @@
 <template>
-  <div class="el-cropper"><VueCropper ref="cropper" :src="imgSrc" alt="Avatar"> </VueCropper></div>
+  <div class="el-cropper">
+    <VueCropper
+      ref="cropper"
+      :aspect-ratio="1 / 1"
+      :initialAspectRatio="1 / 1"
+      :highlight="false"
+      :guides="false"
+      :view-mode="2"
+      drag-mode="crop"
+      :background="true"
+      :src="imgSrc"
+      alt="Avatar"
+    >
+    </VueCropper>
+  </div>
 </template>
 
 <script>
