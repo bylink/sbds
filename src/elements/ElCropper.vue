@@ -1,19 +1,5 @@
 <template>
-  <div class="el-cropper">
-    <VueCropper
-      ref="cropper"
-      :aspect-ratio="1 / 1"
-      :initialAspectRatio="1 / 1"
-      :highlight="false"
-      :guides="false"
-      :view-mode="2"
-      drag-mode="crop"
-      :background="true"
-      :src="imgSrc"
-      alt="Avatar"
-    >
-    </VueCropper>
-  </div>
+  <div class="el-cropper"><VueCropper ref="cropper" :src="imgSrc" alt="Avatar"> </VueCropper></div>
 </template>
 
 <script>
@@ -102,3 +88,15 @@ export default {
   }
 }
 </style>
+
+<docs>
+    ```jsx
+        let imgSrc = 'https://yt3.ggpht.com/-xxp17w8gwH4/AAAAAAAAAAI/AAAAAAAAAAA/yoFDaHVr8os/s84-c-k-no-mo-rj-c0xffffff/photo.jpg';
+
+        <div style="max-width: 100px;">
+            <ElCropper
+               :img-src="imgSrc"
+            />
+        </div>
+    ```
+</docs>
