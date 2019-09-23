@@ -9,9 +9,7 @@
       :view-mode="2"
       drag-mode="crop"
       :background="true"
-      :src="
-        'https://yt3.ggpht.com/-xxp17w8gwH4/AAAAAAAAAAI/AAAAAAAAAAA/yoFDaHVr8os/s84-c-k-no-mo-rj-c0xffffff/photo.jpg'
-      "
+      :src="imgSrc"
       alt="Avatar"
     >
     </VueCropper>
@@ -104,13 +102,3 @@ export default {
   }
 }
 </style>
-
-<docs>
-    ```jsx
-
-        <div style="max-width: 100px;">
-            <ElCropper
-            />
-        </div>
-    ```
-</docs>
