@@ -157,8 +157,10 @@ export default {
         [`el-field-checkbox__type-${this.type}`]: this.type,
       }
     },
+
     errorText() {
       if (this.errors == null || this.errors.length === 0) return null
+      if (typeof this.errors === "object") return Object.values(this.errors)[0]
       return this.errors.join(", ")
     },
   },
