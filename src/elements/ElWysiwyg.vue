@@ -58,13 +58,12 @@ $spaces: $token-spaces;
   a {
     text-decoration: none;
     color: inherit;
-    border-bottom: 1px solid $color-main;
     line-height: $line-height-sm;
 
     &:hover,
     &:focus,
     &:active {
-      border: none;
+      color: $color-main;
     }
   }
 
@@ -166,6 +165,7 @@ $spaces: $token-spaces;
       position: relative;
       font-size: $size-sm;
       line-height: $line-height-sm;
+      word-break: break-word;
 
       &:before {
         content: "";
@@ -185,7 +185,6 @@ $spaces: $token-spaces;
     padding-left: $space-l;
     font-size: $size-ml;
     line-height: $line-height-m;
-    padding-top: $space-xxs;
     padding-bottom: $space-m;
     position: relative;
     color: $color-gray-darkest;

@@ -33,7 +33,6 @@
         />
 
         <div class="date-pick__wrapper" v-else-if="isDate">
-          <el-title color="gray" size="xxxs" line-height="xxs"> Дата поездки </el-title>
           <date-pick
             :isDateDisabled="isPastDate"
             :nextMonthCaption="nextMonthCaption"
@@ -388,13 +387,14 @@ export default {
     position: absolute;
     left: $space-xs;
     top: $space-xs;
-    z-index: 1;
+    z-index: 2;
     pointer-events: none;
     transition: all 0.15s ease;
   }
 
   &__main {
     position: relative;
+    z-index: 1;
   }
 
   &__prepend,
@@ -526,11 +526,12 @@ export default {
 
 .date-pick__wrapper {
   position: relative;
+  background-color: #fff;
   & .el-title {
     position: absolute;
     top: 8px;
     left: 15px;
-    z-index: 21;
+    z-index: 20;
   }
 }
 .vdpComponent {
@@ -574,6 +575,7 @@ export default {
     line-height: $line_height_s;
     color: $color_gray_darkest;
     border: none;
+    background-color: transparent;
     &:hover,
     &:active,
     &:focus {

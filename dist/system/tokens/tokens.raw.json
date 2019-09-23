@@ -119,6 +119,13 @@
       "originalValue": "hsla({!gray}, 76%, 1)",
       "name": "color_gray_light"
     },
+    "color_mint": {
+      "type": "color",
+      "category": "color_group_new",
+      "value": "rgb(0, 189, 164)",
+      "originalValue": "hsla(172, 100%, 37%, 1)",
+      "name": "color_mint"
+    },
     "color_gray_darken": {
       "type": "color",
       "category": "color_group_new",
@@ -402,8 +409,8 @@
     "container_s": {
       "type": "number",
       "category": "size",
-      "value": "335px",
-      "originalValue": "335px",
+      "value": "280px",
+      "originalValue": "280px",
       "name": "container_s"
     },
     "tappable_element_xs": {
