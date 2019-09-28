@@ -35,6 +35,7 @@
 
         <div class="date-pick__wrapper" v-else-if="isDate">
           <date-pick
+            :isDateDisabled="isPastDate"
             :nextMonthCaption="nextMonthCaption"
             :prevMonthCaption="prevMonthCaption"
             :weekdays="weekdays"
