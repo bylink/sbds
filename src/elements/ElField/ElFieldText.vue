@@ -26,6 +26,7 @@
           :disabled="disabled"
           :id="name"
           :value="value"
+          :readonly="readonly"
           @focus="inputFocused = true"
           @blur="handleBlur"
           v-on="listeners"
@@ -45,6 +46,7 @@
             ref="input"
             :mobileBreakpointWidth="0"
             :value="value"
+            :readonly="readonly"
             @focus="inputFocused = true"
             @blur="handleBlur"
             v-on="listeners"
@@ -61,6 +63,7 @@
           :disabled="disabled"
           :name="name"
           :id="name"
+          :readonly="readonly"
           @focus="inputFocused = true"
           @blur="handleBlur"
           v-on="listeners"
@@ -75,6 +78,7 @@
           :type="type"
           :placeholder="placeholder"
           :value="value"
+          :readonly="readonly"
           ref="input"
           :name="name"
           :id="name"
@@ -182,6 +186,15 @@ export default {
      *
      */
     radiusless: {
+      type: Boolean,
+      default: false,
+    },
+
+    /**
+     *  Только чтение
+     *
+     */
+    readonly: {
       type: Boolean,
       default: false,
     },
