@@ -46,7 +46,7 @@
             ref="input"
             :mobileBreakpointWidth="0"
             :value="value"
-            :inputAttributes="{ readonly: true }"
+            :input-attributes="{ readonly: true }"
             @focus="inputFocused = true"
             @blur="handleBlur"
             v-on="listeners"
