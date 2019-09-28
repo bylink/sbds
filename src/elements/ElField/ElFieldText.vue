@@ -46,6 +46,7 @@
             ref="input"
             :mobileBreakpointWidth="0"
             :value="value"
+            :input-attributes="{ readonly: true }"
             :readonly="readonly"
             @focus="inputFocused = true"
             @blur="handleBlur"
