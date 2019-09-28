@@ -31,6 +31,10 @@ $spaces: $token-spaces;
     b {
       padding-bottom: 0;
     }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 
   b {
