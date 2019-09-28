@@ -49,7 +49,7 @@ export default {
         })
         .toBlob(blob => {
           this.$emit("crop", blob)
-        })
+        }, "image/jpeg")
     },
   },
 }
