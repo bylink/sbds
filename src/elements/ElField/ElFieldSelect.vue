@@ -585,7 +585,7 @@ $colors: $token-colors;
       z-index: 1;
     }
     #{$block-name}__icon {
-      cursor: default;
+      pointer-events: none;
     }
     .multiselect--disabled {
       opacity: 1;
