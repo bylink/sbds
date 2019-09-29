@@ -156,7 +156,7 @@ export default {
     },
 
     errors: {
-      type: Array,
+      type: [Array, Object],
       default: null,
     },
 
