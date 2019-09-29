@@ -248,6 +248,7 @@ export default {
   },
   methods: {
     handleChangeDirection() {
+      if (this.disabled) return
       this.$emit("handleChangeDirection")
     },
     handleChange(value) {
@@ -583,6 +584,9 @@ $colors: $token-colors;
     #{$block-name}__header {
       z-index: 1;
     }
+    #{$block-name}__icon {
+      cursor: default;
+    }
     .multiselect--disabled {
       opacity: 1;
       background: transparent;
@@ -631,6 +635,9 @@ $colors: $token-colors;
     right: 8px;
     cursor: pointer;
     z-index: 50;
+    &:hover {
+      color: $color-main;
+    }
   }
 }
 </style>
