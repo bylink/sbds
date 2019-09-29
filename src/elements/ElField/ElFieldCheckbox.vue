@@ -175,6 +175,7 @@ export default {
 <style lang="scss">
 .el-field-checkbox {
   display: block;
+  user-select: none;
 
   $block-name: &;
 
