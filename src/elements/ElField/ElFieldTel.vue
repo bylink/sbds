@@ -2,6 +2,7 @@
   <IMaskComponent
     v-model="phoneNumber"
     :mask="mask"
+    type="tel"
     ref="input"
     :overwrite="false"
     :dispatch="dispatch"
