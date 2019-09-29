@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" class="el-title" :class="classObject">
+  <component :is="tagName" class="el-title" :class="classObject">
     <slot name="icon-prepend" />
     <div class="el-title__text"><slot /></div>
     <slot name="icon-append" />
@@ -12,13 +12,6 @@ export default {
   name: "ElTitle",
   components: { ElSvgIcon },
   props: {
-    /**
-     * Уровень: `h1`, `h2` и т.д.
-     */
-    level: {
-      type: Number,
-      default: 2,
-    },
     /**
      * Размер: `xs`, `s` и т.д.
      */
@@ -59,6 +52,7 @@ export default {
      */
     tagName: {
       type: String,
+      default: "div",
     },
     /**
      * Uppercase
@@ -83,9 +77,6 @@ export default {
     },
   },
   computed: {
-    tag() {
-      return this.tagName ? this.tagName : `h${this.level}`
-    },
     classObject() {
       return {
         [`el-title--size-${this.size}`]: this.size,
