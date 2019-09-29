@@ -553,6 +553,9 @@ $colors: $token-colors;
       }
 
       &#{$block-name}--disabled {
+        #{$block-name}__header {
+          z-index: 1;
+        }
         .multiselect--disabled {
           .multiselect {
             &__tags {
