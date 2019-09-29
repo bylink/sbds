@@ -4,7 +4,7 @@
       {{ text }}
     </el-title>
     <el-button :to="to" variation="gray-light-small"> Подробнее </el-button>
-    <div class="el-attention__close" @click="isVisible = false">
+    <div class="el-attention__close" @click="handleClose">
       <el-svg-icon size="xxs" :fill="color" name="popup_close" />
     </div>
   </div>
@@ -34,12 +34,22 @@ export default {
       type: String,
       default: "",
     },
+    name: {
+      type: String,
+      default: "",
+    },
   },
 
   data() {
     return {
       isVisible: true,
     }
+  },
+  methods: {
+    handleClose() {
+      this.$emit("handleClose", this.name)
+      this.isVisible = false
+    },
   },
   computed: {
     classes() {
