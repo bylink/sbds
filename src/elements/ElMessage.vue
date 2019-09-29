@@ -8,7 +8,7 @@
             slot="icon-prepend"
             :size="status === 'error' ? 'xs' : 's'"
           />
-          {{ getText }}
+          {{ text }}
         </el-title>
       </div>
     </el-card>
@@ -31,6 +31,10 @@ export default {
       type: String,
       default: "success",
     },
+    text: {
+      type: String,
+      default: "",
+    },
   },
   computed: {
     classes() {
@@ -42,11 +46,6 @@ export default {
       if (this.status === "success") return "success"
       if (this.status === "error") return "danger"
       if (this.status === "info") return "gray-darkest"
-    },
-    getText() {
-      if (this.status === "success") return "Заказ отредактирован!"
-      if (this.status === "error") return "Ошибка"
-      if (this.status === "info") return "Информация"
     },
     getIcon() {
       if (this.status === "success") return "checkbox-arrow"
