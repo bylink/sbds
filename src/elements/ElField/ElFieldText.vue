@@ -539,9 +539,12 @@ export default {
 
 .date-pick__wrapper {
   position: relative;
-  cursor: pointer;
   user-select: none;
   background-color: #fff;
+  & input {
+    cursor: pointer;
+    user-select: none;
+  }
   & .el-title {
     position: absolute;
     top: 8px;
