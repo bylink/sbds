@@ -278,7 +278,7 @@ $colors: $token-colors;
       }
     }
     &-s {
-      padding: $space_xxs / 2 $space_m;
+      padding: $space_xxs / 2 $space_m - 5px;
       padding-top: $space_xxs / 2 - 2px;
       letter-spacing: normal;
       font-weight: $weight-medium;

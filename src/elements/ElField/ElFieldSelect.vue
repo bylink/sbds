@@ -365,15 +365,18 @@ $colors: $token-colors;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
-
-    &__input {
-    }
-
     &__select {
-      height: $tappable-element-m - 2px;
       top: $space-xxs + 2px;
+      height: 47px;
       &::before {
-        border-color: $color-gray-dark transparent transparent;
+        top: 20%;
+        transform: rotate(45deg);
+        color: $color-gray-darkest;
+        border: solid;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 4px;
+        margin: 0;
       }
     }
 

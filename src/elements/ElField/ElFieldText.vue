@@ -580,7 +580,7 @@ export default {
   & .vdpCell.disabled,
   & .vdpCell.outOfRange {
     opacity: 1;
-    color: $color-gray;
+    color: $color-gray-light;
   }
   & .vdpCell.today {
     color: $color-main;
