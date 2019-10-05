@@ -279,7 +279,7 @@ $colors: $token-colors;
     }
     &-s {
       padding: $space_xxs / 2 $space_m;
-      padding-top: $space_xxs - 2px;
+      padding-top: $space_xxs / 2 - 2px;
       letter-spacing: normal;
       font-weight: $weight-medium;
       font-size: $size-sm;
@@ -298,7 +298,7 @@ $colors: $token-colors;
     }
     &-m {
       padding: $space_xxs / 2 $space_m;
-      padding-top: $space_xxs - 2px;
+      padding-top: $space_xxs / 2 - 2px;
       letter-spacing: $spacing-m;
       font-weight: $weight-medium;
       font-size: $size-sm;
@@ -317,7 +317,7 @@ $colors: $token-colors;
     }
     &-l {
       padding: $space_s / 2 $space_xl;
-      padding-top: $space_s - 2px;
+      padding-top: $space_s / 2 - 2px;
       letter-spacing: $spacing-m;
       font-weight: $weight-medium;
       font-size: $size-m;
@@ -336,7 +336,7 @@ $colors: $token-colors;
     }
     &-xl {
       padding: $space_xxs / 2 $space_l;
-      padding-top: $space_xxs - 2px;
+      padding-top: $space_xxs / 2 - 2px;
       letter-spacing: normal;
       font-weight: $weight-medium;
       font-size: $size-l;
