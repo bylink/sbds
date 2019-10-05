@@ -349,6 +349,12 @@ $colors: $token-colors;
   }
 
   .multiselect {
+    &__element {
+      .multiselect__option--selected {
+        font-family: $font-bold;
+        font-weight: 500;
+      }
+    }
     &__single {
       padding-left: 0;
       background-color: transparent;
