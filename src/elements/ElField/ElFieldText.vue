@@ -566,6 +566,17 @@ export default {
     line-height: $line_height_s;
     color: $color_gray_dark;
   }
+  & .vdpCell {
+    padding: 0.4em 0;
+  }
+  & .vdpHeadCell {
+    padding: 0.3em 0.5em 1.2em;
+  }
+  & .vdpInnerWrap {
+    max-width: unset;
+    border-radius: 0 0 3px 3px;
+    padding: 1.4em;
+  }
   & .vdpCell.disabled,
   & .vdpCell.outOfRange {
     opacity: 1;
@@ -604,10 +615,6 @@ export default {
     right: 0;
     padding: 0;
     animation: none !important;
-  }
-  & .vdpInnerWrap {
-    max-width: unset;
-    border-radius: 0 0 3px 3px;
   }
   & .vdpPeriodControls button {
     font-family: $font-regular;
