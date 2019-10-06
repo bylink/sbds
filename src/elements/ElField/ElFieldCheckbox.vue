@@ -188,7 +188,7 @@ export default {
   &__name {
     display: inline-block;
     position: relative;
-    padding-left: $space-m;
+    padding-left: $space-m + 4px;
     margin-right: $space-xs;
 
     &:hover {

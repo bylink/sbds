@@ -52,7 +52,7 @@ $spaces: $token-spaces;
 
   strong {
     font-size: $size-sm;
-    display: block;
+    display: inline-block;
     font-weight: $weight-medium;
     color: $color-main;
     line-height: $line-height-sm;
@@ -202,7 +202,7 @@ $spaces: $token-spaces;
       position: absolute;
       content: "";
       left: 0;
-      top: 12px;
+      top: 7px;
       background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUgMUgxMlY4SDVWMVoiIGZpbGw9IiNGRjcyMDAiLz4KPHBhdGggZD0iTTEyIDhIMTlWMTVIMTJWOFoiIGZpbGw9IiNGRjcyMDAiLz4KPHBhdGggZD0iTTUgMTVIMTJWMjJINVYxNVoiIGZpbGw9IiNGRjcyMDAiLz4KPC9zdmc+Cg==)
         no-repeat;
       width: 25px;
