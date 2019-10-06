@@ -5,6 +5,7 @@
         <div class="el-section__top-left">
           <slot name="title">
             <el-title
+              :tagName="tagName"
               class="el-section__title--default"
               v-if="title"
               size="xxxl"
@@ -37,6 +38,14 @@ export default {
     background: {
       type: String,
       default: "white",
+    },
+    /**
+     *  Тэг заголовка:
+     *  `H1, H2, H3т.д.`
+     */
+    tagName: {
+      type: String,
+      default: "div",
     },
     /**
      *  Отступ сверху:
