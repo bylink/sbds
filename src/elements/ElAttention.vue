@@ -68,7 +68,7 @@ $colors: $token-colors;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 12px 10px 20px;
+  padding: 8px 12px 8px 20px;
   width: 100%;
   z-index: 15;
 
@@ -100,7 +100,7 @@ $colors: $token-colors;
   &__close {
     margin-left: auto;
     cursor: pointer;
-    padding: 3px;
+    padding: 5px;
     align-self: flex-start;
     & .el-svg-icon {
       display: flex;

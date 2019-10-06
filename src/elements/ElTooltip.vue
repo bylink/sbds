@@ -1,5 +1,8 @@
 <template>
-  <div class="el-tooltip-target" v-tooltip="{ content, placement, classes: tooltipClasses }">
+  <div
+    class="el-tooltip-target"
+    v-tooltip="{ content, placement, classes: tooltipClasses, trigger: 'hover click' }"
+  >
     <slot></slot>
   </div>
 </template>

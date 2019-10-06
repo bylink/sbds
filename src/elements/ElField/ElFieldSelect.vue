@@ -248,6 +248,7 @@ export default {
   },
   methods: {
     handleChangeDirection() {
+      if (this.disabled) return
       this.$emit("handleChangeDirection")
     },
     handleChange(value) {
@@ -348,6 +349,12 @@ $colors: $token-colors;
   }
 
   .multiselect {
+    &__element {
+      .multiselect__option--selected {
+        font-family: $font-bold;
+        font-weight: 500;
+      }
+    }
     &__single {
       padding-left: 0;
       background-color: transparent;
@@ -358,15 +365,18 @@ $colors: $token-colors;
       text-overflow: ellipsis;
       white-space: nowrap;
     }
-
-    &__input {
-    }
-
     &__select {
-      height: $tappable-element-m - 2px;
       top: $space-xxs + 2px;
+      height: 47px;
       &::before {
-        border-color: $color-gray-dark transparent transparent;
+        top: 20%;
+        transform: rotate(45deg);
+        color: $color-gray-darkest;
+        border: solid;
+        border-width: 0 1px 1px 0;
+        display: inline-block;
+        padding: 4px;
+        margin: 0;
       }
     }
 
@@ -580,6 +590,12 @@ $colors: $token-colors;
   }
 
   &--disabled {
+    #{$block-name}__header {
+      z-index: 1;
+    }
+    #{$block-name}__icon {
+      pointer-events: none;
+    }
     .multiselect--disabled {
       opacity: 1;
       background: transparent;
@@ -628,6 +644,9 @@ $colors: $token-colors;
     right: 8px;
     cursor: pointer;
     z-index: 50;
+    &:hover {
+      color: $color-main;
+    }
   }
 }
 </style>

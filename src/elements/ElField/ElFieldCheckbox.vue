@@ -175,6 +175,7 @@ export default {
 <style lang="scss">
 .el-field-checkbox {
   display: block;
+  user-select: none;
 
   $block-name: &;
 
@@ -187,7 +188,7 @@ export default {
   &__name {
     display: inline-block;
     position: relative;
-    padding-left: $space-m;
+    padding-left: $space-m + 4px;
     margin-right: $space-xs;
 
     &:hover {

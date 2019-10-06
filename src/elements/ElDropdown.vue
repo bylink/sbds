@@ -74,10 +74,17 @@ export default {
 
   position: relative;
   display: inline-block;
+  outline: none !important;
 
   &__toggler {
     outline: none;
-    user-select: none;
+    user-select: none !important;
+
+    &:hover,
+    &:active,
+    &:focus {
+      outline: none !important;
+    }
   }
 
   &__body {
