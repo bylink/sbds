@@ -116,7 +116,7 @@ $spaces: $token-spaces;
   h4 {
     font-size: $size-l;
     line-height: $line-height-ml;
-    padding-bottom: $space-s;
+    padding-bottom: 0;
     @media #{$media-query-m} {
       font-size: $size-xl;
       line-height: $line-height-l;
