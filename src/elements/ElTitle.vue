@@ -1,9 +1,8 @@
 <template>
-  <component :is="tagName" class="el-title" :class="classObject">
+  <div class="el-title" :class="classObject">
     <slot name="icon-prepend" />
-    <div class="el-title__text"><slot /></div>
-    <slot name="icon-append" />
-  </component>
+    <component :is="tagName" class="el-title__text"><slot /></component> <slot name="icon-append" />
+  </div>
 </template>
 
 <script>
