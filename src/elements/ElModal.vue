@@ -58,6 +58,13 @@ export default {
       if (this.loading) return
       this.$emit("submit")
     },
+    runResizeEvents() {
+      this.vhFix()
+    },
+    vhFix() {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty("--vh", `${vh}px`)
+    },
   },
   computed: {
     classes() {
@@ -67,10 +74,12 @@ export default {
       }
     },
   },
-
-  mounted() {
-    let vh = window.innerHeight * 0.01
-    document.documentElement.style.setProperty("--vh", `${vh}px`)
+  beforeMount() {
+    this.runResizeEvents()
+    window.addEventListener("resize", this.runResizeEvents)
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.runResizeEvents)
   },
 }
 </script>
