@@ -349,6 +349,7 @@ $colors: $token-colors;
   }
 
   .multiselect {
+    color: $color-gray-darkest;
     &__element {
       .multiselect__option--selected {
         font-family: $font-bold;
