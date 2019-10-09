@@ -343,11 +343,14 @@ export default {
       const currentDate = new Date()
       let prettyDate = moment(date).format("DD.MM.YYYY")
       let prettycurrentDate = moment(currentDate).format("DD.MM.YYYY")
-      console.log(prettyDate)
-      console.log(prettycurrentDate)
+      console.log(moment(prettyDate, "DD.MM.YYYY").format("X"))
+      console.log(moment(prettycurrentDate, "DD.MM.YYYY").format("X"))
       console.log("------")
 
-      return moment(prettyDate).format("X") < moment(prettycurrentDate).format("X")
+      return (
+        moment(prettyDate, "DD.MM.YYYY").format("X") <
+        moment(prettycurrentDate, "DD.MM.YYYY").format("X")
+      )
     },
     checkValue() {
       if (this.value !== null) {
