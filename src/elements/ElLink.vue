@@ -408,7 +408,7 @@ $colors: $token-colors;
   }
 
   &--is-active,
-  &.nuxt-link-active {
+  &.nuxt-link-exact-active {
     color: $color-main;
     background-color: transparent;
     border-color: transparent;
