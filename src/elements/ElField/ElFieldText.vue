@@ -343,7 +343,7 @@ export default {
       const currentDate = new Date()
       let dateDay = moment(date).format("DD")
       let currentDateDay = moment(currentDate).format("DD")
-      return dateDay < currentDateDay
+      return moment(date) < moment(currentDate)
     },
     checkValue() {
       if (this.value !== null) {
