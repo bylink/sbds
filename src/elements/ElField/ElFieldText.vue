@@ -42,7 +42,7 @@
             :months="months"
             :style="inputStyles"
             :placeholder="placeholder"
-            format="DD.MM.YYYY"
+            format="DD.MM.YYYY HH:mm"
             ref="input"
             :mobileBreakpointWidth="0"
             :value="value"
