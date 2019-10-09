@@ -51,6 +51,7 @@
             @blur="handleBlur"
             v-on="listeners"
             @input="value => handleInput(value)"
+            @click="handleClick"
           />
         </div>
 
@@ -352,6 +353,10 @@ export default {
       if (this.value === null || this.value === "") {
         this.inputFocused = false
       }
+    },
+
+    handleClick() {
+      this.$emit("click")
     },
 
     handleInput(value) {
