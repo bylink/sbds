@@ -644,7 +644,7 @@ $colors: $token-colors;
     bottom: 8px;
     right: 8px;
     cursor: pointer;
-    z-index: 1;
+    z-index: 50;
     &:hover {
       color: $color-main;
     }
