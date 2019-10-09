@@ -342,14 +342,11 @@ export default {
     isPastDate(date) {
       const currentDate = new Date()
       let prettyDate = moment(date).format("DD.MM.YYYY")
-      let prettycurrentDate = moment(currentDate).format("DD.MM.YYYY")
-      console.log(moment(prettyDate, "DD.MM.YYYY").format("X"))
-      console.log(moment(prettycurrentDate, "DD.MM.YYYY").format("X"))
-      console.log("------")
+      let prettyCurrentDate = moment(currentDate).format("DD.MM.YYYY")
 
       return (
         moment(prettyDate, "DD.MM.YYYY").format("X") <
-        moment(prettycurrentDate, "DD.MM.YYYY").format("X")
+        moment(prettyCurrentDate, "DD.MM.YYYY").format("X")
       )
     },
     checkValue() {
