@@ -121,6 +121,7 @@
 
 <script>
 import _omit from "lodash/omit"
+import moment from "moment"
 
 import tokens from "../../assets/tokens/tokens"
 import DatePick from "vue-date-pick"
@@ -340,7 +341,7 @@ export default {
   methods: {
     isPastDate(date) {
       const currentDate = new Date()
-      console.log(date, currentDate)
+      console.log(moment(date).days())
       return date < currentDate
     },
     checkValue() {
