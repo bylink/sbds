@@ -340,6 +340,7 @@ export default {
   methods: {
     isPastDate(date) {
       const currentDate = new Date()
+      console.log(date < currentDate)
       return date < currentDate
     },
     checkValue() {
