@@ -341,9 +341,7 @@ export default {
   methods: {
     isPastDate(date) {
       const currentDate = new Date()
-      let dateDay = moment(date).format("DD")
-      let currentDateDay = moment(currentDate).format("DD")
-      return moment(date) < moment(currentDate)
+      return moment(date).format("DD.MM.YYYY") < moment(currentDate).format("DD.MM.YYYY")
     },
     checkValue() {
       if (this.value !== null) {
