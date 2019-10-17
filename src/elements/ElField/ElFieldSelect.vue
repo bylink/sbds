@@ -270,7 +270,7 @@ export default {
     },
 
     handleOpen() {
-      console.log(opened)
+      console.log(123123123123)
       this.inputFocused = true
       this.inputOpened = true
     },
