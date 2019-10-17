@@ -204,6 +204,7 @@ export default {
   data() {
     return {
       inputFocused: false,
+      inputOpened: false,
     }
   },
   computed: {
@@ -212,6 +213,7 @@ export default {
         "el-field-select--error": this.errorText,
         "el-field-select--disabled": this.disabled,
         "el-field-select--focused": this.inputFocused,
+        "el-field-select--opened": this.inputOpened,
         "el-field-select--borderless": this.borderless,
         "el-field-select--radiusless": this.radiusless,
         "el-field-select--arrow-disabled": this.arrowDisabled,
@@ -269,6 +271,7 @@ export default {
 
     handleOpen() {
       this.inputFocused = true
+      this.inputOpened = true
     },
 
     handleClose() {
@@ -276,6 +279,7 @@ export default {
         return
       }
       this.inputFocused = false
+      this.inputOpened = false
     },
 
     handleSearchChange(value) {
@@ -299,9 +303,7 @@ export default {
 
   watch: {
     value() {
-      if (this.value !== null && this.value.length !== 0) {
-        this.inputFocused = true
-      }
+      this.checkValue()
     },
   },
 }
