@@ -270,13 +270,13 @@ export default {
     },
 
     handleOpen() {
-      console.log(123123123123)
       this.inputFocused = true
       this.inputOpened = true
     },
 
     handleClose() {
       if (this.value !== null && this.value.length !== 0) {
+        this.inputOpened = false
         return
       }
       this.inputFocused = false
