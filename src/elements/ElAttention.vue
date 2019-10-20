@@ -1,5 +1,6 @@
 <template>
   <div v-if="isVisible" class="el-attention" :class="classes">
+    <component :is="'nuxt-link'" class="el-attention__inner" :to="to" />
     <el-title :ellipsis="false" inline :color="color" size="xs" line-height="s">
       {{ text }}
     </el-title>
@@ -65,12 +66,26 @@ export default {
 <style lang="scss">
 $colors: $token-colors;
 .el-attention {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 8px 12px 8px 20px;
   width: 100%;
   z-index: 15;
+
+  &__inner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background: transparent;
+    @media #{$media-query-m} {
+      display: none;
+    }
+  }
 
   @each $color, $value in $colors {
     &--background-#{$color} {
@@ -102,6 +117,7 @@ $colors: $token-colors;
     cursor: pointer;
     padding: 5px;
     align-self: flex-start;
+    z-index: 2;
     & .el-svg-icon {
       display: flex;
       align-items: center;
