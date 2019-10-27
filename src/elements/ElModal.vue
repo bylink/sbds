@@ -232,7 +232,7 @@ export default {
 
   &__control {
     text-align: center;
-    margin-bottom: auto -3px 20px -3px;
+    margin: auto -3px 20px -3px;
     @media #{$media-query-m} {
       margin-bottom: 0;
       margin-top: 0;
