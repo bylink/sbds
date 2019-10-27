@@ -138,7 +138,10 @@ export default {
 
   &.v--modal-overlay {
     z-index: $z-index-overlay;
-    background-color: fade-out($color-black, 0.3);
+    background-color: $color-white;
+    @media #{$media-query-m} {
+      background-color: fade-out($color-black, 0.3);
+    }
 
     .v--modal-background-click {
       padding-bottom: 0;
@@ -211,7 +214,6 @@ export default {
 
   &__inner {
     position: relative;
-    box-shadow: 0 6px 12px rgba(110, 110, 110, 0.61);
     padding: 24px 20px 20px 20px;
     background-color: $color-white;
     height: 100vh;
@@ -224,15 +226,15 @@ export default {
       height: auto;
       border-radius: 8px;
       padding: 32px 40px 40px 40px;
+      box-shadow: 0 6px 12px rgba(110, 110, 110, 0.61);
     }
   }
 
   &__control {
-    margin-left: -3px;
-    margin-right: -3px;
-    margin-top: auto;
     text-align: center;
+    margin-bottom: auto -3px 20px -3px;
     @media #{$media-query-m} {
+      margin-bottom: 0;
       margin-top: 0;
       text-align: left;
       display: flex;
