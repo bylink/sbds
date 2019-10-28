@@ -44,8 +44,8 @@ export default {
     cropImage() {
       this.$refs.cropper
         .getCroppedCanvas({
-          maxWidth: 650,
-          maxHeight: 650,
+          maxWidth: 500,
+          maxHeight: 500,
         })
         .toBlob(blob => {
           this.$emit("crop", blob)
