@@ -342,17 +342,11 @@ export default {
     isPastDate(date) {
       const currentDate = new Date()
       let datePlusMonth = currentDate.setDate(currentDate.getDate() + 30)
-      let prettyDate = moment(date).format("DD.MM.YYYY")
-      let prettyCurrentDate = moment(currentDate).format("DD.MM.YYYY")
-      let prettyDatePlusMonth = moment(datePlusMonth).format("DD.MM.YYYY")
+      let prettyDate = moment(date).format("X")
+      let prettyCurrentDate = moment(currentDate).format("X")
+      let prettyDatePlusMonth = moment(datePlusMonth).format("X")
 
-      return (
-        moment(prettyDate, "DD.MM.YYYY").format("X") <
-        moment(prettyCurrentDate, "DD.MM.YYYY").format("X")
-        // ||
-        // moment(prettyDate, "DD.MM.YYYY").format("X") >
-        //   moment(prettyDatePlusMonth, "DD.MM.YYYY").format("X")
-      )
+      return prettyDate < prettyCurrentDate || prettyDate > prettyDatePlusMonth
     },
     checkValue() {
       if (this.value !== null) {
