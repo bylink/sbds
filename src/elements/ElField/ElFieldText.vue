@@ -344,9 +344,14 @@ export default {
       let prettyDate = moment(date).format("DD.MM.YYYY")
       let prettyCurrentDate = moment(currentDate).format("DD.MM.YYYY")
 
+      console.log(
+        moment(prettyCurrentDate, "DD.MM.YYYY").format("X") + moment("31", "DD").format("X")
+      )
       return (
         moment(prettyDate, "DD.MM.YYYY").format("X") <
-        moment(prettyCurrentDate, "DD.MM.YYYY").format("X")
+          moment(prettyCurrentDate, "DD.MM.YYYY").format("X") ||
+        moment(prettyDate, "DD.MM.YYYY").format("X") >
+          moment(prettyCurrentDate, "DD.MM.YYYY").format("X") + moment("31", "DD").format("X")
       )
     },
     checkValue() {
