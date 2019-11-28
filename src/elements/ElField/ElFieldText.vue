@@ -340,22 +340,17 @@ export default {
 
   methods: {
     checkDate(date) {
-      console.log(1, this.isPastDate(date))
-      console.log(2, this.isMonthAfterDate(date))
       return this.isPastDate(date) || this.isMonthAfterDate(date)
     },
     isPastDate(date) {
       const currentDate = new Date()
-      let prettyDate = moment(date).format("X")
-      let prettyCurrentDate = moment(currentDate).format("X")
+      let prettyDate = moment(date).format("DD.MM.YYYY")
+      let prettyCurrentDate = moment(currentDate).format("DD.MM.YYYY")
 
-      return prettyDate < prettyCurrentDate
-      // return (
-      //   moment(prettyDate, "DD.MM.YYYY").format("X") <
-      //     moment(prettyCurrentDate, "DD.MM.YYYY").format("X") ||
-      //   moment(prettyDate, "DD.MM.YYYY").format("X") >
-      //     moment(prettyDatePlusMonth, "DD.MM.YYYY").format("X")
-      // )
+      return (
+        moment(prettyDate, "DD.MM.YYYY").format("X") <
+        moment(prettyCurrentDate, "DD.MM.YYYY").format("X")
+      )
     },
     isMonthAfterDate(date) {
       const currentDate = new Date()
