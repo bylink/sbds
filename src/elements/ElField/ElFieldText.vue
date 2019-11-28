@@ -35,7 +35,7 @@
 
         <div class="date-pick__wrapper" v-else-if="isDate">
           <date-pick
-            :isDateDisabled="isPastDate"
+            :isDateDisabled="isPastDate || isMonthAfterDate"
             :nextMonthCaption="nextMonthCaption"
             :prevMonthCaption="prevMonthCaption"
             :weekdays="weekdays"
@@ -341,11 +341,8 @@ export default {
   methods: {
     isPastDate(date) {
       const currentDate = new Date()
-      // let datePlusMonth = currentDate.setDate(currentDate.getDate() + 30)
       let prettyDate = moment(date).format("X")
       let prettyCurrentDate = moment(currentDate).format("X")
-      // let prettyDatePlusMonth = moment(datePlusMonth).format("X")
-      // ( prettyDate < prettyCurrentDate || prettyDate > prettyDatePlusMonth )
       return prettyDate < prettyCurrentDate
       // return (
       //   moment(prettyDate, "DD.MM.YYYY").format("X") <
@@ -353,6 +350,13 @@ export default {
       //   moment(prettyDate, "DD.MM.YYYY").format("X") >
       //     moment(prettyDatePlusMonth, "DD.MM.YYYY").format("X")
       // )
+    },
+    isMonthAfterDate(date) {
+      const currentDate = new Date()
+      let prettyDate = moment(date).format("X")
+      let datePlusMonth = currentDate.setDate(currentDate.getDate() + 30)
+      let prettyDatePlusMonth = moment(datePlusMonth).format("X")
+      return prettyDate > prettyDatePlusMonth
     },
     checkValue() {
       if (this.value !== null) {
