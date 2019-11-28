@@ -348,7 +348,7 @@ export default {
       // ( prettyDate < prettyCurrentDate || prettyDate > prettyDatePlusMonth )
       console.log(0, date)
       console.log(1, datePlusMonth)
-      console.log(2, moment(date).format("DD.MM.YYYY"))
+      console.log(2, moment(date).format("X"))
       console.log(3, moment(prettyDate, "DD.MM.YYYY").format("X"))
       return (
         moment(prettyDate, "DD.MM.YYYY").format("X") <
