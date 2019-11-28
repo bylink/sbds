@@ -346,26 +346,7 @@ export default {
       let prettyCurrentDate = moment(currentDate).format("DD.MM.YYYY")
       let prettyDatePlusMonth = moment(datePlusMonth).format("DD.MM.YYYY")
 
-      console.log(
-        1,
-        moment(prettyDate, "DD.MM.YYYY").format("X") >
-          moment(prettyDatePlusMonth, "DD.MM.YYYY").format("X")
-      )
-
-      console.log(
-        2,
-        moment(prettyDate, "DD.MM.YYYY").format("X") <
-          moment(prettyCurrentDate, "DD.MM.YYYY").format("X")
-      )
-
-      console.log(
-        3,
-        moment(prettyDate, "DD.MM.YYYY").format("X") <
-          moment(prettyCurrentDate, "DD.MM.YYYY").format("X") ||
-          moment(prettyDate, "DD.MM.YYYY").format("X") >
-            moment(prettyDatePlusMonth, "DD.MM.YYYY").format("X")
-      )
-
+      console.log(moment(prettyDatePlusMonth, "DD.MM.YYYY").format("X"))
       return (
         moment(prettyDate, "DD.MM.YYYY").format("X") <
           moment(prettyCurrentDate, "DD.MM.YYYY").format("X") ||
