@@ -348,10 +348,10 @@ export default {
 
       console.log(moment(prettyDatePlusMonth, "DD.MM.YYYY").format("X"))
       return (
-        moment(prettyDate, "DD.MM.YYYY").format("X") <
-          moment(prettyCurrentDate, "DD.MM.YYYY").format("X") ||
+        // moment(prettyDate, "DD.MM.YYYY").format("X") <
+        //   moment(prettyCurrentDate, "DD.MM.YYYY").format("X") ||
         moment(prettyDate, "DD.MM.YYYY").format("X") >
-          moment(prettyDatePlusMonth, "DD.MM.YYYY").format("X")
+        moment(prettyDatePlusMonth, "DD.MM.YYYY").format("X")
       )
     },
     checkValue() {
