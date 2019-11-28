@@ -343,6 +343,8 @@ export default {
       const currentDate = new Date()
       let prettyDate = moment(date).format("X")
       let prettyCurrentDate = moment(currentDate).format("X")
+
+      console.log(prettyDate < prettyCurrentDate)
       return prettyDate < prettyCurrentDate
       // return (
       //   moment(prettyDate, "DD.MM.YYYY").format("X") <
@@ -356,6 +358,8 @@ export default {
       let prettyDate = moment(date).format("X")
       let datePlusMonth = currentDate.setDate(currentDate.getDate() + 30)
       let prettyDatePlusMonth = moment(datePlusMonth).format("X")
+
+      console.log(prettyDate > prettyDatePlusMonth)
       return prettyDate > prettyDatePlusMonth
     },
     checkValue() {
