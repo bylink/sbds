@@ -340,7 +340,6 @@ export default {
 
   methods: {
     checkDate(date) {
-      console.log("sbds", date)
       return this.isPastDate(date) || this.isMonthAfterDate(date)
     },
     isPastDate(date) {
@@ -356,7 +355,7 @@ export default {
     isMonthAfterDate(date) {
       const currentDate = new Date()
       let prettyDate = moment(date).format("X")
-      let datePlusMonth = currentDate.setDate(currentDate.getDate() + 40)
+      let datePlusMonth = currentDate.setDate(currentDate.getDate() + 30)
       let prettyDatePlusMonth = moment(datePlusMonth).format("X")
 
       return prettyDate > prettyDatePlusMonth
