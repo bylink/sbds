@@ -407,7 +407,13 @@ export default {
   &--date {
     & #{$block-name} {
       &__header {
-        top: $space-xxs;
+        top: 1px;
+        width: calc(100% - 33px);
+
+        & .el-title {
+          padding-top: 8px;
+          background: #fff;
+        }
       }
     }
   }
