@@ -407,13 +407,7 @@ export default {
   &--date {
     & #{$block-name} {
       &__header {
-        top: 1px;
-        width: calc(100% - 33px);
-
-        & .el-title {
-          padding-top: 8px;
-          background: #fff;
-        }
+        top: $space-xxs;
       }
     }
   }
@@ -530,6 +524,15 @@ export default {
       &__append,
       &__prepend {
         align-items: flex-start;
+      }
+      &__header {
+        top: 1px;
+        width: calc(100% - 33px);
+
+        & .el-title {
+          padding-top: 8px;
+          background: #fff;
+        }
       }
     }
   }
