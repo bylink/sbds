@@ -282,6 +282,7 @@ export default {
   }
   &--windowed {
     &.v--modal-overlay {
+      color: pink;
       &.el-modal__inner {
         margin: 0 20px;
         min-height: unset;
