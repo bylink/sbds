@@ -49,6 +49,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    isWindowedOnMobile: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     close() {
@@ -71,6 +75,7 @@ export default {
       return {
         "el-modal--large": this.isLarge,
         "el-modal--medium": this.isMedium,
+        "el-modal--windowed": this.isWindowedOnMobile,
       }
     },
   },
@@ -272,6 +277,18 @@ export default {
         @media #{$media-query-m} {
           width: 561px !important;
         }
+      }
+    }
+  }
+  &--windowed {
+    &.v--modal-overlay {
+      #{$block-name}__inner {
+        margin: 0 20px;
+        min-height: unset;
+        height: auto;
+        border-radius: 8px;
+        padding: 20px 20px 40px;
+        box-shadow: 0 6px 12px rgba(110, 110, 110, 0.61);
       }
     }
   }
