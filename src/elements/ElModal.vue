@@ -282,7 +282,7 @@ export default {
   }
   &--windowed {
     &.v--modal-overlay {
-      .el-modal__inner {
+      &.el-modal__inner {
         margin: 0 20px;
         min-height: unset;
         height: auto;
