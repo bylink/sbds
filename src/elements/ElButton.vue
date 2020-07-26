@@ -3,7 +3,7 @@
     :is="tag"
     :class="classes"
     v-bind="tagBind"
-    class="el-button el-button--kokokokokokokok"
+    class="el-button"
     v-on="$listeners"
     :exact="exact"
   >
