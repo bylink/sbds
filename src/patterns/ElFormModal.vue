@@ -1,6 +1,6 @@
 <template>
   <El-modal
-    class="el-form-modal"
+    class="el-form-modal el-kokokokokokoko"
     :name="name"
     :is-large="isLarge"
     :is-medium="isMedium"
