@@ -4,6 +4,7 @@
     :name="name"
     :is-large="isLarge"
     :is-medium="isMedium"
+    :is-windowed-on-mobile="isWindowedOnMobile"
     @beforeOpen="event => $emit('beforeOpen', event)"
     @beforeClose="event => $emit('beforeClose', event)"
     @opened="event => $emit('opened', event)"
@@ -81,6 +82,10 @@ export default {
       default: false,
     },
     isMedium: {
+      type: Boolean,
+      default: false,
+    },
+    isWindowedOnMobile: {
       type: Boolean,
       default: false,
     },
